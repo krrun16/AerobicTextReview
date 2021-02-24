@@ -19,10 +19,9 @@ vid_one_V2_total_voc
 
 #Video 2
 #Youtube length in seconds is 2,370
-vid_two_V2_data=pd.read_csv("3 Beginner Videos\Labels_Video_#2_V2.txt",
+vid_two_V2_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#2_V2.txt",
            delim_whitespace=True,
            skipinitialspace=True)
-vid_two_V2_data.tail()
 vid_two_V2_data1 = vid_two_V2_data.drop(columns=["LABEL"])
 vid_two_V2_data2 = vid_two_V2_data1.assign(length = vid_two_V2_data["STOP"] - 
                                                 vid_two_V2_data["START"])
@@ -37,10 +36,10 @@ vid_two_V2_total_voc
 
 #Video 3
 #Youtube length in seconds is 1,751
-vid_three_V3_data=pd.read_csv("3 Beginner Videos\Labels_Video_#3_V3.txt",
+vid_three_V3_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#3_V3.txt",
            delim_whitespace=True,
            skipinitialspace=True)
-vid_three_V3_data
+
 deletions = [74, 75, 154, 166, 168, 172, 173, 199, 215, 216, 278, 281, 
             283, 304, 319, 324, 325, 326, 330, 332, 334, 338, 345, 347, 
             350, 351, 353, 354, 356, 359, 386, 408, 411, 419, 420, 429, 
@@ -59,7 +58,6 @@ deletions = [74, 75, 154, 166, 168, 172, 173, 199, 215, 216, 278, 281,
 len(deletions)
  
 vid_three_V3_data = vid_three_V3_data[~vid_three_V3_data.LABEL.isin(deletions)]
-vid_three_V3_data
 
 vid_three_V3_data1 = vid_three_V3_data.drop(columns=["LABEL"])
 vid_three_V3_data2 = vid_three_V3_data1.assign(length = vid_three_V3_data["STOP"] - 
