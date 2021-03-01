@@ -3,44 +3,25 @@ import numpy as np
 
 #Manually fixed/placed labels
 
-
-#Video 1
-#Youtube length in seconds is 1,087
-vid_one_V2_data=pd.read_csv("Labels_Video_#1_V2.txt",
-           delim_whitespace=True,
-           skipinitialspace=True)
-vid_one_V2_data1 = vid_one_V2_data.drop(columns=["LABEL"])
-vid_one_V2_data2 = vid_one_V2_data1.assign(length = vid_one_V2_data["STOP"] - 
-                                                vid_one_V2_data["START"])
-vid_one_V2_total_voc = vid_one_V2_data2.sum(axis=0)
-vid_one_V2_total_voc = vid_one_V2_total_voc["length"]
-vid_one_V2_total_voc
-
-
-#Video 2
-#Youtube length in seconds is 2,370
-vid_two_V2_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#2_V2.txt",
-           delim_whitespace=True,
-           skipinitialspace=True)
-vid_two_V2_data1 = vid_two_V2_data.drop(columns=["LABEL"])
-vid_two_V2_data2 = vid_two_V2_data1.assign(length = vid_two_V2_data["STOP"] - 
-                                                vid_two_V2_data["START"])
-vid_two_V2_total_voc = vid_two_V2_data2.sum(axis=0)
-vid_two_V2_total_voc = vid_two_V2_total_voc["length"]
-vid_two_V2_total_voc
-
-#First go: 1805.25 seconds of instruction
-#V2:       1555.13 seconds of instruction 
-#V3:        seconds of instruction
-
-
 #Video 3
-#Youtube length in seconds is 1,751
-vid_three_V3_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#3_V3.txt",
+vid_three_V2_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#3_V2.txt",
            delim_whitespace=True,
            skipinitialspace=True)
 
-deletions = [74, 75, 154, 166, 168, 172, 173, 199, 215, 216, 278, 281, 
+vid_three_V2_data1 = vid_three_V2_data.drop(columns=["LABEL"])
+vid_three_V2_data2 = vid_three_V2_data1.assign(length = vid_three_V2_data["STOP"] - 
+                                                vid_three_V2_data["START"])
+vid_three_V2_total_voc = vid_three_V2_data2.sum(axis=0)
+vid_three_V2_total_voc = vid_three_V2_total_voc["length"]
+vid_three_V2_total_voc
+
+
+
+vid_three_V3_data_wo_deletions=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#3_V3.txt",
+           delim_whitespace=True,
+           skipinitialspace=True)
+
+deletions_vid_3 = [74, 75, 154, 166, 168, 172, 173, 199, 215, 216, 278, 281, 
             283, 304, 319, 324, 325, 326, 330, 332, 334, 338, 345, 347, 
             350, 351, 353, 354, 356, 359, 386, 408, 411, 419, 420, 429, 
             458, 468, 473, 480, 513, 514, 515, 520, 521, 571, 581, 585, 
@@ -55,9 +36,9 @@ deletions = [74, 75, 154, 166, 168, 172, 173, 199, 215, 216, 278, 281,
             1149, 1166, 1167, 1173, 1174, 1175, 1176, 1178, 1184, 1185, 
             1186, 1212, 1213, 1214, 1216, 1217, 1220, 1221, 1222, 1261, 
             1359, 1363, 1364, 1365, 1369]
-len(deletions)
- 
-vid_three_V3_data = vid_three_V3_data[~vid_three_V3_data.LABEL.isin(deletions)]
+
+
+vid_three_V3_data = vid_three_V3_data_wo_deletions[~vid_three_V3_data_wo_deletions.LABEL.isin(deletions_vid_3)]
 
 vid_three_V3_data1 = vid_three_V3_data.drop(columns=["LABEL"])
 vid_three_V3_data2 = vid_three_V3_data1.assign(length = vid_three_V3_data["STOP"] - 
@@ -66,6 +47,31 @@ vid_three_V3_total_voc = vid_three_V3_data2.sum(axis=0)
 vid_three_V3_total_voc = vid_three_V3_total_voc["length"]
 vid_three_V3_total_voc
 
-#First go: 640.43 seconds of instruction
-#V2:       716.82 seconds of instruction 
-#V3:       720.65 seconds of instrictoon
+#First go: 716.82 seconds of instruction 
+#V2:       720.65 seconds of instruction
+#Time of Video is 1,751 seconds
+
+#Vid_3 Cohen's Kappa
+
+BL = len(deletions_vid_3)
+TR = (len(vid_three_V3_data_wo_deletions)) - len(vid_three_V2_data)
+TL = len(vid_three_V3_data) - TR
+BR = TL - 1
+
+# Correct
+
+P_O = (TL + BR) / (TL + TR + BL + BR)
+
+p_yes_at_random = (TL + TR) / (TL + TR + BR + BL) * (TL + BL) / (TL + TR + BR + BL)
+
+p_no_at_random = (BL + BR) / (TL + TR + BR + BL) * (TR + BR) / (TL + TR + BR + BL)
+
+P_E = p_yes_at_random + p_no_at_random
+
+Kappa = (P_O - P_E) / (1 - P_E)
+Kappa
+
+TL
+TR
+BL
+BR
