@@ -3,7 +3,6 @@ import numpy as np
 
 #Manually fixed/placed labels
 
-
 #Video 1
 vid_one_V2_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#1_V2.txt",
            delim_whitespace=True,
