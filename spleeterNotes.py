@@ -24,6 +24,12 @@ spleeter separate -p spleeter:2stems -o spleeter_run/audio_output -i (file path)
 Example:
 spleeter separate -p spleeter:2stems -o spleeter_run/audio_output -i /Users/morgandeneve/Spleeter_test/audio_example.mp3
 
+Terminal Command (More than 10 mins)
+spleeter separate -p spleeter:2stems -o spleeter_run/audio_output -i [file path] -d [duration length in seconds]
+
+Example:
+spleeter separate -p spleeter:2stems -o spleeter_run/audio_output -i /Users/morgandeneve/spleeter_run/MadFit_NoiseReduced.mp3 -d 1074
+
 
 Errors
 Windows spleeter error
