@@ -1,0 +1,30 @@
+Where to classify
+
+1. Phrases that are ambigious but refer to a 
+	Phrase that was well described earlier
+
+2. Guiding the user (i.e., "3, 2, 1, alright relax")
+
+3. Optional additional challenges
+	"If feeling good, try to do this"
+
+4. Demonstrative pronouns
+
+5. Talking about the  feeling the user should feel
+
+
+6. Difference between describing exercise or giving 
+	comments vs. instructing what to do
+		-optional comments to help
+
+NOTES:
+	What if it is just changing speed - (1)
+
+Easy Classification - Descriptive
+
+1. Specific body part, direction, duration. 
+	All of them. 
+
+2. Metaphors
+
+3. user maximum ability (i.e., "as far as you can go")
