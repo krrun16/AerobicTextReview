@@ -1,23 +1,12 @@
 Where to classify
 
-1. Phrases that are ambigious but refer to a 
-	Phrase that was well described earlier
-
-2. Guiding the user (i.e., "3, 2, 1, alright relax")
-
-3. Optional additional challenges
+1. Optional additional challenges
 	"If feeling good, try to do this"
-
-4. Demonstrative pronouns - 
+2. Demonstrative pronouns - 
 	(i.e., this, that, here, there, those)
 
-5. !!! Talking about the  feeling the user should feel
+3. !!! Talking about the  feeling the user should feel
 		!!!
-
-
-Concerns:
-	What if it is just changing speed - (1)
-		(i.e., Faster, slower, quick feet) 
 
 
 
