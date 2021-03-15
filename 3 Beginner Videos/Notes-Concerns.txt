@@ -8,17 +8,18 @@ Where to classify
 3. Optional additional challenges
 	"If feeling good, try to do this"
 
-4. Demonstrative pronouns
+4. Demonstrative pronouns - 
+	(i.e., this, that, here, there, those)
 
-5. Talking about the  feeling the user should feel
+5. !!! Talking about the  feeling the user should feel
+		!!!
 
 
-6. Difference between describing exercise or giving 
-	comments vs. instructing what to do
-		-optional comments to help
-
-NOTES:
+Concerns:
 	What if it is just changing speed - (1)
+		(i.e., Faster, slower, quick feet) 
+
+
 
 Easy Classification - Descriptive
 
