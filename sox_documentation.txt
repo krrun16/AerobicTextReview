@@ -1,23 +1,12 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2577
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab560
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+Sox Info: http://sox.sourceforge.net/
+Sox Download: https://sourceforge.net/projects/sox/
+Mac Install (through Homebrew): https://formulae.brew.sh/formula/sox
 
-\f0\fs26 \cf0 Sox Info: http://sox.sourceforge.net/\
-Sox Download: https://sourceforge.net/projects/sox/\
-Mac Install (through Homebrew): https://formulae.brew.sh/formula/sox\
-\
-\
-Example:\
-**folder \'93spleeter_batch\'94 includes: befit_vocals.wav, chloeting_vocals.wav, madfit_vocals.wav\
-\
-(base) Morgans-MacBook-Pro:~ morgandeneve$ cd /Users/morgandeneve/spleeter_batch\
-(base) Morgans-MacBook-Pro:spleeter_batch morgandeneve$ soxi -D *\
-774.834150\
-910.695850\
-1685.530000\
-\
-}
+Example:
+**folder spleeter_batch includes: befit_vocals.wav, chloeting_vocals.wav, madfit_vocals.wav
+
+(base) Morgans-MacBook-Pro:~ morgandeneve$ cd /Users/morgandeneve/spleeter_batch
+(base) Morgans-MacBook-Pro:spleeter_batch morgandeneve$ soxi -D *
+774.834150
+910.695850
+1685.530000
