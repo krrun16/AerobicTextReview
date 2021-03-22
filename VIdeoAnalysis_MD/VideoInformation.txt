@@ -1,14 +1,20 @@
 1_MadFit
 	MadFit/15 MIN BEGINNER CARDIO Workout (At Home No Equipment)
 https://www.youtube.com/watch?v=VWj8ZxCxrYk
-1018 seconds
+774.834150 seconds
+855 words
+66.2077 words/minute
 
-2_ChloeTing\
+2_ChloeTing
 	Chloe Ting/15 Mins Full Body FAT BURN Workout | No Jumping | Beginner Friendly
 https://www.youtube.com/watch?v=CD6BCdFHogg
-911 seconds
+910.695850 seconds
+764 words
+50.335 words/minute
 
-3_BeFit\
+3_BeFit
 	BeFit/BeFiT 101: 10 min Beginners Cardio Fat Burn Workout
 https://www.youtube.com/watch?v=OyLiIrA46SY
-775 seconds
+---- seconds
+2016 words
+---- words/minute
