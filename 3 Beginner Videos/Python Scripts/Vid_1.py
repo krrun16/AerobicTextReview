@@ -4,9 +4,7 @@ import numpy as np
 #Manually fixed/placed labels
 
 #Video 1
-vid_one_V2_data=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#1_V2.txt",
-           delim_whitespace=True,
-           skipinitialspace=True)
+vid_one_V2_data=pd.read_csv(r"C:\Users\calvi\OneDrive - University of Iowa\Documents\aerobictextreview\3 Beginner Videos\Labels\Labels\labels_video_#1.txt", delim_whitespace=True, skipinitialspace=True)
 
 vid_one_V2_data
 
@@ -17,7 +15,7 @@ vid_one_V2_total_voc = vid_one_V2_data2.sum(axis=0)
 vid_one_V2_total_voc = vid_one_V2_total_voc["length"]
 vid_one_V2_total_voc
 
-vid_one_V3_data_wo_deletions=pd.read_csv("3 Beginner Videos\Labels\Labels_Video_#1_V3.txt",
+vid_one_V3_data_wo_deletions=pd.read_csv(r"C:\Users\calvi\OneDrive - University of Iowa\Documents\aerobictextreview\3 Beginner Videos\Labels\labels\labels_video_#1_V2.txt",
            delim_whitespace=True,
            skipinitialspace=True)
 
@@ -36,7 +34,7 @@ vid_one_V3_total_voc
 #V2:        649.31 seconds of instruction
 #Time of video is 1056 seconds
 
-#Vid_3 Cohen's Kappa
+#Vid_1 Cohen's Kappa
 
 BL = len(deletions_vid_1)
 TR = (len(vid_one_V3_data_wo_deletions)) - len(vid_one_V2_data)
@@ -53,7 +51,7 @@ p_no_at_random = (BL + BR) / (TL + TR + BR + BL) * (TR + BR) / (TL + TR + BR + B
 P_E = p_yes_at_random + p_no_at_random
 
 Kappa = (P_O - P_E) / (1 - P_E)
-Kappa
+print(Kappa)
 
 TL
 TR

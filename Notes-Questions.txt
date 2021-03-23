@@ -19,3 +19,9 @@ By eye accuracy, this method works very well for video 1 & 3. Music is too loud 
 
 Is there a way we can distinguish the difference between the instructor level volume and the silence volume
 to amplify audio only if volume above silence volume...?
+
+Once the two exercise video were recorded into Audacity, I used the built-in Sound Finder function in Audacity to create 
+labels of when the host was instructing. Using a threshold of labeling any audio below 8 dB as silence and the minimum 
+duration of that silence being 0.2 seconds, we were able to obtain labels of when the instructor was speaking with 
+Cohen's Kappa of 98% and 88%. 
+
