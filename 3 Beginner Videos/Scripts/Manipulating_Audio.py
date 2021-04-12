@@ -7,7 +7,7 @@ input_data = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobi
 audio = input_data[1]
 
 # plot the [] designated frames
-plt.plot(audio[0:100])
+plt.plot(audio[0:1000])
 
 print(len(audio))
 print(audio[0:100])
@@ -33,5 +33,5 @@ video_1_params = video_1.getparams()
 #Find of Length of Video solely from Code in seconds:
 video_1_length = video_1_params[3] / video_1_params[2]
 
-video_1_volume = audio.tolist()
-print(video_1_volume[0:5])
+#video_1_volume = audio.tolist()
+#print(video_1_volume[0:5])
