@@ -3,27 +3,25 @@ from scipy.io.wavfile import read
 import numpy as np
 import wave
 
-# read audio samples
+# read audio samples using frame rate and # of frames
 input_data = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/vocals.wav")
+
+# extract solely the frames clipped
 audio = input_data[1]
+
+#Delete the second repetitive column
 audio = np.delete(audio, [1,1])
 
+#Change negative values to positive inverse to calculate log()
+audio_inverse = np.where(audio < 0, (1/audio) * -1, audio)
 
-#audio = audio[100:200]
-print(audio)
+#Convert values from amplitude to dB
+audio_db = 20 * np.log10(audio_inverse)
 
-results = np.where(audio<0, (1/audio) * -1, audio)
-#for i in range(len(audio)):
- #   if audio[i] < 0:
-  #          audio[i] = (1/audio[i]) * -1
-   # else:
-    #    audio[i] = audio[i]
-     #   print(audio)
+#Filter out dB not in 
+audio_voice = audio[audio < 60]
 
-#audio_db = 20 * np.log10(audio)
-
-
-
+#Open file in audio format
 video_1 = wave.open("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/vocals.wav")
 
 
@@ -33,6 +31,7 @@ video_1_params = video_1.getparams()
 
 #Find of Length of Video solely from Code in seconds:
 video_1_length = video_1_params[3] / video_1_params[2]
+
 
 #video_1_volume = audio.tolist()
 #print(video_1_volume[0:5])
