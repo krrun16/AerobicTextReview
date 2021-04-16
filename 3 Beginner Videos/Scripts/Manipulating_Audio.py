@@ -1,37 +1,43 @@
 from scipy.io.wavfile import read
 #import matplotlib.pyplot as plt
 import numpy as np
-import wave
+import pandas as pd
 
 # read audio samples using frame rate and # of frames
 input_data = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/vocals.wav")
+input_data2 = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 2/vocals.wav")
 
 # extract solely the frames clipped
-audio = input_data[1]
+audio = pd.DataFrame(input_data[1])
+
 
 #Delete the second repetitive column
-audio = np.delete(audio, [1,1])
+audio2 = audio.drop(columns=[1])
+
+#Delete zero values
+audio3 = audio2[audio2 != 0]
 
 #Change negative values to positive inverse to calculate log()
-audio_inverse = np.where(audio < 0, (1/audio) * -1, audio)
+audio4 = np.where(audio3 < 0, (1/audio3) * -1, audio3)
 
 #Convert values from amplitude to dB
-audio_db = 20 * np.log10(audio_inverse)
+audio_db = pd.DataFrame(20 * np.log10(audio4))
+#audio_db = audio_db[audio_db != ]
 
 #Filter out dB not in 
-audio_voice = audio[audio < 60]
-
-#Open file in audio format
-video_1 = wave.open("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/vocals.wav")
+audio_voice = audio_db.loc[(audio_db[0] <= 60) & (audio_db[0] >= 20)]
 
 
-#Find parameters in videos
-video_1_params = video_1.getparams()
+#Length of instruction
+sec_instruct = len(audio_voice) / (input_data[0])
 
 
-#Find of Length of Video solely from Code in seconds:
-video_1_length = video_1_params[3] / video_1_params[2]
+#length of video in seconds                                
+video_1_length = len(input_data[1]) / (input_data[0])
 
+
+#Percent of time instructing
+perc_instruct = (sec_instruct / video_1_length) * 100
 
 #video_1_volume = audio.tolist()
 #print(video_1_volume[0:5])
