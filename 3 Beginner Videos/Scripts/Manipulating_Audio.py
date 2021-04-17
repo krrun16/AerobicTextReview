@@ -4,8 +4,7 @@ import numpy as np
 import pandas as pd
 
 # read audio samples using frame rate and # of frames
-input_data = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/vocals.wav")
-input_data2 = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 2/vocals.wav")
+input_data = read("C:/Users/calvi\OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 3/vocals.wav")
 
 # extract solely the frames clipped
 audio = pd.DataFrame(input_data[1])
@@ -25,7 +24,7 @@ audio_db = pd.DataFrame(20 * np.log10(audio4))
 #audio_db = audio_db[audio_db != ]
 
 #Filter out dB not in 
-audio_voice = audio_db.loc[(audio_db[0] <= 60) & (audio_db[0] >= 20)]
+audio_voice = audio_db.loc[(audio_db[0] <= 60) & (audio_db[0] >= 0)]
 
 
 #Length of instruction
@@ -33,11 +32,11 @@ sec_instruct = len(audio_voice) / (input_data[0])
 
 
 #length of video in seconds                                
-video_1_length = len(input_data[1]) / (input_data[0])
+video_length = len(input_data[1]) / (input_data[0])
 
 
 #Percent of time instructing
-perc_instruct = (sec_instruct / video_1_length) * 100
+perc_instruct = (sec_instruct / video_length) * 100
 
 #video_1_volume = audio.tolist()
 #print(video_1_volume[0:5])
