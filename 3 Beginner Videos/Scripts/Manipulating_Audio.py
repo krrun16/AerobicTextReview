@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # read audio samples using frame rate and # of frames
-input_data = read("C:/Users/calvi\OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 3/vocals.wav")
+input_data = read("C:/Users/calvi\OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/video_1_vocals_x2.wav")
 
 # extract solely the frames clipped
 audio = pd.DataFrame(input_data[1])
@@ -24,7 +24,7 @@ audio_db = pd.DataFrame(20 * np.log10(audio4))
 #audio_db = audio_db[audio_db != ]
 
 #Filter out dB not in 
-audio_voice = audio_db.loc[(audio_db[0] <= 60) & (audio_db[0] >= 0)]
+audio_voice = audio_db.loc[(audio_db[0] >= 0)]
 
 
 #Length of instruction

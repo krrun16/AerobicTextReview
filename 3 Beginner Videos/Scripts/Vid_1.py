@@ -4,7 +4,7 @@ import pandas as pd
 #Manually fixed/placed labels
 
 #Video 1
-vid_one_V2_data=pd.read_csv(r"C:\Users\calvi\OneDrive - University of Iowa\Documents\aerobictextreview\3 Beginner Videos\Calvin_Videos\Video 1\labels_10.txt", delim_whitespace=True)
+vid_one_V2_data=pd.read_csv(r"C:\Users\calvi\OneDrive - University of Iowa\Documents\aerobictextreview\3 Beginner Videos\Calvin_Videos\Video 1\labels_1_x10.txt", delim_whitespace=True)
 
 vid_one_V2_data
 
