@@ -1,5 +1,0 @@
-
-Detecting heavy breathing as instruction or not: can manually detect in audacity, but not sure what the python 
-	script will do. 
-
--- I think when an instructor uses a mic it detects a lot of breathes as instruction

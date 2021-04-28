@@ -1,24 +1,3 @@
-#from scipy.io.wavfile import read
-#import matplotlib.pyplot as plt
- 
-
-# read audio samples
-#input_data = read("C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/vocals.wav")
-#audio = input_data[1]
-#instruction = audio.index[audio > 0]
-
-# plot the [] designated samples
-#plt.plot(audio[1000:10000])
-
-# label the axes
-#plt.ylabel("Amplitude")
-#plt.xlabel("Time")
-# set the title  
-#plt.title("Sample Wav")
-# display the plot
-#plt.show()
-
-
 # imports
 import matplotlib.pyplot as plt
 import numpy as np
@@ -78,3 +57,20 @@ if __name__ == "__main__":
     path = sys.argv[1]
   
     visualize(path)
+    
+    
+# read audio samples using frame rate and # of frames
+#input_data = read("C:/Users/calvi\OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Calvin_Videos/Video 1/video_1_vocals_x2.wav")
+
+# extract solely the frames clipped
+#audio = pd.DataFrame(input_data[1])    
+    
+# plot the [] designated frames
+#plt.plot(audio[0:1000])
+# label the axes
+#plt.ylabel("Amplitude")
+#plt.xlabel("Time")
+# set the title  
+#plt.title("Sample Wav")
+# display the plot
+#plt.show()

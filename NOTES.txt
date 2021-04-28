@@ -1,0 +1,31 @@
+Calvin's Work:
+
+3 Beginner videos\Calvin_Videos
+	Video_#: accompaniment.wav 	<Music from using spleeter>
+		 vocals.wav 		<Vocals from using spleeter>
+		 video_#.mp3 		<original recording in audacity>
+		 EDITED_LEGIT_LABELS 	<labeled timestamp durations of sound detected in video>
+	
+
+3 Beginner videos\scripts
+	amplify.py			<Amplifies a WAV file by the given scaling factor (Command Line Accessible)>
+			Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
+
+	silence_remove.py 		
+
+	
+	Time_w_Labels.py 		<Gives percent of instruction based of labels exported from audacity
+							(Command Line Accessible)>
+			I wrote this program.
+
+	
+	
+
+
+
+CONCERNS TO THINK ABOUT:
+
+Detecting heavy breathing as instruction or not: can manually detect in audacity, but not sure what the python 
+	script will do. 
+
+-- I think when an instructor uses a mic it detects a lot of breathes as instruction
