@@ -8,18 +8,47 @@ Calvin's Work:
 	
 
 3 Beginner videos\scripts
-	amplify.py			<Amplifies a WAV file by the given scaling factor (Command Line Accessible)>
+	amplify.py:			<Amplifies a WAV file by a given scaling factor (Command Line Accessible)>
 			Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
 
-	silence_remove.py 		
+	
+	Graphing_Audio.py		<TO UPDATE>
 
 	
-	Time_w_Labels.py 		<Gives percent of instruction based of labels exported from audacity
+	Labels.Percent.py: 		<Gives percent of instruction based of labels exported from audacity
+							(Command Line Accessible)>
+			I wrote this program.
+
+
+	Percent_of_Instruction.py 	<Finds Percent of Instruction from a Wav import, dB threshold TBD (CMA)>
+			I wrote this program
+
+
+	silence_remove.py: 		<TO UPDATE>
+
+
+
+	Labels.Percent.py: 		<Gives percent of instruction based of labels exported from audacity
 							(Command Line Accessible)>
 			I wrote this program.
 
 	
+
 	
+
+3 Beginner videos\Transcripts
+	Video_#: 			<Link, Views, Date Posted, Video Length, Words Per Minute, and transcript>
+
+
+3 Beginner Videos
+	Percentage of Instruction: 	<Actual Percentage of Instruction, Runs through percent_of_instruct.py with
+						different dB thresholds. 
+
+
+LOOK AT TOMORROW:
+
+graph dB differences with splitting with spleeter and also the difference with silence remove
+Change mp3s to wavs
 
 
 
