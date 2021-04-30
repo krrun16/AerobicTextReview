@@ -12,7 +12,8 @@ Calvin's Work:
 			Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
 
 	
-	Graphing_Audio.py		<TO UPDATE>
+	Graphing_Audio.py		<Graphs a WAV file, uses 1:00-1:10. Longer produces ugly plot>
+			I wrote this progam.
 
 	
 	Labels.Percent.py: 		<Gives percent of instruction based of labels exported from audacity
@@ -24,7 +25,7 @@ Calvin's Work:
 			I wrote this program
 
 
-	silence_remove.py: 		<TO UPDATE>
+	silence_remove.py: 		<a program that uses >
 
 
 
