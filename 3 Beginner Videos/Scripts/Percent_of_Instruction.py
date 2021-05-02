@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import sys
 
+#filename = "C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Videos/Video_1/vocals.wav"
 
         
 filename = sys.argv[1]
@@ -28,7 +29,7 @@ audio_db = pd.DataFrame(20 * np.log10(audio4))
 #audio_db = audio_db[audio_db != ]
     
 #Filter out dB not in 
-audio_voice = audio_db.loc[(audio_db[0] <= 60) & (audio_db[0] >= 20)]
+audio_voice = audio_db.loc[(audio_db[0] <= 80) & (audio_db[0] >= 0)]
 
 #Length of instruction
 sec_instruct = len(audio_voice) / (input_data[0])

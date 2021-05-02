@@ -8,34 +8,23 @@ Calvin's Work:
 	
 
 3 Beginner videos\scripts
-	amplify.py:			<Amplifies a WAV file by a given scaling factor (Command Line Accessible)>
+	Amplify.py:			<Amplifies a WAV file by a given scaling factor (Command Line Accessible)>
 			Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
 
 	
-	Graphing_Audio.py		<Graphs a WAV file, uses 1:00-1:10. Longer produces ugly plot>
-			I wrote this progam.
+	Graph_Audio.py		<Graphs a WAV file, uses 1:00-1:10. Longer produces ugly plot>
 
 	
-	Labels.Percent.py: 		<Gives percent of instruction based of labels exported from audacity
-							(Command Line Accessible)>
-			I wrote this program.
+	Labels_Percent.py: 		<Gives percent of instruction based of labels exported from audacity>
 
 
-	Percent_of_Instruction.py 	<Finds Percent of Instruction from a Wav import, dB threshold TBD (CMA)>
-			I wrote this program
+	Percent_of_Instruction.py 	<Finds Percent of Instruction from a Wav import, dB threshold TBD>
 
 
-	silence_remove.py: 		<a program that uses >
+	Silence_Remove.py: 		<a program that silences sound below a threshold generated with ML>
+			Github doc: https://github.com/ngbala6/Audio-Processing/blob/master/Silence-Remove/silenceremove.py
 
 
-
-	Labels.Percent.py: 		<Gives percent of instruction based of labels exported from audacity
-							(Command Line Accessible)>
-			I wrote this program.
-
-	
-
-	
 
 3 Beginner videos\Transcripts
 	Video_#: 			<Link, Views, Date Posted, Video Length, Words Per Minute, and transcript>

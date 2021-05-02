@@ -4,6 +4,7 @@ import sys
 #Manually fixed/placed labels
 
 #Video 
+#"C:/Users/calvi/OneDrive - University of Iowa/Documents/aerobictextreview/3 Beginner Videos/Videos/Video_3/Edited_labels_vocals.txt"
 
 #Reads the input file if using command line
 filename = sys.argv[1]
