@@ -35,10 +35,7 @@ Calvin's Work:
 						different dB thresholds. 
 
 
-LOOK AT TOMORROW:
 
-graph dB differences with splitting with spleeter and also the difference with silence remove
-Change mp3s to wavs
 
 
 
