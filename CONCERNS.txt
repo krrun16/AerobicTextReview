@@ -1,3 +1,0 @@
-
-Detecting heavy breathing as instruction or not: can manually detect in audacity, but not sure what the python 
-	script will do. 

@@ -1,0 +1,23 @@
+Video 3 
+			# actually not speaking		# actually speaking
+# labels not speaking		1369				20
+# labels speaking		148				1249
+
+# correct: 2618
+% agreement: 94%
+
+Cohen's Kappa: 
+
+p computer said yes = 50.1%
+p actually said yes = 45.5%
+p yes at random = 22.8%
+
+p computer said no = 49.9%
+p actually said no = 54.5%
+p no at random = 27.2%
+
+p agree at random = 50%
+
+Kappa = 0.88
+
+
