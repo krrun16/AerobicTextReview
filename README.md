@@ -29,16 +29,16 @@ Video_#:
 	
 
 **3 Beginner videos\scripts**
-- Amplify.py 					<Amplifies a WAV file by a given scaling factor>
+- Amplify.py 					{Amplifies a WAV file by a given scaling factor}
 Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
 
-- Graph_Audio.py				<Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot>
+- Graph_Audio.py				{Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot}
 
-- Labels_Percent.py 			<Gives percent of instruction based of labels exported from audacity>
+- Labels_Percent.py 			{Gives percent of instruction based of labels exported from audacity}
 
-- Percent_of_Instruction.py 	<Finds Percent of Instruction from a Wav import, dB threshold TBD>
+- Percent_of_Instruction.py 	{Finds Percent of Instruction from a Wav import, dB threshold TBD}
 
-- Silence_Remove.py 		<a program that silences sound below a threshold generated with ML>
+- Silence_Remove.py 		{a program that silences sound below a threshold generated with ML}
 Github doc: https://github.com/ngbala6/Audio-Processing/blob/master/Silence-Remove/silenceremove.py
 
 
