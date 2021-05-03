@@ -1,6 +1,6 @@
-Calvin's Work:
+3 Beginner Videos
 
-3 Beginner videos\Calvin_Videos
+3 Beginner videos\Videos
 	Video_#: accompaniment.wav 	<Music from using spleeter>
 		 vocals.wav 		<Vocals from using spleeter>
 		 video_#.mp3 		<original recording in audacity>
@@ -8,11 +8,11 @@ Calvin's Work:
 	
 
 3 Beginner videos\scripts
-	Amplify.py:			<Amplifies a WAV file by a given scaling factor (Command Line Accessible)>
+	Amplify.py:			<Amplifies a WAV file by a given scaling factor>
 			Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
 
 	
-	Graph_Audio.py		<Graphs a WAV file, uses 1:00-1:10. Longer produces ugly plot>
+	Graph_Audio.py			<Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot>
 
 	
 	Labels_Percent.py: 		<Gives percent of instruction based of labels exported from audacity>
@@ -35,6 +35,7 @@ Calvin's Work:
 						different dB thresholds. 
 
 
+	Graphs				<Graphs of dB's of each video at different time increments>
 
 
 

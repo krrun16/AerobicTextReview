@@ -20,9 +20,11 @@ audio_db = pd.DataFrame(20 * np.log10(audio))
 
 
 # plot the [] designated frames
+# to find the seconds of video indexed, divide by frame rate
 plt.plot(audio_db[2646000:3087000])
 plt.ylabel("dB")
 plt.xlabel("Time")
+
 # set the title  
 plt.title("Sample Wav")
 # display the plot
