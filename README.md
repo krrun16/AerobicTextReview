@@ -17,49 +17,65 @@ It is fine if you explore these things and keep the code out of this repository.
 
 **TABLE OF CONTENTS:** 
 
-**--> 3 Beginner Videos**
+** Classifications **
 
-**3 Beginner videos\Videos**
+	** Original work **
+		
+		** vids123 **
+			Three original qualitative labels and three files indicating the output of proofreading.
+		
+		** vids456 **
+			Three original qualitative label files, one file indicating proofreading, and three final qualitative label files.
+			
+	** Classifications_Vids123 **
+		Final qualitative classifications in excel format for first three videos **
+		
+	** Classifications_Vids456 **
+		Final qualitative classifications in excel format for second three videos **
+		
+	** codebook **
+		Final draft of codebook used to conduct qualitative coding, proofread by external collaborators
 
-Video_#: 
-- 	accompaniment.wav 		<Music from using spleeter>
-- 	vocals.wav 				<Vocals from using spleeter>	
-- 	video_#.mp3 			<original recording in audacity>
-- 	EDITED_LEGIT_LABELS 	<labeled timestamp durations of sound detected in video>
+** Video Analysis **
+
+	** Audio **
+		
+		** ground_truth_speaking_vs_not **
+			six .txt files indicating the ground truth time ranges in which a person was speaking
+			
+		** original_without_ads **
+			six audio files of the workouts, after advertisements were removed. These were recorded using Audacity.
+			
+		** post_spleeter **
+			six folders containing the "vocals" and "accompaniment" audio files after running the original workout file through spleeter.
+			
+	** Scripts **
 	
+		- amplify.py 					{Amplifies a WAV file by a given scaling factor - a potential approach}
+										Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
+		- Graph_Audio.py				{Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot}
 
-**3 Beginner videos\scripts**
-- Amplify.py 					{Amplifies a WAV file by a given scaling factor - a potential approach}
-Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
+		- Labels_Percent.py 			{Gives percent of instruction based of labels exported from audacity}
 
-- Graph_Audio.py				{Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot}
+		- Percent_of_Instruction.py 	{Finds Percent of Instruction from a Wav import, dB threshold TBD}
 
-- Labels_Percent.py 			{Gives percent of instruction based of labels exported from audacity}
+		- silence_remove.py 			{a program that silences sound below a threshold generated with ML - a potential approach}
+										Github doc: https://github.com/ngbala6/Audio-Processing/blob/master/Silence-Remove/silenceremove.py
+		- sox_documentation.txt			code documentation to find the length of a video
+		
+		- spleeterNotes.txt				notes on how to run spleeter
+		
+		- test_parser.py				original code that gave an example of parsing text using nltk library
+		
+	** Transcripts **
+		
+		- VideoInformation: 			Link, Views, Date Posted, Video Length, Words Per Minute
+		
+		- Video_#						transcript of workout
 
-- Percent_of_Instruction.py 	{Finds Percent of Instruction from a Wav import, dB threshold TBD}
+** Percentage of Instruction **			Percentage of Instruction, Runs through percent_of_instruct.py with different dB thresholds (ignore kappa)
 
-- Silence_Remove.py 		{a program that silences sound below a threshold generated with ML - a potential approach}
-Github doc: https://github.com/ngbala6/Audio-Processing/blob/master/Silence-Remove/silenceremove.py
+** Graphs **							Graphs of dB's of each video at different time increments
 
-
-
-**3 Beginner videos\Transcripts**
-- Video_#: 			<Link, Views, Date Posted, Video Length, Words Per Minute, and transcript>
-
-
-**3 Beginner Videos**
-
-- Percentage of Instruction: 	<Actual Percentage of Instruction, Runs through percent_of_instruct.py with different dB thresholds. >
-
-
-- Graphs						<Graphs of dB's of each video at different time increments>
-
-
-
-
-CONCERNS TO THINK ABOUT:
-
-Detecting heavy breathing as instruction or not: can manually detect in audacity, but not sure what the python 
-	script will do. 
-
--- I think when an instructor uses a mic it detects a lot of breathes as instruction
+Considerations:
+- Whether we accept breathing as "instruction": When the instructor uses a mic, spleeter labels breathing as vocals
