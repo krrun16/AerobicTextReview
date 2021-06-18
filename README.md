@@ -12,10 +12,8 @@ With the following notes, I am referring to directions on https://www.nltk.org/i
 
 Then, you can follow this tutorial to install nltk packages and run basic text analysis. This should give us the foundation to get started: https://likegeeks.com/nlp-tutorial-using-python-nltk/
 
-It is fine if you explore these things and keep the code out of this repository. But when we start writing code for the project, make sure you are in your anaconda environment with everything installed. I added a file I was using along with the tutorial to .gitignore so that I could keep it around, but not have it pushed.
 
-
-**TABLE OF CONTENTS:** 
+TABLE OF CONTENTS:
 
 ** Classifications **
 
@@ -51,27 +49,27 @@ It is fine if you explore these things and keep the code out of this repository.
 			
 	** Scripts **
 	
-		- amplify.py 					{Amplifies a WAV file by a given scaling factor - a potential approach}
+		** amplify.py ** 				{Amplifies a WAV file by a given scaling factor - a potential approach}
 										Github doc: https://github.com/russellcardullo/python-dsp/blob/master/amplify.py
-		- Graph_Audio.py				{Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot}
+		** Graph_Audio.py **			{Graphs a WAV file, uses 1:00-1:10. Longer duration produces ugly plot}
 
-		- Labels_Percent.py 			{Gives percent of instruction based of labels exported from audacity}
+		** Labels_Percent.py **			{Gives percent of instruction based of labels exported from audacity}
 
-		- Percent_of_Instruction.py 	{Finds Percent of Instruction from a Wav import, dB threshold TBD}
+		** Percent_of_Instruction.py ** {Finds Percent of Instruction from a Wav import, dB threshold TBD}
 
-		- silence_remove.py 			{a program that silences sound below a threshold generated with ML - a potential approach}
+		** silence_remove.py **			{a program that silences sound below a threshold generated with ML - a potential approach}
 										Github doc: https://github.com/ngbala6/Audio-Processing/blob/master/Silence-Remove/silenceremove.py
-		- sox_documentation.txt			code documentation to find the length of a video
+		** sox_documentation.txt **			code documentation to find the length of a video
 		
-		- spleeterNotes.txt				notes on how to run spleeter
+		**spleeterNotes.txt **			notes on how to run spleeter
 		
-		- test_parser.py				original code that gave an example of parsing text using nltk library
+		** test_parser.py **			original code that gave an example of parsing text using nltk library
 		
 	** Transcripts **
 		
-		- VideoInformation: 			Link, Views, Date Posted, Video Length, Words Per Minute
+		** VideoInformation ** 			Link, Views, Date Posted, Video Length, Words Per Minute
 		
-		- Video_#						transcript of workout
+		** Video_#	**					transcript of workout
 
 ** Percentage of Instruction **			Percentage of Instruction, Runs through percent_of_instruct.py with different dB thresholds (ignore kappa)
 
