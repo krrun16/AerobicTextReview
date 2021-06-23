@@ -109,7 +109,7 @@ textWords=getTextWords(txtFilename=txtFilename)
 fullText=getFullText(txtFilename=txtFilename)
 synonymArray=getSynonymArray(["squat","jumping jack"])
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"testingFunctionFamiliarExercisePhrases.csv")
+makeSynonymCSV(synonymDictionary,"video1_FamiliarExercisePhrases.csv")
 
 txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
@@ -117,7 +117,7 @@ textWords=getTextWords(txtFilename=txtFilename)
 fullText=getFullText(txtFilename=txtFilename)
 synonymArray=getSynonymArray(["arm","leg", "head"])
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"testingFunctionBodyParts.csv")
+makeSynonymCSV(synonymDictionary,"video1_BodyParts.csv")
 
 txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
@@ -125,13 +125,14 @@ textWords=getTextWords(txtFilename=txtFilename)
 fullText=getFullText(txtFilename=txtFilename)
 synonymArray=getSynonymArray(["up","left","right","down"])
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"testingFunctionDirectionToMove.csv")
+makeSynonymCSV(synonymDictionary,"video1_FunctionDirectionToMove.csv")
 
 txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
 textWords=getTextWords(txtFilename=txtFilename)
 fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["feel","stretch"])
+lemmatizeArray=getLemmatizeArray(["feel","stretch"])
+synonymArray=getSynonymArray(lemmatizeArray)
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
 makeSynonymCSV(synonymDictionary,"testingFunctionExpectedBodySensation.csv")
 
@@ -139,17 +140,18 @@ txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
 textWords=getTextWords(txtFilename=txtFilename)
 fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["weight","chair","box"])
+synonymArray=getSynonymArray(["weight","chair","box","mat"])
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"testingFunctionEquipment.csv")
+makeSynonymCSV(synonymDictionary,"video1_Equipment.csv")
 
 txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
 textWords=getTextWords(txtFilename=txtFilename)
 fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["ready","starting"])
+lemmatizeArray=getLemmatizeArray(["ready","starting"])
+synonymArray=getSynonymArray(lemmatizeArray)
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"testingFunctionStartWords.csv")
+makeSynonymCSV(synonymDictionary,"video1_StartWords.csv")
 
 txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
@@ -160,3 +162,12 @@ synonymArray=getSynonymArray(lemmatizeArray)
 synonymArray=getSynonymArray(["over","done"])
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
 makeSynonymCSV(synonymDictionary,"video1_stoppingWordCount.csv")
+
+txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
+textLines=getTextLines(txtFilename=txtFilename)
+textWords=getTextWords(txtFilename=txtFilename)
+fullText=getFullText(txtFilename=txtFilename)
+lemmatizeArray=getLemmatizeArray(["breathe","nice","hot","ready"])
+synonymArray=getSynonymArray(lemmatizeArray)
+synonymDictionary=getSynonymDictionary(synonymArray,fullText)
+makeSynonymCSV(synonymDictionary,"video1_unacceptable.csv")
