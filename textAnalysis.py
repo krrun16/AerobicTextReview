@@ -134,7 +134,7 @@ fullText=getFullText(txtFilename=txtFilename)
 lemmatizeArray=getLemmatizeArray(["feel","stretch"])
 synonymArray=getSynonymArray(lemmatizeArray)
 synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"testingFunctionExpectedBodySensation.csv")
+makeSynonymCSV(synonymDictionary,"video1_ExpectedBodySensation.csv")
 
 txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
 textLines=getTextLines(txtFilename=txtFilename)
