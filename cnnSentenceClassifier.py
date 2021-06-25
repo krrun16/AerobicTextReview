@@ -204,4 +204,4 @@ plot_history(history)
 
 from keras.models import load_model
 
-model.save('my_model_06.24.21.h5')  # creates a HDF5 file 'my_model.h5'
+model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
