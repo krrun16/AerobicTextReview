@@ -103,78 +103,87 @@ def makeSynonymCSV(synonymDictionary,csvFilename):
         for key, value in synonymDictionary.items():
             writer.writerow([key, value])
 
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["squat","jumping jack"])
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_FamiliarExercisePhrases.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["arm","leg", "head"])
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_BodyParts.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["up","left","right","down"])
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_FunctionDirectionToMove.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-lemmatizeArray=getLemmatizeArray(["feel","stretch"])
-synonymArray=getSynonymArray(lemmatizeArray)
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_ExpectedBodySensation.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-synonymArray=getSynonymArray(["weight","chair","box","mat"])
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_Equipment.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-lemmatizeArray=getLemmatizeArray(["ready","starting"])
-synonymArray=getSynonymArray(lemmatizeArray)
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_StartWords.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-lemmatizeArray=getLemmatizeArray(["over","done"])
-synonymArray=getSynonymArray(lemmatizeArray)
-synonymArray=getSynonymArray(["over","done"])
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_stoppingWordCount.csv")
-
-txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
-textLines=getTextLines(txtFilename=txtFilename)
-textWords=getTextWords(txtFilename=txtFilename)
-fullText=getFullText(txtFilename=txtFilename)
-lemmatizeArray=getLemmatizeArray(["breathe","nice","hot","ready"])
-synonymArray=getSynonymArray(lemmatizeArray)
-synonymDictionary=getSynonymDictionary(synonymArray,fullText)
-makeSynonymCSV(synonymDictionary,"video1_unacceptable.csv")
+# function that makes a dictionary from an array of manually entered phrases
+def fullGetDictionary(transcriptName,manualArray,csvFilename):
+    txtFilename=os.getcwd()+transcriptName
+    textLines=getTextLines(txtFilename=txtFilename)
+    textWords=getTextWords(txtFilename=txtFilename)
+    fullText=getFullText(txtFilename=txtFilename)
+    synonymArray=getSynonymArray(manualArray)
+    synonymDictionary=getSynonymDictionary(synonymArray,fullText)
+    makeSynonymCSV(synonymDictionary,csvFilename+".csv")
 
 
 # /////////////////////////
-# Table 2
+# TABLE 1
+# manually entered phrases
+familiarExercisePhrases=["squat","jumping jack","push up","plank"]
+bodyParts=["arm","leg","head","hand", "foot","abs", "stomach"]
+    # issue: "back" might overlap with direction back?
+directionToMove=["move up","move down", "move left", "move right","move side",
+                 "move front", "move back","bring up","bring down","bring left",
+                 "bring right","bring side", "bring front","bring back"]
+expectedBodySensation=["you should feel a stretch","feel the burn","sore"]
+equipment=["weights", "chair","box","mat","ball","resistance band"]
+
+# getting dictionaries
+fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+                  familiarExercisePhrases,
+                  "video1_FamiliarExercisePhrases")
+fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+                  bodyParts,
+                  "video1_BodyParts")
+fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+                  directionToMove,
+                  "video1_FunctionDirectionToMove")
+fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+                  expectedBodySensation,
+                  "video1_ExpectedBodySensation")
+fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+                  equipment,
+                  "video1_Equipment")
+
+# old table 2 code
+#txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
+#textLines=getTextLines(txtFilename=txtFilename)
+#textWords=getTextWords(txtFilename=txtFilename)
+#fullText=getFullText(txtFilename=txtFilename)
+#lemmatizeArray=getLemmatizeArray(["ready","starting"])
+#synonymArray=getSynonymArray(lemmatizeArray)
+#synonymDictionary=getSynonymDictionary(synonymArray,fullText)
+#makeSynonymCSV(synonymDictionary,"video1_StartWords.csv")
+
+#txtFilename=os.getcwd()+"/Video Analysis/Transcripts/Video_1_Hasfit.txt"
+#textLines=getTextLines(txtFilename=txtFilename)
+#textWords=getTextWords(txtFilename=txtFilename)
+#fullText=getFullText(txtFilename=txtFilename)
+#lemmatizeArray=getLemmatizeArray(["over","done"])
+#synonymArray=getSynonymArray(lemmatizeArray)
+#synonymArray=getSynonymArray(["over","done"])
+#synonymDictionary=getSynonymDictionary(synonymArray,fullText)
+#makeSynonymCSV(synonymDictionary,"video1_stoppingWordCount.csv")
+
+
+# /////////////////////////
+# TABLE 3
+# manually entered phrases
+breathing=["breathe in", "breathe out"]
+encouraging=["nice job","I'm so hot","I'm so tired"]
+inaccessible=["here","there","make sure you can see the screen"]
+filler=["are you ready"]
+subjective=["stay nice and under control"]
+unfamiliarExercisePhrases=["rise","chop down","stay in line"]
+
+concatenatedUnacceptablePhrases = breathing+encouraging+inaccessible+filler+subjective+unfamiliarExercisePhrases
+
+# getting dictionaries
+fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+                  concatenatedUnacceptablePhrases,
+                  "video1_Unacceptable")
+
+
+# /////////////////////////
+# TABLE 2
 
 # function to count the number of instances of each phrase in the transcript text
 def getPhraseDictionary(phraseList,fullText) -> {str:int}:
