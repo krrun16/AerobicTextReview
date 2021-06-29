@@ -61,18 +61,38 @@ def getFullText(txtFilename) -> str:
     fullText = fullText.lower()
     return fullText
 
-# function to lemmatize (stem) the original words and then return all possible synonym
+# function to lemmatize (stem) the original words and then return all possible synonyms
 def getLemmatizeArray(myWords) -> [str]:
     # Lemmatize (getting the stem of a word and it outputs a real word)
     lemmatizer = WordNetLemmatizer()
     myWordsLemm = []
-
     for word in myWords:
         myWordsLemm.append(lemmatizer.lemmatize(word, pos="v"))
         myWordsLemm.append(lemmatizer.lemmatize(word, pos="n"))
         myWordsLemm.append(lemmatizer.lemmatize(word, pos="a"))
         myWordsLemm.append(lemmatizer.lemmatize(word, pos="r"))
+    # Remove duplicate lemmatize results
+    myWordsLemm = list(set(myWordsLemm))
+    return myWordsLemm
 
+# function to lemmatize (stem) the original words and then return all possible noun synonyms
+def getLemmatizeArrayNoun(myWords) -> [str]:
+    # Lemmatize (getting the stem of a word and it outputs a real word)
+    lemmatizer = WordNetLemmatizer()
+    myWordsLemm = []
+    for word in myWords:
+        myWordsLemm.append(lemmatizer.lemmatize(word, pos="n"))
+    # Remove duplicate lemmatize results
+    myWordsLemm = list(set(myWordsLemm))
+    return myWordsLemm
+
+# function to lemmatize (stem) the original words and then return all possible verb synonyms
+def getLemmatizeArrayVerb(myWords) -> [str]:
+    # Lemmatize (getting the stem of a word and it outputs a real word)
+    lemmatizer = WordNetLemmatizer()
+    myWordsLemm = []
+    for word in myWords:
+        myWordsLemm.append(lemmatizer.lemmatize(word, pos="v"))
     # Remove duplicate lemmatize results
     myWordsLemm = list(set(myWordsLemm))
     return myWordsLemm
@@ -82,7 +102,7 @@ def getSynonymArray(myWordsLemm) -> [str]:
     # Get synonym
     myWordsSynonym = []
     for word in myWordsLemm:
-        for synonym in wordnet.synsets(word):
+        for synonym in wordnet.synsets(word.n):
             for lemma in synonym.lemmas():
                 myWordsSynonym.append(lemma.name().replace("_", " "))
 
@@ -103,12 +123,38 @@ def makeSynonymCSV(synonymDictionary,csvFilename):
         for key, value in synonymDictionary.items():
             writer.writerow([key, value])
 
-# function that makes a dictionary from an array of manually entered phrases
+# function that makes a dictionary from an array of manually entered phrases with all parts of speech
 def fullGetDictionary(transcriptName,manualArray,csvFilename):
     txtFilename=os.getcwd()+transcriptName
     textLines=getTextLines(txtFilename=txtFilename)
     textWords=getTextWords(txtFilename=txtFilename)
     fullText=getFullText(txtFilename=txtFilename)
+    lemmatizeArray=getLemmatizeArray(manualArray)
+    synonymArray=getSynonymArray(lemmatizeArray)
+    synonymArray=getSynonymArray(manualArray)
+    synonymDictionary=getSynonymDictionary(synonymArray,fullText)
+    makeSynonymCSV(synonymDictionary,csvFilename+".csv")
+
+# function that makes a dictionary from an array of manually entered phrases with nouns only
+def fullGetDictionaryNoun(transcriptName,manualArray,csvFilename):
+    txtFilename=os.getcwd()+transcriptName
+    textLines=getTextLines(txtFilename=txtFilename)
+    textWords=getTextWords(txtFilename=txtFilename)
+    fullText=getFullText(txtFilename=txtFilename)
+    lemmatizeArray=getLemmatizeArrayNoun(manualArray)
+    synonymArray=getSynonymArray(lemmatizeArray)
+    synonymArray=getSynonymArray(manualArray)
+    synonymDictionary=getSynonymDictionary(synonymArray,fullText)
+    makeSynonymCSV(synonymDictionary,csvFilename+".csv")
+
+# function that makes a dictionary from an array of manually entered phrases with verbs only
+def fullGetDictionaryVerb(transcriptName,manualArray,csvFilename):
+    txtFilename=os.getcwd()+transcriptName
+    textLines=getTextLines(txtFilename=txtFilename)
+    textWords=getTextWords(txtFilename=txtFilename)
+    fullText=getFullText(txtFilename=txtFilename)
+    lemmatizeArray=getLemmatizeArrayVerb(manualArray)
+    synonymArray=getSynonymArray(lemmatizeArray)
     synonymArray=getSynonymArray(manualArray)
     synonymDictionary=getSynonymDictionary(synonymArray,fullText)
     makeSynonymCSV(synonymDictionary,csvFilename+".csv")
@@ -117,8 +163,8 @@ def fullGetDictionary(transcriptName,manualArray,csvFilename):
 # /////////////////////////
 # TABLE 1
 # manually entered phrases
-familiarExercisePhrases=["squat","jumping jack","push up","plank"]
-bodyParts=["arm","leg","head","hand", "foot","abs", "stomach"]
+familiarExercisePhrases=["squat", "jumping jack", "jump", "push up", "plank"]
+bodyParts=["arm", "leg", "head", "hand", "foot", "abs", "stomach"]
     # issue: "back" might overlap with direction back?
 directionToMove=["move up","move down", "move left", "move right","move side",
                  "move front", "move back","bring up","bring down","bring left",
@@ -127,10 +173,10 @@ expectedBodySensation=["you should feel a stretch","feel the burn","sore"]
 equipment=["weights", "chair","box","mat","ball","resistance band"]
 
 # getting dictionaries
-fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+fullGetDictionaryNoun("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
                   familiarExercisePhrases,
                   "video1_FamiliarExercisePhrases")
-fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+fullGetDictionaryNoun("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
                   bodyParts,
                   "video1_BodyParts")
 fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
@@ -139,7 +185,7 @@ fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
 fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
                   expectedBodySensation,
                   "video1_ExpectedBodySensation")
-fullGetDictionary("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
+fullGetDictionaryNoun("/Video Analysis/Transcripts/Video_1_Hasfit.txt",
                   equipment,
                   "video1_Equipment")
 
