@@ -40,10 +40,11 @@ def create_word_embedding(comments, add_pos_tags=False):
                 word_embedding[word] = count
                 count += 1
             encoded_comment.append(word_embedding[word])
+
         encoded_comments.append(encoded_comment)
         commentAndEncodedComment.append([originalComment,encoded_comment])
 
-    return encoded_comments, commentAndEncodedComment
+    return encoded_comments, commentAndEncodedComment, word_embedding
 
 
 def encode_and_split_data(comments, data_split=0.8):
@@ -58,7 +59,7 @@ def encode_and_split_data(comments, data_split=0.8):
     '''
 
     # Word + Punctuation + POS Tags embedding
-    encoded_comments, commentAndEncodedComment = create_word_embedding(comments, add_pos_tags=True)
+    encoded_comments, commentAndEncodedComment, word_embedding = create_word_embedding(comments, add_pos_tags=True)
 
     # Determine the training sample split point
     splitValue = int(len(encoded_comments) * data_split)
@@ -68,12 +69,12 @@ def encode_and_split_data(comments, data_split=0.8):
     x_test = np.array(encoded_comments[splitValue:])
     x_test_commentAndEncodedComment = commentAndEncodedComment[splitValue:]
 
-    return x_train, x_test, x_test_commentAndEncodedComment, splitValue
+    return x_train, x_test, x_test_commentAndEncodedComment, splitValue, word_embedding
 
 # Get train and test sets for x (comments) and y (phrase category)
 results = [["x","y"]]
 
-csvfile=open(os.getcwd()+"/Classifications/Classifications_Vids123_original.csv")
+csvfile=open(os.getcwd()+"/Classifications/Cleaned/Classifications_Vids123_filled_coded.csv")
 reader = csv.reader(csvfile)
 for row in reader: # each row is a list
     results.append(row)
@@ -88,7 +89,7 @@ for i in results:
 
 print(y_categories)
 
-x_train, x_test, x_test_commentAndEncodedComment, splitValue=encode_and_split_data(x_comments,
+x_train, x_test, x_test_commentAndEncodedComment, splitValue, word_embedding=encode_and_split_data(x_comments,
                                                        data_split=0.8)
 
 y_train = (y_categories[:splitValue])
@@ -108,7 +109,13 @@ for list in y_test:
 y_trainInteger=y_train_new
 y_testInteger=y_test_new
 
-# Determine the number of categories + default(i.e. sentence types)
+# Save the word embedding codes for future use if I want to test the same model on a different dataset
+with open('wordEmbedding.csv', 'w') as csv_file:
+    writer = csv.writer(csv_file)
+    for key, value in word_embedding.items():
+       writer.writerow([key, value])
+
+# Determine the number of categories + default (i.e. sentence types)
 num_classes = np.max(y_trainInteger) + 1
 
 max_words, batch_size, maxlen, epochs = 10000, 400, 500, 200
@@ -150,12 +157,13 @@ model.compile(loss='categorical_crossentropy',
 from keras.callbacks import History
 history = History()
 
-# "Fit the model" (train model), using training data (80% of datset)
+# "Fit the model" (train model) using training data (80% of dataset)
 model.fit(x_train, y_train, batch_size=batch_size,
           epochs=epochs, validation_data=(x_test, y_test), callbacks=[history])
 
 # Evaluate the trained model, using the test data (20% of the dataset)
 score = model.evaluate(x_test, y_test, batch_size=batch_size)
+
 # Print the test score (this may be low since the annotated test set is not completely accurate)
 print(score)
 
@@ -170,7 +178,7 @@ for i in range(len(x_test_commentAndEncodedComment)):
     inputEncoded = sequence.pad_sequences(inputEncoded, maxlen=maxlen)
 
     prediction=model.predict(inputEncoded, batch_size=None, verbose=0, steps=None, callbacks=None, max_queue_size=10,workers=1, use_multiprocessing=False)
-
+    print(prediction)
     max_index = prediction[0].argmax(axis=0)
 
     worksheet.write_row(i, 0, [originalInputText,max_index,y_testInteger[i][0]])
@@ -202,6 +210,5 @@ def plot_history(history):
 
 plot_history(history)
 
-from keras.models import load_model
-
-model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
+# Save the model to test or use more in the future
+model.save('myModel.h5')
