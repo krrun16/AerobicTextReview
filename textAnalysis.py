@@ -102,10 +102,29 @@ def getSynonymArray(myWordsLemm) -> [str]:
     # Get synonym
     myWordsSynonym = []
     for word in myWordsLemm:
-        for synonym in wordnet.synsets(word.n):
+        for synonym in wordnet.synsets(word):
             for lemma in synonym.lemmas():
                 myWordsSynonym.append(lemma.name().replace("_", " "))
+    return myWordsSynonym
 
+# function to return noun synonyms
+def getSynonymArrayNoun(myWordsLemm) -> [str]:
+    # Get synonym
+    myWordsSynonym = []
+    for word in myWordsLemm:
+        for synonym in wordnet.synsets(word, pos="n"):
+            for lemma in synonym.lemmas():
+                myWordsSynonym.append(lemma.name().replace("_", " "))
+    return myWordsSynonym
+
+# function to return verb synonyms
+def getSynonymArrayVerb(myWordsLemm) -> [str]:
+    # Get synonym
+    myWordsSynonym = []
+    for word in myWordsLemm:
+        for synonym in wordnet.synsets(word, pos="v"):
+            for lemma in synonym.lemmas():
+                myWordsSynonym.append(lemma.name().replace("_", " "))
     return myWordsSynonym
 
 # function to count the number of instances of each synonym in the string
@@ -131,7 +150,6 @@ def fullGetDictionary(transcriptName,manualArray,csvFilename):
     fullText=getFullText(txtFilename=txtFilename)
     lemmatizeArray=getLemmatizeArray(manualArray)
     synonymArray=getSynonymArray(lemmatizeArray)
-    synonymArray=getSynonymArray(manualArray)
     synonymDictionary=getSynonymDictionary(synonymArray,fullText)
     makeSynonymCSV(synonymDictionary,csvFilename+".csv")
 
@@ -142,8 +160,7 @@ def fullGetDictionaryNoun(transcriptName,manualArray,csvFilename):
     textWords=getTextWords(txtFilename=txtFilename)
     fullText=getFullText(txtFilename=txtFilename)
     lemmatizeArray=getLemmatizeArrayNoun(manualArray)
-    synonymArray=getSynonymArray(lemmatizeArray)
-    synonymArray=getSynonymArray(manualArray)
+    synonymArray=getSynonymArrayNoun(lemmatizeArray)
     synonymDictionary=getSynonymDictionary(synonymArray,fullText)
     makeSynonymCSV(synonymDictionary,csvFilename+".csv")
 
@@ -154,8 +171,7 @@ def fullGetDictionaryVerb(transcriptName,manualArray,csvFilename):
     textWords=getTextWords(txtFilename=txtFilename)
     fullText=getFullText(txtFilename=txtFilename)
     lemmatizeArray=getLemmatizeArrayVerb(manualArray)
-    synonymArray=getSynonymArray(lemmatizeArray)
-    synonymArray=getSynonymArray(manualArray)
+    synonymArray=getSynonymArrayVerb(lemmatizeArray)
     synonymDictionary=getSynonymDictionary(synonymArray,fullText)
     makeSynonymCSV(synonymDictionary,csvFilename+".csv")
 
@@ -166,9 +182,7 @@ def fullGetDictionaryVerb(transcriptName,manualArray,csvFilename):
 familiarExercisePhrases=["squat", "jumping jack", "jump", "push up", "plank"]
 bodyParts=["arm", "leg", "head", "hand", "foot", "abs", "stomach"]
     # issue: "back" might overlap with direction back?
-directionToMove=["move up","move down", "move left", "move right","move side",
-                 "move front", "move back","bring up","bring down","bring left",
-                 "bring right","bring side", "bring front","bring back"]
+directionToMove=["up", "down", "left", "right", "side", "front", "back"]
 expectedBodySensation=["you should feel a stretch","feel the burn","sore"]
 equipment=["weights", "chair","box","mat","ball","resistance band"]
 
