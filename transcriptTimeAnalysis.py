@@ -49,7 +49,7 @@ for x in range(numVideos):
                 phrase += currentPhrase
                 continue
             silenceLength = secondStart - firstEnd
-            if silenceLength >= 0.5: # breaks between phrases are assumed to be 0.5 seconds
+            if silenceLength >= 0.2: # breaks between phrases are assumed to be 0.2 seconds (0.5 was too big)
                 writer.writerow([currentPhrase,str(currentStart),str(firstEnd)])
                 currentPhrase = ""
             else:
