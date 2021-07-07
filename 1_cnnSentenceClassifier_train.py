@@ -70,20 +70,26 @@ for list in y_train:
     for subitem in list:
         y_train_new.append([int(subitem)])
 
+max_words=0
+
 # /////////////////////////////////////////////////////////////////////////////////
 # Save the word embedding codes for future use to test the same model on a different dataset
 with open('1_wordEmbedding.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
     for key, value in word_embedding.items():
         writer.writerow([key, value])
+        max_words+=1
 
 # /////////////////////////////////////////////////////////////////////////////////
 # Determine the number of categories + default (i.e. sentence types)
 num_classes = np.max(y_train_new) + 1
 
+print(max_words)
+
 # Same values as this tutorial, except using 200 epochs for more training: https://austingwalters.com/convolutional-neural-networks-cnn-to-classify-sentences/
-max_words, batch_size, maxlen, epochs = 10000, 64, 500, 200
-embedding_dims, filters, kernel_size, hidden_dims = 50, 250, 5, 150
+# If you're gonna change batch_size or maxlen, need to update it in 2_cnnSentenceClassifier_test.py as well!!!!!!!
+batch_size, maxlen, epochs = 64, 500, 200
+embedding_dims, filters, kernel_size, hidden_dims = 50, 512, 5, 150
 
 # Pad the x sentence vectors to ensure a consistent length
 x_train = sequence.pad_sequences(x_train, maxlen=maxlen)
