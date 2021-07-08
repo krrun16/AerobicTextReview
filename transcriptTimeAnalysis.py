@@ -1,7 +1,7 @@
 import csv
 import pandas as pd
 
-numVideos = 7
+numVideos = 8
 
 # Get rid of 2nd column in all files
 for x in range(numVideos):
