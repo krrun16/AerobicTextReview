@@ -1,0 +1,277 @@
+muscle,6,bodyParts
+abs,6,bodyParts
+lower body,1,bodyParts
+tricep,7,bodyParts
+heel,5,bodyParts
+glut,4,bodyParts
+back,43,bodyParts
+upper body,4,bodyParts
+arm,7,bodyParts
+feet,4,bodyParts
+knee,7,bodyParts
+hip,16,bodyParts
+shoulder,8,bodyParts
+core,7,bodyParts
+palm,1,bodyParts
+pinkie,3,bodyParts
+bicep,2,bodyParts
+elbow,12,bodyParts
+upper arm,1,bodyParts
+glute,3,bodyParts
+ear,2,bodyParts
+forearm,0,bodyParts
+finger,1,bodyParts
+rib,0,bodyParts
+tail,0,bodyParts
+calf,0,bodyParts
+calves,0,bodyParts
+on the ground,1,directionToMove
+up,50,directionToMove
+back,43,directionToMove
+angle,1,directionToMove
+to the ground,5,directionToMove
+down,10,directionToMove
+below,2,directionToMove
+over,6,directionToMove
+parallel,1,directionToMove
+ground,9,directionToMove
+off the ground,3,directionToMove
+back down,4,directionToMove
+high,1,directionToMove
+straight up,2,directionToMove
+in line,1,directionToMove
+at the top,5,directionToMove
+side to side,0,directionToMove
+open,0,directionToMove
+back together,0,directionToMove
+forward,2,directionToMove
+around,2,directionToMove
+into,8,directionToMove
+straight,7,directionToMove
+side,4,directionToMove
+right,30,directionToMove
+other side,0,directionToMove
+lower,4,directionToMove
+low,11,directionToMove
+in the ground,0,directionToMove
+out,18,directionToMove
+left,7,directionToMove
+center,0,directionToMove
+degrees,0,directionToMove
+front,1,directionToMove
+hip level,0,directionToMove
+toward,0,directionToMove
+above,0,directionToMove
+straight line,2,directionToMove
+higher,0,directionToMove
+weight,24,equipment
+dumbbell,18,equipment
+box,6,equipment
+chair,5,equipment
+seat,3,equipment
+water,1,equipment
+mat,1,equipment
+towel,0,equipment
+jump rope,0,equipment
+getting ready,1,startingAnExercise
+we're starting,1,startingAnExercise
+starting,3,startingAnExercise
+getting right into it,1,startingAnExercise
+get right into it,0,startingAnExercise
+first we're,0,startingAnExercise
+start off,0,startingAnExercise
+start it,0,startingAnExercise
+the first exercise,0,startingAnExercise
+start with,2,startingAnExercise
+start our stretch,0,startingAnExercise
+first workout,0,startingAnExercise
+here we go,3,startingAnExercise
+you ready,1,startingAnExercise
+join me now,0,startingAnExercise
+starting off,0,startingAnExercise
+start to,2,startingAnExercise
+we are done,1,stoppingAnExercise
+are done,1,stoppingAnExercise
+we're done,0,stoppingAnExercise
+it's over,0,stoppingAnExercise
+done okay,5,stoppingAnExercise
+it is done,0,stoppingAnExercise
+is done,0,stoppingAnExercise
+that's the end,1,stoppingAnExercise
+not done yet,0,duration
+not much left,2,duration
+halfway done,1,duration
+got ten seconds,1,duration
+ten second,1,duration
+got 10 more seconds,1,duration
+10 more seconds,2,duration
+more seconds left,1,duration
+more seconds,6,duration
+second break,1,duration
+20 second,1,duration
+30 second,0,duration
+seconds here,0,duration
+twenty seconds,0,duration
+ten seconds,1,duration
+we have five seconds,0,duration
+work for 20 seconds,0,duration
+twenty second,0,duration
+we've got 40 seconds,0,duration
+20 seconds,0,duration
+40 seconds of work,0,duration
+40 second,0,duration
+forty seconds here,0,duration
+forty second,0,duration
+40 seconds,0,duration
+20 seconds of each,0,duration
+60 seconds,0,duration
+20 seconds of,0,duration
+last 60 seconds,0,duration
+almost done,1,duration
+five more seconds,3,duration
+not much time left,1,duration
+almost there,5,duration
+we are almost there,0,duration
+can see the finish line,0,duration
+not done yet,0,duration
+"getting close to the end,",0,duration
+seconds,7,duration
+as quick as we can,0,pacing
+four three two one,8,pacing
+three two one,11,pacing
+five four three two one,5,pacing
+four three two one zero,4,pacing
+five four three two one zero,3,pacing
+four three two one and zero,1,pacing
+three two one and zero,3,pacing
+five four three two and one,4,pacing
+five four three two and last one zero,1,pacing
+allotted time period,1,pacing
+five come on four three two one,0,pacing
+speed this up,0,pacing
+last four three two one,0,pacing
+cue you down,0,pacing
+four three,13,pacing
+two one,11,pacing
+in three two one,0,pacing
+in three two one,0,pacing
+five come on four three two one,0,pacing
+three two,16,pacing
+at your own pace,2,pacing
+slow slow slow,0,pacing
+switch switch switch,0,pacing
+speed it up,0,pacing
+good tempo,0,pacing
+go in a tempo,0,pacing
+side side,0,pacing
+at my counts,0,pacing
+fast,1,pacing
+three in two and in one,0,pacing
+the pace is high,0,pacing
+go slow,0,pacing
+go fast,0,pacing
+three two and one,4,pacing
+in three two and one,0,pacing
+3 2 1,0,pacing
+in three come on in two and one,0,pacing
+three two and one,4,pacing
+3 2 & 1,0,pacing
+two and one,4,pacing
+three come on two and one,0,pacing
+three come on two one,0,pacing
+don't rush,0,pacing
+fast pace,0,pacing
+two and again one,0,pacing
+fast as you can,0,pacing
+your pace,0,pacing
+slow right down,0,pacing
+one two,0,pacing
+moving at a pace,1,pacing
+pause whenever,0,pacing
+take a break whenever,0,pacing
+break whenever,0,pacing
+do it slow,0,pacing
+one more time,0,quantityOfAnExercise
+not many left,1,quantityOfAnExercise
+don't have much left,1,quantityOfAnExercise
+one more exercise,1,quantityOfAnExercise
+few more,0,quantityOfAnExercise
+last one,1,quantityOfAnExercise
+few times,0,quantityOfAnExercise
+two times,0,quantityOfAnExercise
+two more,0,quantityOfAnExercise
+three different moves,0,quantityOfAnExercise
+three times,0,quantityOfAnExercise
+last five,0,quantityOfAnExercise
+one more set,0,quantityOfAnExercise
+three more,0,quantityOfAnExercise
+three rounds,0,quantityOfAnExercise
+try that again,0,quantityOfAnExercise
+one more,3,quantityOfAnExercise
+two different movement,0,quantityOfAnExercise
+last round,0,quantityOfAnExercise
+one more round,0,quantityOfAnExercise
+last time,0,quantityOfAnExercise
+two jumping jack,0,quantityOfAnExercise
+four high knee,0,quantityOfAnExercise
+one on each side,0,quantityOfAnExercise
+one right and one left,0,quantityOfAnExercise
+circuit number,0,quantityOfAnExercise
+last time on,0,quantityOfAnExercise
+this is one of two,0,quantityOfAnExercise
+round one,0,transitioning
+then we go to,0,transitioning
+we're going to,25,transitioning
+right into the,2,transitioning
+going into our,1,transitioning
+another combo,1,transitioning
+into the next,3,transitioning
+going back to,1,transitioning
+we're going to go,2,transitioning
+we're going back,1,transitioning
+we're changing,0,transitioning
+then you're,1,transitioning
+we're gonna,3,transitioning
+we're back to,0,transitioning
+we're gonna go to,0,transitioning
+we're going to go back,0,transitioning
+now I want you to,0,transitioning
+it's time for,0,transitioning
+we're gonna do,0,transitioning
+we've got another,0,transitioning
+then we'll go,0,transitioning
+now we're going,1,transitioning
+no we're going up,0,transitioning
+march now,0,transitioning
+then we'll,0,transitioning
+we'll take it to,0,transitioning
+no we're going,0,transitioning
+we're going into,1,transitioning
+we're moving into,0,transitioning
+gonna move straight into,0,transitioning
+it's coming next,0,transitioning
+we're gonna go,0,transitioning
+then I,0,transitioning
+we're doing,1,transitioning
+we've got some,0,transitioning
+and we're straight in,0,transitioning
+then get up,0,transitioning
+do another,0,transitioning
+switch side,0,transitioning
+let's do,0,transitioning
+switch sides,0,transitioning
+we are headed to,0,transitioning
+head to,0,transitioning
+breathe,4,breathing
+inhales,0,breathing
+exhales,0,breathing
+inhale,0,breathing
+exhale,0,breathing
+catch your breath,0,breathing
+big inhale,0,breathing
+big exhale,0,breathing
+slow exhales,0,breathing
+breather,0,breathing
+big breathes,0,breathing
+deep breaths,1,breathing
+keep breathing,0,breathing
