@@ -74,7 +74,7 @@ def encode_and_split_data(comments, data_split=0.8):
 # Get train and test sets for x (comments) and y (phrase category)
 results = [["x","y"]]
 
-csvfile=open(os.getcwd()+"/Classifications/Cleaned/Classifications_Vids123_filled_coded.csv")
+csvfile=open(os.path.split(os.path.abspath(os.getcwd()))[0]+"/Classifications/Cleaned/vids123/Classifications_Vids123_filled_coded.csv")
 reader = csv.reader(csvfile)
 for row in reader: # each row is a list
     results.append(row)

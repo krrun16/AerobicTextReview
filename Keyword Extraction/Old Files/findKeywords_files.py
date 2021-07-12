@@ -5,7 +5,7 @@ import os
 
 def getKeywordsArray(filename):
     keywords = []
-    csvfile = open(os.getcwd() + '/Keywords/'+str(filename)+'.csv', encoding="utf-8-sig", mode="r")
+    csvfile = open(os.path.split(os.path.abspath(os.getcwd()))[0] + '/Keywords/'+str(filename)+'.csv', encoding="utf-8-sig", mode="r")
 
     csv_reader = csv.reader(csvfile, delimiter=',')
     line_count = 0
@@ -131,9 +131,12 @@ transcriptFiles=["Video_1_Hasfit.txt",
                  "Video_5_ChloeTing.txt",
                  "Video_6_BeFit.txt"]
 
+from os.path import dirname as up
+count=1
+
 for transcriptFilename in transcriptFiles:
-    txtFilename = os.path.split(os.path.abspath(os.getcwd()))[0] + "/Video Analysis/Transcripts/" + transcriptFilename
-    count=1
+    two_up = up(up(up(__file__)))
+    txtFilename = two_up + "/Video Analysis/Transcripts/" + transcriptFilename
     textLines = getTextLines(txtFilename=txtFilename)
     textWords = getTextWords(txtFilename=txtFilename)
     fullText = getFullText(txtFilename=txtFilename)
@@ -142,5 +145,5 @@ for transcriptFilename in transcriptFiles:
     print()
 
     myKeywordArray = getKeywordCounts(fullText)
-    makeKeywordCSV(myKeywordArray, os.getcwd() + "/Keyword Counts/video"+str(count)+"_keywordCount.csv")
+    makeKeywordCSV(myKeywordArray, os.path.split(os.path.abspath(os.getcwd()))[0] + "/Results_Keyword Counts/video"+str(count)+"_keywordCount.csv")
     count+=1
