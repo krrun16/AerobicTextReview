@@ -1,0 +1,562 @@
+big breathes,2,breathing
+big exhale,0,breathing
+big inhale,0,breathing
+breather,1,breathing
+breathe,22,breathing
+catch your breath,0,breathing
+deep breaths,5,breathing
+slow exhales,0,breathing
+exhales,0,breathing
+exhale,0,breathing
+inhales,0,breathing
+inhale,0,breathing
+keep breathing,1,breathing
+breathing,1,breathing
+be determined,1,encouragingPhrases
+be focused,1,encouragingPhrases
+be strong,3,encouragingPhrases
+believe in you,1,encouragingPhrases
+best effort,4,encouragingPhrases
+big desire,1,encouragingPhrases
+big drive,1,encouragingPhrases
+big effort,2,encouragingPhrases
+big energy,1,encouragingPhrases
+can do this,1,encouragingPhrases
+channeling it,1,encouragingPhrases
+come on squad,0,encouragingPhrases
+come on,44,encouragingPhrases
+coming for you,1,encouragingPhrases
+couldn't do it without you,0,encouragingPhrases
+crushing it,0,encouragingPhrases
+designed to be tough,1,encouragingPhrases
+determination,3,encouragingPhrases
+doing great,0,encouragingPhrases
+doing this together,0,encouragingPhrases
+don't worry if,1,encouragingPhrases
+drive come on,1,encouragingPhrases
+effort,8,encouragingPhrases
+every single second matters,1,encouragingPhrases
+everybody's there,1,encouragingPhrases
+everybody's with us,1,encouragingPhrases
+everyone's doing great,0,encouragingPhrases
+excellent job,0,encouragingPhrases
+extra effort,1,encouragingPhrases
+fantastic,2,encouragingPhrases
+feeling good,2,encouragingPhrases
+feeling the pain,1,encouragingPhrases
+fight,1,encouragingPhrases
+fighting through,0,encouragingPhrases
+finishing strong,0,encouragingPhrases
+focus on your goals,0,encouragingPhrases
+game faces,1,encouragingPhrases
+get that much better,0,encouragingPhrases
+give it all,0,encouragingPhrases
+good job,0,encouragingPhrases
+good pain,1,encouragingPhrases
+got plenty left,0,encouragingPhrases
+got to do it,1,encouragingPhrases
+got to find it,1,encouragingPhrases
+got to put it in,1,encouragingPhrases
+great job,2,encouragingPhrases
+happy thoughts,0,encouragingPhrases
+high fives,0,encouragingPhrases
+how you feeling,1,encouragingPhrases
+I can't keep up,0,encouragingPhrases
+I need you,0,encouragingPhrases
+I promise you,0,encouragingPhrases
+I'm feeling it,0,encouragingPhrases
+I'm just as tired,0,encouragingPhrases
+it really counts,0,encouragingPhrases
+it's about desire,1,encouragingPhrases
+it's all mental,0,encouragingPhrases
+it's intense,1,encouragingPhrases
+keep getting it,0,encouragingPhrases
+keep going,2,encouragingPhrases
+keep it up,0,encouragingPhrases
+keep stepping up,1,encouragingPhrases
+keep working,4,encouragingPhrases
+keep you moving,0,encouragingPhrases
+know you can,1,encouragingPhrases
+know you will,1,encouragingPhrases
+let's dig,3,encouragingPhrases
+let's do this,1,encouragingPhrases
+let's get it,0,encouragingPhrases
+let's go,7,encouragingPhrases
+let's push,2,encouragingPhrases
+let's work,6,encouragingPhrases
+let's work this,1,encouragingPhrases
+lucky to be here,1,encouragingPhrases
+mental right now,0,encouragingPhrases
+nice all right,0,encouragingPhrases
+nice come on,0,encouragingPhrases
+nice work,0,encouragingPhrases
+nice work guys,0,encouragingPhrases
+nobody starts great,0,encouragingPhrases
+not much in the tank,2,encouragingPhrases
+not quitting,0,encouragingPhrases
+perseverance,1,encouragingPhrases
+personal best,3,encouragingPhrases
+power power,1,encouragingPhrases
+promise,0,encouragingPhrases
+push push,2,encouragingPhrases
+push together,0,encouragingPhrases
+push yourself,0,encouragingPhrases
+real stuff,1,encouragingPhrases
+resilience,1,encouragingPhrases
+right here with you,0,encouragingPhrases
+stay engaged,1,encouragingPhrases
+stay focused,1,encouragingPhrases
+stay with me,0,encouragingPhrases
+thank you,0,encouragingPhrases
+thank you so much,0,encouragingPhrases
+that was fun,0,encouragingPhrases
+that's drive,1,encouragingPhrases
+the enemy's coming,1,encouragingPhrases
+the finish line,2,encouragingPhrases
+these are tough,1,encouragingPhrases
+this is hard,0,encouragingPhrases
+this is it,0,encouragingPhrases
+this might feel really new,0,encouragingPhrases
+totally fine,0,encouragingPhrases
+tough stuff,2,encouragingPhrases
+warrior,1,encouragingPhrases
+we got it,3,encouragingPhrases
+we got this,3,encouragingPhrases
+we're all there,1,encouragingPhrases
+we've got this,3,encouragingPhrases
+winner,2,encouragingPhrases
+wonderful,1,encouragingPhrases
+work through now,1,encouragingPhrases
+work through,3,encouragingPhrases
+you can do this,1,encouragingPhrases
+you got it,0,encouragingPhrases
+you got this,0,encouragingPhrases
+you guys rock,0,encouragingPhrases
+you still with me,0,encouragingPhrases
+you will see the results,0,encouragingPhrases
+you're doing great,0,encouragingPhrases
+you're stronger,3,encouragingPhrases
+you're tired,0,encouragingPhrases
+you're with me,0,encouragingPhrases
+you've got this,1,encouragingPhrases
+your best,5,encouragingPhrases
+your heart,1,encouragingPhrases
+your life,1,encouragingPhrases
+your strength,1,encouragingPhrases
+squeeze these,0,inaccessibleLocations
+show you,2,inaccessibleLocations
+notice how,0,inaccessibleLocations
+move this,0,inaccessibleLocations
+side view,0,inaccessibleLocations
+going here,0,inaccessibleLocations
+end up here,0,inaccessibleLocations
+out there,0,inaccessibleLocations
+go here,0,inaccessibleLocations
+stays here,0,inaccessibleLocations
+this way,0,inaccessibleLocations
+this plank,0,inaccessibleLocations
+stay there,0,inaccessibleLocations
+like this,1,inaccessibleLocations
+stay here,0,inaccessibleLocations
+their way,1,inaccessibleLocations
+be here,3,inaccessibleLocations
+here we are,1,inaccessibleLocations
+here we,13,inaccessibleLocations
+all the way out,6,inaccessibleLocations
+look at,3,inaccessibleLocations
+down here,1,inaccessibleLocations
+over here,0,inaccessibleLocations
+right here,0,inaccessibleLocations
+right there,1,inaccessibleLocations
+there we go,1,inaccessibleLocations
+all out there,0,inaccessibleLocations
+see your,0,inaccessibleLocations
+a little bit more,1,subjectivePhrases
+a little bit,4,subjectivePhrases
+big reach,0,subjectivePhrases
+everything active,0,subjectivePhrases
+everything squeezed,0,subjectivePhrases
+focus it,1,subjectivePhrases
+form right,0,subjectivePhrases
+good crisp movements,1,subjectivePhrases
+good form,1,subjectivePhrases
+keep it strong,0,subjectivePhrases
+little bend,0,subjectivePhrases
+little easier,0,subjectivePhrases
+little explosion,0,subjectivePhrases
+little harder,0,subjectivePhrases
+nice and controlled,0,subjectivePhrases
+nice and easy,0,subjectivePhrases
+nice and flat,0,subjectivePhrases
+nice and high,0,subjectivePhrases
+nice and low,0,subjectivePhrases
+nice and narrow,0,subjectivePhrases
+nice and quick,0,subjectivePhrases
+nice and small,0,subjectivePhrases
+nice and stable,0,subjectivePhrases
+nice and strong,2,subjectivePhrases
+nice and tight,1,subjectivePhrases
+nice and under control,0,subjectivePhrases
+nice and wide,0,subjectivePhrases
+nice strong,0,subjectivePhrases
+powerfully,1,subjectivePhrases
+really reach,0,subjectivePhrases
+safe manner,0,subjectivePhrases
+stay nice,0,subjectivePhrases
+stay with it,2,subjectivePhrases
+strong arm,0,subjectivePhrases
+too much,0,subjectivePhrases
+under control,0,subjectivePhrases
+work it through,2,subjectivePhrases
+working through,5,subjectivePhrases
+works for you,0,subjectivePhrases
+we are headed to,0,transitioning
+we'll take it to,0,transitioning
+we're back to,0,transitioning
+we're changing,0,transitioning
+we're doing,2,transitioning
+we're going back to,0,transitioning
+we're going back,0,transitioning
+we're going into,0,transitioning
+we're going to go back,0,transitioning
+we're going to go,0,transitioning
+we're going to,1,transitioning
+we're gonna go to,0,transitioning
+we're gonna go,2,transitioning
+we're gonna do,0,transitioning
+we're gonna move,2,transitioning
+we're gonna,11,transitioning
+we're moving into,0,transitioning
+we've got another,0,transitioning
+we've got some,1,transitioning
+we're on to,0,transitioning
+and we're straight in,1,transitioning
+another combo,0,transitioning
+do another,0,transitioning
+going back to,0,transitioning
+going into our,0,transitioning
+going to go back,0,transitioning
+gonna move straight into,1,transitioning
+head to,0,transitioning
+into the next,0,transitioning
+it's coming next,1,transitioning
+it's time for,0,transitioning
+let's do,1,transitioning
+march now,0,transitioning
+now we're going up,0,transitioning
+now we're going,0,transitioning
+now I want you to,0,transitioning
+now we're going,0,transitioning
+right into the,0,transitioning
+switch sides,0,transitioning
+switch side,0,transitioning
+then get up,0,transitioning
+then I,0,transitioning
+then we go to,0,transitioning
+then we'll go,0,transitioning
+then we'll,0,transitioning
+then you're,0,transitioning
+first we're,0,startingAnExercise
+first workout,1,startingAnExercise
+get right into it,0,startingAnExercise
+we're getting ready,0,startingAnExercise
+getting ready,0,startingAnExercise
+getting right into it,0,startingAnExercise
+here we go,9,startingAnExercise
+join me now,0,startingAnExercise
+we're gonna start off,0,startingAnExercise
+start off,0,startingAnExercise
+we're gonna start our,1,startingAnExercise
+start our,1,startingAnExercise
+we're gonna start with,1,startingAnExercise
+we're going to start with,1,startingAnExercise
+start with,3,startingAnExercise
+starting off,0,startingAnExercise
+the first exercise,1,startingAnExercise
+we're going to start,1,startingAnExercise
+we're starting,0,startingAnExercise
+you ready,3,startingAnExercise
+we are done,0,stoppingAnExercise
+we're done,0,stoppingAnExercise
+it's over,1,stoppingAnExercise
+done okay,0,stoppingAnExercise
+it is done,1,stoppingAnExercise
+that's the end,0,stoppingAnExercise
+we have five seconds,0,duration
+we've got 40 seconds,1,duration
+work for 20 seconds,0,duration
+got 10 more seconds,0,duration
+10 more seconds,0,duration
+20 seconds of each,1,duration
+20 seconds of,7,duration
+20 seconds,11,duration
+20 second,12,duration
+30 second,0,duration
+40 seconds of work,2,duration
+40 seconds,4,duration
+40 second,4,duration
+last 60 seconds,1,duration
+60 seconds,2,duration
+almost done,1,duration
+almost there,1,duration
+can see the finish line,2,duration
+five more seconds,0,duration
+forty seconds here,1,duration
+forty second,1,duration
+getting close to the end,0,duration
+halfway done,0,duration
+more seconds left,0,duration
+more seconds,0,duration
+not done yet,0,duration
+not much left,0,duration
+not much time left,0,duration
+second break,0,duration
+seconds here,1,duration
+got ten seconds,0,duration
+ten seconds,0,duration
+ten second,0,duration
+twenty seconds,0,duration
+twenty second,0,duration
+we are almost there,1,duration
+seconds,19,duration
+3 2 & 1,1,pacing
+3 2 1,1,pacing
+allotted time period,0,pacing
+as quick as we can,0,pacing
+at my counts,0,pacing
+at your own pace,0,pacing
+break whenever,2,pacing
+cue you down,0,pacing
+do it slow,0,pacing
+don't rush,1,pacing
+fast as you can,1,pacing
+fast pace,1,pacing
+fast,6,pacing
+five come on four three two one,0,pacing
+five four three two and last one zero,0,pacing
+five four three two and one,0,pacing
+five four three two one zero,0,pacing
+five four three two one,0,pacing
+four three two one and zero ,0,pacing
+four three two one zero,0,pacing
+last four three two one,0,pacing
+four three two one,0,pacing
+four three,0,pacing
+one two,5,pacing
+in three come on in two and one,1,pacing
+in three two and one,3,pacing
+in three two one ,3,pacing
+three come on two and one,1,pacing
+three come on two one,1,pacing
+three in two and in one,1,pacing
+three two and one,15,pacing
+three two one and zero,0,pacing
+three two one,23,pacing
+three two,38,pacing
+two and again one,1,pacing
+two and one,18,pacing
+two one,26,pacing
+go fast,3,pacing
+go in a tempo,0,pacing
+go slow,2,pacing
+good tempo,0,pacing
+moving at a pace,0,pacing
+pause whenever,2,pacing
+side side ,0,pacing
+slow right down,1,pacing
+slow slow slow,0,pacing
+speed it up,0,pacing
+speed this up,0,pacing
+switch switch switch,0,pacing
+take a break whenever,1,pacing
+the pace is high,1,pacing
+your pace,1,pacing
+circuit number,0,quantityOfAnExercise
+don't have much left,0,quantityOfAnExercise
+few more,0,quantityOfAnExercise
+few times,0,quantityOfAnExercise
+four high knee,0,quantityOfAnExercise
+last five,0,quantityOfAnExercise
+last one,0,quantityOfAnExercise
+last round,0,quantityOfAnExercise
+last time on,0,quantityOfAnExercise
+last time,0,quantityOfAnExercise
+not many left,0,quantityOfAnExercise
+one more exercise,0,quantityOfAnExercise
+one more round,0,quantityOfAnExercise
+one more set,0,quantityOfAnExercise
+one more time,0,quantityOfAnExercise
+one more,0,quantityOfAnExercise
+one on each side,0,quantityOfAnExercise
+one right and one left,0,quantityOfAnExercise
+round one,0,quantityOfAnExercise
+this is one of two,0,quantityOfAnExercise
+three different moves,0,quantityOfAnExercise
+three more,0,quantityOfAnExercise
+three rounds,0,quantityOfAnExercise
+three times,0,quantityOfAnExercise
+try that again,0,quantityOfAnExercise
+two different movement,0,quantityOfAnExercise
+two jumping jack,0,quantityOfAnExercise
+two more,0,quantityOfAnExercise
+two times,0,quantityOfAnExercise
+abdominal,0,bodyParts
+abs,0,bodyParts
+upper arm,0,bodyParts
+arm,5,bodyParts
+back chest,0,bodyParts
+back heel,0,bodyParts
+back muscles,0,bodyParts
+back of the,0,bodyParts
+back of those,0,bodyParts
+back of your leg,0,bodyParts
+back of your,0,bodyParts
+back toe,0,bodyParts
+backside,0,bodyParts
+bicep,0,bodyParts
+bone,0,bodyParts
+calf,0,bodyParts
+calves,0,bodyParts
+chin,14,bodyParts
+core,17,bodyParts
+ear,7,bodyParts
+elbow,0,bodyParts
+eye,0,bodyParts
+feet,0,bodyParts
+finger,0,bodyParts
+forearm,0,bodyParts
+front toe,0,bodyParts
+glute,0,bodyParts
+glut,0,bodyParts
+heel,0,bodyParts
+hip,0,bodyParts
+joint,0,bodyParts
+knee,16,bodyParts
+knuckle,0,bodyParts
+lower back,1,bodyParts
+lower body,0,bodyParts
+muscle,2,bodyParts
+neck,0,bodyParts
+our backs,0,bodyParts
+our back,0,bodyParts
+palm,0,bodyParts
+pinkie,0,bodyParts
+quadricep,0,bodyParts
+rib,0,bodyParts
+shin,2,bodyParts
+shoulder,2,bodyParts
+sole,0,bodyParts
+spine,0,bodyParts
+straight back,0,bodyParts
+tail,0,bodyParts
+tricep,0,bodyParts
+upper body,0,bodyParts
+your back,0,bodyParts
+above,0,directionToMove
+all the way up,0,directionToMove
+angle,0,directionToMove
+are back,0,directionToMove
+around,0,directionToMove
+at the top,0,directionToMove
+back down,0,directionToMove
+back flat,0,directionToMove
+back in the center,0,directionToMove
+back in,3,directionToMove
+back neutral,0,directionToMove
+back to center,0,directionToMove
+back to the center,0,directionToMove
+back to the middle,0,directionToMove
+back together,0,directionToMove
+back up,0,directionToMove
+backwards,0,directionToMove
+below,0,directionToMove
+bring it back,0,directionToMove
+bring them back,0,directionToMove
+center,0,directionToMove
+climb back up,0,directionToMove
+come up,0,directionToMove
+degrees,0,directionToMove
+down your back,0,directionToMove
+down,5,directionToMove
+forward and back,0,directionToMove
+forward,1,directionToMove
+front,1,directionToMove
+go back,0,directionToMove
+ground,84,directionToMove
+higher,0,directionToMove
+high,4,directionToMove
+in line,0,directionToMove
+in the ground,0,directionToMove
+into,7,directionToMove
+jump them back,0,directionToMove
+left,5,directionToMove
+level,2,directionToMove
+low,13,directionToMove
+lower,2,directionToMove
+move back,1,directionToMove
+off the ground,0,directionToMove
+on the ground,0,directionToMove
+open,2,directionToMove
+other side,5,directionToMove
+out,45,directionToMove
+over,7,directionToMove
+parallel,0,directionToMove
+pull back,0,directionToMove
+pulling back,0,directionToMove
+push yourself back,0,directionToMove
+right into,0,directionToMove
+right,15,directionToMove
+side,10,directionToMove
+side to side,0,directionToMove
+sit back,0,directionToMove
+sit it back,0,directionToMove
+sitting back,0,directionToMove
+step back,0,directionToMove
+stepping back,0,directionToMove
+stepping it back,0,directionToMove
+straight line,0,directionToMove
+straight up,0,directionToMove
+straight,3,directionToMove
+to the ground,0,directionToMove
+towards the back,0,directionToMove
+toward,1,directionToMove
+up,20,directionToMove
+body parts worked,0,expectedBodySensation
+deep burn,2,expectedBodySensation
+feel a,1,expectedBodySensation
+feel every,0,expectedBodySensation
+feel in the,0,expectedBodySensation
+feel it,1,expectedBodySensation
+feel like,2,expectedBodySensation
+feel that stretch,0,expectedBodySensation
+feel that,0,expectedBodySensation
+feel the,4,expectedBodySensation
+feel those,0,expectedBodySensation
+feeling a,0,expectedBodySensation
+feeling it,3,expectedBodySensation
+feeling that,2,expectedBodySensation
+feeling those,0,expectedBodySensation
+get that heart rate up,0,expectedBodySensation
+get the heart rate up,0,expectedBodySensation
+getting that heart rate up,0,expectedBodySensation
+heart rates probably up,0,expectedBodySensation
+heart rates up,0,expectedBodySensation
+heart rate,1,expectedBodySensation
+is engaged,0,expectedBodySensation
+pretend like you're,0,expectedBodySensation
+struggling,1,expectedBodySensation
+this one really hits,0,expectedBodySensation
+this works your,0,expectedBodySensation
+work those,0,expectedBodySensation
+you might notice your,0,expectedBodySensation
+you're gonna feel those,0,expectedBodySensation
+you're gonna find that,1,expectedBodySensation
+weight,3,equipment
+dumbbell,0,equipment
+box,0,equipment
+chair,0,equipment
+seat,0,equipment
+water,5,equipment
+mat,5,equipment
+towel,2,equipment
+jump rope,0,equipment
