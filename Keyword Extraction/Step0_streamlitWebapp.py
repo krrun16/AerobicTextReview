@@ -1,7 +1,5 @@
 # Stuff to install:
-# pip install streamlit
-# pip install scikit-learn
-# pip install matplotlib
+
 # Pip install pytube3
 
 # Run this in terminal to start the app on your computer: streamlit run Step0_streamlitWebapp.py
@@ -14,7 +12,7 @@ st.write("Identifies 17 different classes of exercise transcript phrases")
 # /////////////////////////////
 # Different checkbox options
 st.sidebar.write("Select Classes:")
-st.sidebar.markdown("__Table 1 (specify body movements):__")
+st.sidebar.markdown("<b style='background-color:#ffeb91'>Table 1 (specify body movements):</b>", unsafe_allow_html=True)
 familiarExercisePhrases = st.sidebar.checkbox("Familiar Exercise Phrases")
 bodyParts = st.sidebar.checkbox("Body Parts")
 directionToMove = st.sidebar.checkbox("Direction to Move")
@@ -22,7 +20,7 @@ expectedBodySensation = st.sidebar.checkbox("Expected Body Sensation")
 equipment = st.sidebar.checkbox("Equipment")
 st.sidebar.markdown("____")
 
-st.sidebar.markdown("__Table 2 (specify timing):__")
+st.sidebar.markdown("<b style='background-color:#a1e3aa'>Table 2 (specify timing):</b>", unsafe_allow_html=True)
 startingAnExercise = st.sidebar.checkbox("Starting an Exercise")
 stoppingAnExercise = st.sidebar.checkbox("Stopping an Exercise")
 duration = st.sidebar.checkbox("Duration")
@@ -31,7 +29,7 @@ quantityOfAnExercise = st.sidebar.checkbox("Quantity of an Exercise")
 transitioning = st.sidebar.checkbox("Transitioning")
 st.sidebar.markdown("____")
 
-st.sidebar.markdown("__Table 3 (does not specify movements or time):__")
+st.sidebar.markdown("<b style='background-color:#f0986c'>Table 3 (does not specify movements or time):</b>", unsafe_allow_html=True)
 breathing = st.sidebar.checkbox("Breathing")
 encouragingPhrases = st.sidebar.checkbox("Encouraging Phrases")
 inaccessibleLocations = st.sidebar.checkbox("Inaccessible Locations")
@@ -79,6 +77,7 @@ def getColorTextHTML(youtubeLink):
     # Get HTML highlights of the other non-filler keywords
     colorTextHTML = getColoredHTMLText(highlightedFillers, "Output.txt")
     colorTextHTML = "<p>" + colorTextHTML + "</p>"
+    colorTextHTML=colorTextHTML.replace("DoNotReplace","")
 
     return colorTextHTML
 

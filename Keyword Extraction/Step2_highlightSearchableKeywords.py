@@ -3,6 +3,20 @@
 import csv
 import os
 
+def codeTextForHTMLHighlighting(originalInputText):
+    myWords=originalInputText.split()
+
+    newText=""
+
+    for word in myWords:
+        newWord=word[0]+"DoNotReplace"+word[1:]+" "
+        newText+=newWord
+
+    #remove space at the end
+    newText=newText[:-1]
+    return newText
+
+
 def getKeywordsArray(filename):
     keywords = []
     csvfile = open(os.getcwd() + '/Keywords/'+str(filename)+'.csv', encoding="utf-8-sig", mode="r")
@@ -15,6 +29,7 @@ def getKeywordsArray(filename):
     return keywords
 
 def getColoredHTMLText(fullText,transcriptFilename):
+    familiarExercisePhrases = getKeywordsArray("familiarExercisePhrases")
     bodyParts = getKeywordsArray("bodyParts")
     directionToMove = getKeywordsArray("directionToMove")
     expectedBodySensation = getKeywordsArray("expectedBodySensation")
@@ -41,30 +56,39 @@ def getColoredHTMLText(fullText,transcriptFilename):
                    [inaccessibleLocations, lightRed, "inaccessibleLocations", "none"],
                    [subjectivePhrases, lightRed, "subjectivePhrases", "none"],
 
-                   [transitioning, lightGreen, "transitioning", "before"],
                    [startingAnExercise, lightGreen, "startingAnExercise", "before"],
+                   [transitioning, lightGreen, "transitioning", "before"],
                    [stoppingAnExercise, lightGreen, "stoppingAnExercise", "after"],
                    [duration, lightGreen, "duration", "none"],
                    [pacing, lightGreen, "pacing", "none"],
                    [quantityOfAnExercise, lightGreen, "quantityOfAnExercise", "none"],
 
-
+                   [familiarExercisePhrases, lightYellow, "familiarExercisePhrases", "none"],
                    [bodyParts, lightYellow, "bodyParts", "none"],
                    [directionToMove, lightYellow, "directionToMove", "none"],
                    [expectedBodySensation, lightYellow, "expectedBodySensation", "none"],
                    [equipment, lightYellow, "equipment", "none"]]
 
     colorTextHTML=fullText
+
+    keywordsToIgnore = ["all right", "alright", "right now", "get right into it", "getting right into it",
+                        "which one is right for you", "doing it right","matter"]
+
+    for keyword in keywordsToIgnore:
+        colorTextHTML = colorTextHTML.replace(" " + keyword,
+                                              ' <span style="background-color:#ffffff" class="ignoreThis">' + codeTextForHTMLHighlighting(
+                                                  keyword) + '</span>')
+
     for keywords in allKeywords:
         for keyword in keywords[0]:
             # colorTextHTML = colorTextHTML.replace(" " + keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + keyword + '</span>')
 
             if keywords[3]=="none":
-                colorTextHTML = colorTextHTML.replace(" "+keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + keyword + '</span>')
+                colorTextHTML = colorTextHTML.replace(" "+keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + codeTextForHTMLHighlighting(keyword) + '</span>')
             elif keywords[3]=="before":
-                colorTextHTML = colorTextHTML.replace(" "+keyword,'<br><br><span style="background-color:#ffffff" class="' + keywords[2] + '">' + keyword + '</span>')
+                colorTextHTML = colorTextHTML.replace(" "+keyword,'<br><br><span style="background-color:#ffffff" class="' + keywords[2] + '">' + codeTextForHTMLHighlighting(keyword) + '</span>')
             elif keywords[3]=="after":
-                colorTextHTML = colorTextHTML.replace(" "+keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + keyword + '</span><br><br>')
+                colorTextHTML = colorTextHTML.replace(" "+keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + codeTextForHTMLHighlighting(keyword) + '</span><br><br>')
 
     # Saving keyword counts to a CSV file
     myKeywordArray = []

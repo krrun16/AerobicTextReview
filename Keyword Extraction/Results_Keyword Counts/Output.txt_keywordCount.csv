@@ -49,9 +49,9 @@ fighting through,2,encouragingPhrases
 finishing strong,1,encouragingPhrases
 focus on your goals,1,encouragingPhrases
 game faces,0,encouragingPhrases
-get that much better,1,encouragingPhrases
+get that much better,0,encouragingPhrases
 give it all,0,encouragingPhrases
-good job,1,encouragingPhrases
+good job,0,encouragingPhrases
 good pain,0,encouragingPhrases
 got plenty left,1,encouragingPhrases
 got to do it,0,encouragingPhrases
@@ -89,15 +89,15 @@ lucky to be here,0,encouragingPhrases
 mental right now,1,encouragingPhrases
 nice all right,1,encouragingPhrases
 nice come on,0,encouragingPhrases
-nice work,21,encouragingPhrases
+nice work,20,encouragingPhrases
 nice work guys,1,encouragingPhrases
-nobody starts great,1,encouragingPhrases
+nobody starts great,0,encouragingPhrases
 not much in the tank,0,encouragingPhrases
 not quitting,0,encouragingPhrases
 perseverance,0,encouragingPhrases
 personal best,0,encouragingPhrases
 power power,0,encouragingPhrases
-promise,2,encouragingPhrases
+promise,1,encouragingPhrases
 push push,0,encouragingPhrases
 push together,0,encouragingPhrases
 push yourself,1,encouragingPhrases
@@ -107,8 +107,6 @@ right here with you,0,encouragingPhrases
 stay engaged,0,encouragingPhrases
 stay focused,0,encouragingPhrases
 stay with me,0,encouragingPhrases
-thank you,5,encouragingPhrases
-thank you so much,5,encouragingPhrases
 that was fun,0,encouragingPhrases
 that's drive,0,encouragingPhrases
 the enemy's coming,0,encouragingPhrases
@@ -133,7 +131,7 @@ you got it,10,encouragingPhrases
 you got this,1,encouragingPhrases
 you guys rock,0,encouragingPhrases
 you still with me,0,encouragingPhrases
-you will see the results,1,encouragingPhrases
+you will see the results,0,encouragingPhrases
 you're doing great,0,encouragingPhrases
 you're stronger,0,encouragingPhrases
 you're tired,0,encouragingPhrases
@@ -144,8 +142,8 @@ your heart,0,encouragingPhrases
 your life,0,encouragingPhrases
 your strength,0,encouragingPhrases
 squeeze these,1,inaccessibleLocations
-show you,2,inaccessibleLocations
-notice how,2,inaccessibleLocations
+show you,0,inaccessibleLocations
+notice how,1,inaccessibleLocations
 move this,1,inaccessibleLocations
 side view,1,inaccessibleLocations
 going here,1,inaccessibleLocations
@@ -156,23 +154,23 @@ stays here,0,inaccessibleLocations
 this way,0,inaccessibleLocations
 this plank,0,inaccessibleLocations
 stay there,0,inaccessibleLocations
-like this,1,inaccessibleLocations
+like this,0,inaccessibleLocations
 stay here,0,inaccessibleLocations
 their way,0,inaccessibleLocations
 be here,0,inaccessibleLocations
 here we are,0,inaccessibleLocations
-here we,5,inaccessibleLocations
+here we,3,inaccessibleLocations
 all the way out,0,inaccessibleLocations
 look at,0,inaccessibleLocations
 down here,0,inaccessibleLocations
 over here,1,inaccessibleLocations
-right here,4,inaccessibleLocations
+right here,3,inaccessibleLocations
 right there,1,inaccessibleLocations
 there we go,1,inaccessibleLocations
 all out there,1,inaccessibleLocations
 see your,0,inaccessibleLocations
 a little bit more,2,subjectivePhrases
-a little bit,9,subjectivePhrases
+a little bit,8,subjectivePhrases
 big reach,0,subjectivePhrases
 everything active,0,subjectivePhrases
 everything squeezed,0,subjectivePhrases
@@ -210,6 +208,26 @@ under control,3,subjectivePhrases
 work it through,0,subjectivePhrases
 working through,0,subjectivePhrases
 works for you,1,subjectivePhrases
+first we're,0,startingAnExercise
+first workout,0,startingAnExercise
+get right into it,0,startingAnExercise
+we're getting ready,0,startingAnExercise
+getting ready,0,startingAnExercise
+getting right into it,1,startingAnExercise
+here we go,2,startingAnExercise
+join me now,0,startingAnExercise
+we're gonna start off,0,startingAnExercise
+start off,0,startingAnExercise
+we're gonna start our,0,startingAnExercise
+start our,0,startingAnExercise
+we're gonna start with,0,startingAnExercise
+we're going to start with,1,startingAnExercise
+start with,2,startingAnExercise
+starting off,0,startingAnExercise
+the first exercise,0,startingAnExercise
+we're going to start,1,startingAnExercise
+we're starting,1,startingAnExercise
+you ready,1,startingAnExercise
 we are headed to,0,transitioning
 we'll take it to,0,transitioning
 we're back to,0,transitioning
@@ -256,30 +274,10 @@ then we go to,0,transitioning
 then we'll go,0,transitioning
 then we'll,0,transitioning
 then you're,1,transitioning
-first we're,0,startingAnExercise
-first workout,0,startingAnExercise
-get right into it,0,startingAnExercise
-we're getting ready,1,startingAnExercise
-getting ready,1,startingAnExercise
-getting right into it,1,startingAnExercise
-here we go,3,startingAnExercise
-join me now,0,startingAnExercise
-we're gonna start off,0,startingAnExercise
-start off,0,startingAnExercise
-we're gonna start our,0,startingAnExercise
-start our,0,startingAnExercise
-we're gonna start with,0,startingAnExercise
-we're going to start with,1,startingAnExercise
-start with,2,startingAnExercise
-starting off,0,startingAnExercise
-the first exercise,0,startingAnExercise
-we're going to start,1,startingAnExercise
-we're starting,1,startingAnExercise
-you ready,0,startingAnExercise
 we are done,1,stoppingAnExercise
 we're done,0,stoppingAnExercise
 it's over,0,stoppingAnExercise
-done okay,4,stoppingAnExercise
+done okay,5,stoppingAnExercise
 it is done,0,stoppingAnExercise
 that's the end,1,stoppingAnExercise
 we have five seconds,0,duration
@@ -386,7 +384,7 @@ one more exercise,1,quantityOfAnExercise
 one more round,0,quantityOfAnExercise
 one more set,0,quantityOfAnExercise
 one more time,0,quantityOfAnExercise
-one more,3,quantityOfAnExercise
+one more,2,quantityOfAnExercise
 one on each side,0,quantityOfAnExercise
 one right and one left,0,quantityOfAnExercise
 round one,0,quantityOfAnExercise
@@ -400,6 +398,28 @@ two different movement,0,quantityOfAnExercise
 two jumping jack,0,quantityOfAnExercise
 two more,0,quantityOfAnExercise
 two times,0,quantityOfAnExercise
+curl-ups,0,familiarExercisePhrases
+curl ups,0,familiarExercisePhrases
+shuttle run,0,familiarExercisePhrases
+v-sit reach,0,familiarExercisePhrases
+v sit reach,0,familiarExercisePhrases
+sit and reach,0,familiarExercisePhrases
+sit & reach,0,familiarExercisePhrases
+one-mile run,0,familiarExercisePhrases
+wall sits,0,familiarExercisePhrases
+wall-sits,0,familiarExercisePhrases
+push-ups,0,familiarExercisePhrases
+push ups,0,familiarExercisePhrases
+ab crunch,0,familiarExercisePhrases
+step-up,0,familiarExercisePhrases
+squat,9,familiarExercisePhrases
+triceps dip on chair,0,familiarExercisePhrases
+plank,0,familiarExercisePhrases
+high knees,0,familiarExercisePhrases
+lunges,0,familiarExercisePhrases
+push-up and rotation,0,familiarExercisePhrases
+side plank,0,familiarExercisePhrases
+jumping jack,0,familiarExercisePhrases
 abdominal,0,bodyParts
 abs,6,bodyParts
 upper arm,1,bodyParts
@@ -419,7 +439,7 @@ calf,0,bodyParts
 calves,0,bodyParts
 chin,6,bodyParts
 core,7,bodyParts
-ear,4,bodyParts
+ear,5,bodyParts
 elbow,12,bodyParts
 eye,0,bodyParts
 feet,5,bodyParts
@@ -428,7 +448,7 @@ forearm,0,bodyParts
 front toe,0,bodyParts
 glute,2,bodyParts
 glut,4,bodyParts
-hand,3,bodyParts
+hand,2,bodyParts
 heel,5,bodyParts
 hip,16,bodyParts
 joint,0,bodyParts
@@ -483,7 +503,7 @@ forward and back,0,directionToMove
 forward,2,directionToMove
 front,1,directionToMove
 go back,1,directionToMove
-ground,43,directionToMove
+ground,52,directionToMove
 higher,0,directionToMove
 high,1,directionToMove
 in line,1,directionToMove
@@ -491,7 +511,7 @@ in the ground,0,directionToMove
 into,8,directionToMove
 jump them back,0,directionToMove
 left,7,directionToMove
-level,2,directionToMove
+level,0,directionToMove
 low,12,directionToMove
 lower,4,directionToMove
 move back,0,directionToMove
@@ -499,14 +519,14 @@ off the ground,3,directionToMove
 on the ground,1,directionToMove
 open,0,directionToMove
 other side,0,directionToMove
-out,27,directionToMove
+out,23,directionToMove
 over,6,directionToMove
 parallel,1,directionToMove
 pull back,2,directionToMove
 pulling back,6,directionToMove
 push yourself back,0,directionToMove
 right into,4,directionToMove
-right,29,directionToMove
+right,27,directionToMove
 side,3,directionToMove
 side to side,0,directionToMove
 sit back,0,directionToMove
@@ -521,7 +541,7 @@ straight,8,directionToMove
 to the ground,5,directionToMove
 towards the back,0,directionToMove
 toward,0,directionToMove
-up,52,directionToMove
+up,47,directionToMove
 body parts worked,1,expectedBodySensation
 deep burn,0,expectedBodySensation
 feel a,0,expectedBodySensation
@@ -552,10 +572,10 @@ work those,0,expectedBodySensation
 you might notice your,0,expectedBodySensation
 you're gonna feel those,0,expectedBodySensation
 you're gonna find that,0,expectedBodySensation
-weight,20,equipment
-dumbbell,18,equipment
-box,6,equipment
-chair,5,equipment
+weight,18,equipment
+dumbbell,15,equipment
+box,4,equipment
+chair,4,equipment
 seat,4,equipment
 water,1,equipment
 mat,1,equipment

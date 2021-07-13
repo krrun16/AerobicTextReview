@@ -22,6 +22,19 @@ def getFullText(txtFilename) -> str:
     fullText = fullText.lower()
     return fullText
 
+def codeTextForHTMLHighlighting(originalInputText):
+    myWords=originalInputText.split()
+
+    newText=""
+
+    for word in myWords:
+        newWord=word[0]+"DoNotReplace"+word[1:]+" "
+        newText+=newWord
+
+    #remove space at the end
+    newText=newText[:-1]
+    return newText
+
 # Turn our testing set into an array of numbers (the same numbers used to code the training and validation sets)
 def create_word_embedding(comments, wordEmbeddings, add_pos_tags=False):
     encoded_comments = []
@@ -106,8 +119,9 @@ def highlightFillers(transcriptFilename):
         max_index = prediction[0].argmax(axis=0)
 
         if max_index==1:
+            newText=codeTextForHTMLHighlighting(originalInputText)
             colorTextHTML = colorTextHTML.replace(originalInputText,
-                                                  ' <span style="background-color:#ffffff" class="filler">' + originalInputText + '</span>')
+                                                  ' <span style="background-color:#ffffff" class="filler">' + newText + '</span>')
 
         worksheet.write(i + 1, 0, originalInputText)
         worksheet.write(i + 1, 2, max_index)

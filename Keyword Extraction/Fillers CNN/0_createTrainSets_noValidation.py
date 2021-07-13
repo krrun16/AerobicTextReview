@@ -14,7 +14,7 @@ import random
 dictionary={}
 
 # Encoding utf-8-sig makes sure that non-alphabetical characters don't get appended to the first entry
-csvfile=open(os.getcwd()+"/Sentences_Vids123456_filled.csv", encoding="utf-8-sig",mode="r")
+csvfile=open(os.getcwd()+"/Sentences_Vids123456_longerFillerDataset.csv", encoding="utf-8-sig",mode="r")
 reader = csv.reader(csvfile)
 
 highestWordCount=0
