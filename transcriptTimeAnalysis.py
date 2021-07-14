@@ -10,6 +10,29 @@ for x in range(numVideos):
     data.pop("GENTLE_GENERATED")
     data.to_csv("Video Analysis/Transcripts/video_" + str(x+1) + "_TimeStampsClean.csv", index=False)
 
+# Returns total time and percentage of silences
+for x in range(numVideos):
+    filename = "Video Analysis/Transcripts/video_" + str(x + 1) + "_TimeStampsClean.csv"
+    data = pd.read_csv(filename)
+    countSeconds = 0
+    totalTime = 0
+    totalRows = len(data.index)
+    for n in range(totalRows-1):
+        firstEnd = float(data.iloc[n]["END_TIME"])
+        secondStart = float(data.iloc[n + 1]["START_TIME"])
+        if firstEnd == "" or secondStart == "" or firstEnd != firstEnd or secondStart != secondStart:
+            continue
+        silenceLength = secondStart - firstEnd
+        countSeconds += silenceLength
+    totalTime = float(data.iloc[totalRows-1]["END_TIME"])
+    if totalTime != totalTime: # deals with nulls
+        pos = totalRows-2
+        while totalTime != totalTime:
+            totalTime = float(data.iloc[pos]["END_TIME"])
+    print("\n Video " + str(x+1) + ": ")
+    print("\n     Time of silence: " + str(float(countSeconds)))
+    print("\n     Percentage of silence: " + str(float(countSeconds/totalTime)))
+
 # Goes through rows to find silences
 for x in range(numVideos):
     filename = "Video Analysis/Transcripts/video_" + str(x + 1) + "_TimeStampsClean.csv"
