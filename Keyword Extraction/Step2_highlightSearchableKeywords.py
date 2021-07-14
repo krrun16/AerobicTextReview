@@ -9,7 +9,7 @@ def codeTextForHTMLHighlighting(originalInputText):
     newText=""
 
     for word in myWords:
-        newWord=word[0]+"DoNotReplace"+word[1:]+" "
+        newWord=word[0]+"XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ"+word[1:]+" "
         newText+=newWord
 
     #remove space at the end
@@ -42,19 +42,21 @@ def getColoredHTMLText(fullText,transcriptFilename):
     quantityOfAnExercise = getKeywordsArray("quantityOfAnExercise")
     transitioning = getKeywordsArray("transitioning")
 
-    breathing = getKeywordsArray("breathing")
+    brPhrase = getKeywordsArray("brPhrase")
     encouragingPhrases = getKeywordsArray("encouragingPhrases")
     inaccessibleLocations = getKeywordsArray("inaccessibleLocations")
     subjectivePhrases = getKeywordsArray("subjectivePhrases")
+    unfamiliarExercisePhrase = getKeywordsArray("unfamiliarExercisePhrase")
 
     lightYellow = "#ffeb91"
     lightGreen = "#a1e3aa"
     lightRed = "#f0986c"
 
-    allKeywords = [[breathing, lightRed, "breathing", "none"],
+    allKeywords = [[brPhrase, lightRed, "brPhrase", "none"],
                    [encouragingPhrases, lightRed, "encouragingPhrases", "none"],
                    [inaccessibleLocations, lightRed, "inaccessibleLocations", "none"],
                    [subjectivePhrases, lightRed, "subjectivePhrases", "none"],
+                   [unfamiliarExercisePhrase,lightRed,"unfamiliarExercisePhrase","none"],
 
                    [startingAnExercise, lightGreen, "startingAnExercise", "before"],
                    [transitioning, lightGreen, "transitioning", "before"],
@@ -79,8 +81,15 @@ def getColoredHTMLText(fullText,transcriptFilename):
                                               ' <span style="background-color:#ffffff" class="ignoreThis">' + codeTextForHTMLHighlighting(
                                                   keyword) + '</span>')
 
+    numberOfKeywordsPerClassDictionary = {}
+
     for keywords in allKeywords:
+        count=0
+
         for keyword in keywords[0]:
+            count+=colorTextHTML.count(keyword)
+            print(keyword)
+            print(colorTextHTML.count(keyword))
             # colorTextHTML = colorTextHTML.replace(" " + keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + keyword + '</span>')
 
             if keywords[3]=="none":
@@ -89,6 +98,8 @@ def getColoredHTMLText(fullText,transcriptFilename):
                 colorTextHTML = colorTextHTML.replace(" "+keyword,'<br><br><span style="background-color:#ffffff" class="' + keywords[2] + '">' + codeTextForHTMLHighlighting(keyword) + '</span>')
             elif keywords[3]=="after":
                 colorTextHTML = colorTextHTML.replace(" "+keyword,' <span style="background-color:#ffffff" class="' + keywords[2] + '">' + codeTextForHTMLHighlighting(keyword) + '</span><br><br>')
+
+        numberOfKeywordsPerClassDictionary[keywords[2]]=count
 
     # Saving keyword counts to a CSV file
     myKeywordArray = []
@@ -104,132 +115,71 @@ def getColoredHTMLText(fullText,transcriptFilename):
         for keyword in myKeywordArray:
             writer.writerow([keyword[0], keyword[1], keyword[2]])
 
-        colorTextHTMLWithTS = addTimeStamps(colorTextHTML, keywords, 5)  # FIX VARIABLES
-        return colorTextHTMLWithTS
+    # colorTextHTMLWithTS = addTimeStamps(colorTextHTML, keywords, 5)  # FIX VARIABLES
 
-    def addTimeStamps(allKeywords, transcript, vidNum):
-        fileName = os.path.split(os.path.abspath(os.getcwd()))[0] + "/../Video Analysis/Transcripts/video_" + str(
-            vidNum) + "_TimeStampsClean.csv"
-        timestamps = []
-        with open(fileName) as csvFile:
-            csvr = csv.reader(csvFile)
-            timestamps = list(csvr)
+    return colorTextHTML, numberOfKeywordsPerClassDictionary
 
-        startSearch = 0
-        endSearch = len(transcript)
-        keywordProcessedAlready = {}
-        for keywords in allKeywords:
-            for keyword in keywords[0]:
-                if (keyword in keywordProcessedAlready):
-                    continue
-                else:
-                    keywordProcessedAlready[keyword] = keyword
-                print("++++++++++", keyword)
-                numberOfKeywordsInTranscript = transcript.count(keyword + " ")
-                if numberOfKeywordsInTranscript == 0:
-                    continue
-                keywordLeft = numberOfKeywordsInTranscript
-                timestampsForKeyword = findAllTimestampForKeyword(timestamps, keyword)
-                if numberOfKeywordsInTranscript != len(timestampsForKeyword):
-                    print("number of keywords in transcript doesn't match number of timestamps for the keyword!!!!!",
-                          numberOfKeywordsInTranscript, len(timestampsForKeyword), keyword)
-                timestampIndex = 0  # number of keywords in string
-                while keywordLeft > 0:
-                    wordToBeReplaced = ' ' + keyword + ' '
-                    if keywordLeft < numberOfKeywordsInTranscript:
-                        wordToBeReplaced = keyword + " (" + timestampsForKeyword[keywordLeft][1] + ") "
-                    keywordWithTimestampStr = keyword + " (" + timestampsForKeyword[keywordLeft - 1][
-                        1] + ") "  # find timestamp of keyword from back of timestamps
-                    print("     ", wordToBeReplaced, keywordWithTimestampStr)
-                    transcript = transcript.replace(wordToBeReplaced, keywordWithTimestampStr, keywordLeft)
-                    print("=======", transcript)  # replace instances of keyword with word + timestamp
-                    keywordLeft -= 1
-
-        return transcript
-
-    def findAllTimestampForKeyword(timestamps, keyword):
-        wordList = keyword.split(' ')
-        timestampsForKeyword = []
-        for i in range(len(timestamps)):
-            if len(wordList) == 1:
-                if keyword == "up":
-                    if timestamps[i][0] != "up":  # has to be exact match
-                        continue
-                    else:
-                        timestampsForKeyword.append(timestamps[i])
-                else:
-                    if keyword in timestamps[i][0]:
-                        timestampsForKeyword.append(timestamps[i])
-            else:
-                matchKeyword = True
-                for j in range(len(wordList)):
-                    if wordList[j] not in timestamps[i + j][0]:
-                        matchKeyword = False
-                        break
-                if matchKeyword == True:
-                    timestampsForKeyword.append(timestamps[i])
-
-        return timestampsForKeyword
-    colorTextHTMLWithTS = addTimeStamps(colorTextHTML,keywords,5) # FIX VARIABLES
-    return colorTextHTMLWithTS
-
-def addTimeStamps(allKeywords,transcript,vidNum):
-    fileName = os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/video_" + str(vidNum) + "_TimeStampsClean.csv"
-    timestamps = []
-    with open(fileName) as csvFile:
-        csvr = csv.reader(csvFile)
-        timestamps = list(csvr)
-
-    startSearch = 0
-    endSearch = len(transcript)
-    keywordProcessedAlready = {}
-    for keywords in allKeywords:
-        for keyword in keywords[0]:
-            if (keyword in keywordProcessedAlready):
-                continue
-            else:
-                keywordProcessedAlready[keyword] = keyword
-            print("++++++++++", keyword)
-            numberOfKeywordsInTranscript = transcript.count(keyword + " ")
-            if numberOfKeywordsInTranscript == 0:
-                continue
-            keywordLeft = numberOfKeywordsInTranscript
-            timestampsForKeyword = findAllTimestampForKeyword(timestamps, keyword)
-            if numberOfKeywordsInTranscript != len(timestampsForKeyword):
-                print("number of keywords in transcript doesn't match number of timestamps for the keyword!!!!!", numberOfKeywordsInTranscript, len(timestampsForKeyword), keyword)
-            timestampIndex = 0# number of keywords in string
-            while keywordLeft > 0:
-                wordToBeReplaced = ' ' + keyword + ' '
-                if keywordLeft < numberOfKeywordsInTranscript:
-                    wordToBeReplaced = keyword + " (" + timestampsForKeyword[keywordLeft][1] + ") "
-                keywordWithTimestampStr = keyword + " (" + timestampsForKeyword[keywordLeft-1][1] + ") "# find timestamp of keyword from back of timestamps
-                print("     ", wordToBeReplaced, keywordWithTimestampStr)
-                transcript = transcript.replace(wordToBeReplaced, keywordWithTimestampStr, keywordLeft)
-                print("=======", transcript)# replace instances of keyword with word + timestamp
-                keywordLeft -= 1
-
-    return transcript
-
-def findAllTimestampForKeyword(timestamps, keyword):
-    wordList = keyword.split(' ')
-    timestampsForKeyword = []
-    for i in range(len(timestamps)):
-        if len(wordList) == 1:
-            if keyword == "up":
-                if timestamps[i][0] != "up":    # has to be exact match
-                    continue
-                else:
-                    timestampsForKeyword.append(timestamps[i])
-            else:
-                if keyword in timestamps[i][0]:
-                    timestampsForKeyword.append(timestamps[i])
-        else:
-            matchKeyword = True
-            for j in range(len(wordList)):
-                if wordList[j] not in timestamps[i+j][0]:
-                    matchKeyword = False
-                    break
-            if matchKeyword == True:
-                timestampsForKeyword.append(timestamps[i])
-
-    return timestampsForKeyword
+# def addTimeStamps(allKeywords, transcript, vidNum):
+#     fileName = os.path.split(os.path.abspath(os.getcwd()))[0] + "/../Video Analysis/Transcripts/video_" + str(
+#         vidNum) + "_TimeStampsClean.csv"
+#     timestamps = []
+#     with open(fileName) as csvFile:
+#         csvr = csv.reader(csvFile)
+#         timestamps = list(csvr)
+#
+#     startSearch = 0
+#     endSearch = len(transcript)
+#     keywordProcessedAlready = {}
+#     for keywords in allKeywords:
+#         for keyword in keywords[0]:
+#             if (keyword in keywordProcessedAlready):
+#                 continue
+#             else:
+#                 keywordProcessedAlready[keyword] = keyword
+#             print("++++++++++", keyword)
+#             numberOfKeywordsInTranscript = transcript.count(keyword + " ")
+#             if numberOfKeywordsInTranscript == 0:
+#                 continue
+#             keywordLeft = numberOfKeywordsInTranscript
+#             timestampsForKeyword = findAllTimestampForKeyword(timestamps, keyword)
+#             if numberOfKeywordsInTranscript != len(timestampsForKeyword):
+#                 print("number of keywords in transcript doesn't match number of timestamps for the keyword!!!!!",
+#                       numberOfKeywordsInTranscript, len(timestampsForKeyword), keyword)
+#             timestampIndex = 0  # number of keywords in string
+#             while keywordLeft > 0:
+#                 wordToBeReplaced = ' ' + keyword + ' '
+#                 if keywordLeft < numberOfKeywordsInTranscript:
+#                     wordToBeReplaced = keyword + " (" + timestampsForKeyword[keywordLeft][1] + ") "
+#                 keywordWithTimestampStr = keyword + " (" + timestampsForKeyword[keywordLeft - 1][
+#                     1] + ") "  # find timestamp of keyword from back of timestamps
+#                 print("     ", wordToBeReplaced, keywordWithTimestampStr)
+#                 transcript = transcript.replace(wordToBeReplaced, keywordWithTimestampStr, keywordLeft)
+#                 print("=======", transcript)  # replace instances of keyword with word + timestamp
+#                 keywordLeft -= 1
+#
+#     return transcript
+#
+#
+# def findAllTimestampForKeyword(timestamps, keyword):
+#     wordList = keyword.split(' ')
+#     timestampsForKeyword = []
+#     for i in range(len(timestamps)):
+#         if len(wordList) == 1:
+#             if keyword == "up":
+#                 if timestamps[i][0] != "up":  # has to be exact match
+#                     continue
+#                 else:
+#                     timestampsForKeyword.append(timestamps[i])
+#             else:
+#                 if keyword in timestamps[i][0]:
+#                     timestampsForKeyword.append(timestamps[i])
+#         else:
+#             matchKeyword = True
+#             for j in range(len(wordList)):
+#                 if wordList[j] not in timestamps[i + j][0]:
+#                     matchKeyword = False
+#                     break
+#             if matchKeyword == True:
+#                 timestampsForKeyword.append(timestamps[i])
+#
+#     return timestampsForKeyword

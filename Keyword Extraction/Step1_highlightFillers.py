@@ -28,7 +28,7 @@ def codeTextForHTMLHighlighting(originalInputText):
     newText=""
 
     for word in myWords:
-        newWord=word[0]+"DoNotReplace"+word[1:]+" "
+        newWord=word[0]+"XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ"+word[1:]+" "
         newText+=newWord
 
     #remove space at the end
@@ -108,6 +108,7 @@ def highlightFillers(transcriptFilename):
     worksheet.write_row(0, 0, ["Original Text", "Predicted Category", "Confidence Level"])
 
     colorTextHTML=fullText
+    numberOfFillers = 0
 
     for i in range(len(x_test_commentAndEncodedComment)):
         originalInputText = x_test_commentAndEncodedComment[i][0]
@@ -122,10 +123,11 @@ def highlightFillers(transcriptFilename):
             newText=codeTextForHTMLHighlighting(originalInputText)
             colorTextHTML = colorTextHTML.replace(originalInputText,
                                                   ' <span style="background-color:#ffffff" class="filler">' + newText + '</span>')
+            numberOfFillers += 1
 
         worksheet.write(i + 1, 0, originalInputText)
         worksheet.write(i + 1, 2, max_index)
         worksheet.write(i + 1, 3, prediction[0][int(max_index)] * 100)
 
     workbook.close()
-    return colorTextHTML
+    return colorTextHTML, numberOfFillers
