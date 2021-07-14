@@ -28,8 +28,8 @@ for x in range(numVideos):
             if silenceLength >= 4: # detects silences longer than 4 seconds
                 writer.writerow([str(firstEnd),str(secondStart),str(silenceLength)])
 
-# Going through the rows and connecting words into phrases based on silences
-for x in range(numVideos):
+# Going through the rows and connecting words into phrases based on silences (not effective)
+'''for x in range(numVideos):
     filename = "Video Analysis/Transcripts/video_" + str(x + 1) + "_TimeStampsClean.csv"
     data = pd.read_csv(filename)
     with open("Video Analysis/Transcripts/video_" + str(x + 1) + "_SplitPhrasesByTime.csv", 'w') as csv_file:
@@ -55,3 +55,4 @@ for x in range(numVideos):
                 currentPhrase = ""
             else:
                 currentPhrase += phrase + " "
+'''
