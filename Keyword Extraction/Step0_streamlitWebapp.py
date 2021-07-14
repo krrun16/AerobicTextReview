@@ -1,6 +1,7 @@
 # Stuff to install:
 
-# Pip install pytube3
+# pip install streamlit
+# pip install pytube3
 
 # Run this in terminal to start the app on your computer: streamlit run Step0_streamlitWebapp.py
 
@@ -11,31 +12,54 @@ st.write("Identifies 17 different classes of exercise transcript phrases")
 
 # /////////////////////////////
 # Different checkbox options
+
 st.sidebar.write("Select Classes:")
 st.sidebar.markdown("<b style='background-color:#ffeb91'>Table 1 (specify body movements):</b>", unsafe_allow_html=True)
-familiarExercisePhrases = st.sidebar.checkbox("Familiar Exercise Phrases")
-bodyParts = st.sidebar.checkbox("Body Parts")
-directionToMove = st.sidebar.checkbox("Direction to Move")
-expectedBodySensation = st.sidebar.checkbox("Expected Body Sensation")
-equipment = st.sidebar.checkbox("Equipment")
+
+placeholder1 = st.sidebar.empty()
+placeholder2 = st.sidebar.empty()
+placeholder3 = st.sidebar.empty()
+placeholder4 = st.sidebar.empty()
+placeholder5 = st.sidebar.empty()
+
+familiarExercisePhrases = placeholder1.checkbox("Familiar Exercise Phrases")
+bodyParts = placeholder2.checkbox("Body Parts")
+directionToMove = placeholder3.checkbox("Direction to Move")
+expectedBodySensation = placeholder4.checkbox("Expected Body Sensation")
+equipment = placeholder5.checkbox("Equipment")
 st.sidebar.markdown("____")
 
 st.sidebar.markdown("<b style='background-color:#a1e3aa'>Table 2 (specify timing):</b>", unsafe_allow_html=True)
-startingAnExercise = st.sidebar.checkbox("Starting an Exercise")
-stoppingAnExercise = st.sidebar.checkbox("Stopping an Exercise")
-duration = st.sidebar.checkbox("Duration")
-pacing = st.sidebar.checkbox("Pacing")
-quantityOfAnExercise = st.sidebar.checkbox("Quantity of an Exercise")
-transitioning = st.sidebar.checkbox("Transitioning")
+
+placeholder6 = st.sidebar.empty()
+placeholder7 = st.sidebar.empty()
+placeholder8 = st.sidebar.empty()
+placeholder9 = st.sidebar.empty()
+placeholder10 = st.sidebar.empty()
+placeholder11 = st.sidebar.empty()
+
+startingAnExercise = placeholder6.checkbox("Starting an Exercise")
+stoppingAnExercise = placeholder7.checkbox("Stopping an Exercise")
+duration = placeholder8.checkbox("Duration")
+pacing = placeholder9.checkbox("Pacing")
+quantityOfAnExercise = placeholder10.checkbox("Quantity of an Exercise")
+transitioning = placeholder11.checkbox("Transitioning")
 st.sidebar.markdown("____")
 
 st.sidebar.markdown("<b style='background-color:#f0986c'>Table 3 (does not specify movements or time):</b>", unsafe_allow_html=True)
-breathing = st.sidebar.checkbox("Breathing")
-encouragingPhrases = st.sidebar.checkbox("Encouraging Phrases")
-inaccessibleLocations = st.sidebar.checkbox("Inaccessible Locations")
-filler = st.sidebar.checkbox("Filler")
-subjectivePhrases = st.sidebar.checkbox("Subjective Phrases")
-unfamiliarExercisePhrase = st.sidebar.checkbox("Unfamiliar Exercise Phrase")
+placeholder12 = st.sidebar.empty()
+placeholder13 = st.sidebar.empty()
+placeholder14 = st.sidebar.empty()
+placeholder15 = st.sidebar.empty()
+placeholder16 = st.sidebar.empty()
+placeholder17 = st.sidebar.empty()
+
+brPhrase = placeholder12.checkbox("Breathing")
+encouragingPhrases = placeholder13.checkbox("Encouraging Phrases")
+inaccessibleLocations = placeholder14.checkbox("Inaccessible Locations")
+filler = placeholder15.checkbox("Filler")
+subjectivePhrases = placeholder16.checkbox("Subjective Phrases")
+unfamiliarExercisePhrase = placeholder17.checkbox("Unfamiliar Exercise Phrase")
 
 # /////////////////////////////
 # Upload a youtube link
@@ -72,14 +96,41 @@ def getColorTextHTML(youtubeLink):
     text_file.close()
 
     # Detect fillers, get HTML red highlight
-    highlightedFillers = highlightFillers("Output.txt")
+    highlightedFillers, numberOfFillers = highlightFillers("Output.txt")
 
     # Get HTML highlights of the other non-filler keywords
-    colorTextHTML = getColoredHTMLText(highlightedFillers, "Output.txt")
+    colorTextHTML, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers, "Output.txt")
+
     colorTextHTML = "<p>" + colorTextHTML + "</p>"
-    colorTextHTML=colorTextHTML.replace("DoNotReplace","")
+    colorTextHTML=colorTextHTML.replace("XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ","")
 
     return colorTextHTML
+
+def countNumberOfKeywordsPerClass(colorTextHTML):
+    myClasses=["familiarExercisePhrases",
+               "bodyParts",
+               "directionToMove",
+               "expectedBodySensation",
+               "equipment",
+               "startingAnExercise",
+               "stoppingAnExercise",
+               "duration",
+               "pacing",
+               "quantityOfAnExercise",
+               "transitioning",
+               "brPhrase",
+               "encouragingPhrases",
+               "inaccessibleLocations",
+               "filler",
+               "subjectivePhrases",
+               "unfamiliarExercisePhrase"]
+
+    numberOfKeywordsPerClassDictionary={}
+
+    for myClass in myClasses:
+        numberOfKeywordsPerClassDictionary[myClass]=colorTextHTML.count('class="'+myClass+'"')
+
+    return numberOfKeywordsPerClassDictionary
 
 colorTextHTML=""
 transcriptText=st.empty()
@@ -90,6 +141,42 @@ transcriptText=st.empty()
 if youtubeLink:
     colorTextHTML=getColorTextHTML(youtubeLink)
     transcriptText.markdown(colorTextHTML, unsafe_allow_html=True)
+
+    numberOfKeywordsPerClassDictionary=countNumberOfKeywordsPerClass(colorTextHTML)
+
+    # Update the checkbox itself
+    familiarExercisePhrases = placeholder1.checkbox(
+        "Familiar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["familiarExercisePhrases"])+")")
+    bodyParts = placeholder2.checkbox("Body Parts (" + str(numberOfKeywordsPerClassDictionary["bodyParts"])+")")
+    directionToMove = placeholder3.checkbox(
+        "Direction to Move (" + str(numberOfKeywordsPerClassDictionary["directionToMove"])+")")
+    expectedBodySensation = placeholder4.checkbox(
+        "Expected Body Sensation (" + str(numberOfKeywordsPerClassDictionary["expectedBodySensation"])+")")
+    equipment = placeholder5.checkbox("Equipment (" + str(numberOfKeywordsPerClassDictionary["equipment"])+")")
+
+    startingAnExercise = placeholder6.checkbox(
+        "Starting an Exercise (" + str(numberOfKeywordsPerClassDictionary["startingAnExercise"]) + ")")
+    stoppingAnExercise = placeholder7.checkbox("Stopping an Exercise (" + str(numberOfKeywordsPerClassDictionary["stoppingAnExercise"]) + ")")
+    duration = placeholder8.checkbox(
+        "Duration (" + str(numberOfKeywordsPerClassDictionary["duration"]) + ")")
+    pacing = placeholder9.checkbox(
+        "Pacing (" + str(numberOfKeywordsPerClassDictionary["pacing"]) + ")")
+    quantityOfAnExercise = placeholder10.checkbox("Quantity of an Exercise (" + str(numberOfKeywordsPerClassDictionary["quantityOfAnExercise"]) + ")")
+    transitioning = placeholder11.checkbox(
+        "Transitioning (" + str(numberOfKeywordsPerClassDictionary["transitioning"]) + ")")
+
+    brPhrase = placeholder12.checkbox(
+        "Breathing (" + str(numberOfKeywordsPerClassDictionary["brPhrase"]) + ")")
+    encouragingPhrases = placeholder13.checkbox(
+        "Encouraging Phrases (" + str(numberOfKeywordsPerClassDictionary["encouragingPhrases"]) + ")")
+    inaccessibleLocations = placeholder14.checkbox(
+        "Inaccessible Locations (" + str(numberOfKeywordsPerClassDictionary["inaccessibleLocations"]) + ")")
+    filler = placeholder15.checkbox(
+        "Filler (" + str(numberOfKeywordsPerClassDictionary["filler"]) + ")")
+    subjectivePhrases = placeholder16.checkbox(
+        "Subjective Phrases (" + str(numberOfKeywordsPerClassDictionary["subjectivePhrases"]) + ")")
+    unfamiliarExercisePhrase = placeholder17.checkbox(
+        "Unfamiliar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["unfamiliarExercisePhrase"]) + ")")
 
 lightYellow = "#ffeb91"
 lightGreen = "#a1e3aa"
@@ -171,9 +258,9 @@ if transitioning:
 # /////////////////////////////
 # Table 3
 
-if breathing:
-    colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="breathing">',
-                                          '<span style="background-color:'+str(lightRed)+'" class="breathing">')
+if brPhrase:
+    colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="brPhrase">',
+                                          '<span style="background-color:'+str(lightRed)+'" class="brPhrase">')
     transcriptText.empty()
     transcriptText.markdown(colorTextHTML, unsafe_allow_html=True)
 
