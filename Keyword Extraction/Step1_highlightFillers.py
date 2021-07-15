@@ -61,14 +61,18 @@ def create_word_embedding(comments, wordEmbeddings, add_pos_tags=False):
 
     return encoded_comments, commentAndEncodedComment
 
-def highlightFillers(transcriptFilename):
+def highlightFillers(transcriptFilename,transcriptFilenameShort,hasFullTxtFilename):
     # The default language is 'en' for English
     segmenter = DeepSegment('en')
 
     mySentencesData=[]
 
-    # txtFilename = os.path.split(os.path.abspath(os.getcwd()))[0] + "/Video Analysis/Transcripts/"+transcriptFilename
-    txtFilename = os.getcwd() + "/" + transcriptFilename
+    txtFilename=""
+    if hasFullTxtFilename:
+        txtFilename=transcriptFilename
+    else:
+        txtFilename = os.getcwd() + "/" + transcriptFilename
+
     fullText = getFullText(txtFilename=txtFilename)
 
     thisVideoSentencesArray = segmenter.segment_long(fullText)
@@ -103,7 +107,7 @@ def highlightFillers(transcriptFilename):
     # ///////////////////////////////////////////////////
     # Get a more detailed accuracy report
     import xlsxwriter
-    workbook = xlsxwriter.Workbook("Results_Detailed Accuracy/detailedAccuracy_"+transcriptFilename+".xlsx")
+    workbook = xlsxwriter.Workbook("Results_Detailed Accuracy/detailedAccuracy_"+transcriptFilenameShort+".xlsx")
     worksheet = workbook.add_worksheet()
     worksheet.write_row(0, 0, ["Original Text", "Predicted Category", "Confidence Level"])
 

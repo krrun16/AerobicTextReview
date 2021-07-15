@@ -1,19 +1,19 @@
-big breathes,0,breathing
-big exhales,2,breathing
-big exhale,6,breathing
-big inhales,1,breathing
-big inhale,5,breathing
-breather,0,breathing
-breathe,4,breathing
-catch your breath,2,breathing
-deep breaths,0,breathing
-slow exhales,1,breathing
-exhales,4,breathing
-exhale,8,breathing
-inhales,1,breathing
-inhale,5,breathing
-keep breathing,0,breathing
-breathing,2,breathing
+big breathes,0,brPhrase
+big exhales,2,brPhrase
+big exhale,6,brPhrase
+big inhales,1,brPhrase
+big inhale,5,brPhrase
+breather,0,brPhrase
+breathe,4,brPhrase
+catch your breath,2,brPhrase
+deep breaths,0,brPhrase
+slow exhales,1,brPhrase
+exhales,4,brPhrase
+exhale,8,brPhrase
+inhales,1,brPhrase
+inhale,5,brPhrase
+keep breathing,0,brPhrase
+breathing,2,brPhrase
 be determined,0,encouragingPhrases
 be focused,0,encouragingPhrases
 be strong,0,encouragingPhrases
@@ -2891,6 +2891,7 @@ now we're going,9,transitioning
 now I want you to,0,transitioning
 now we're going,9,transitioning
 right into the,0,transitioning
+right into,1,transitioning
 switch sides,1,transitioning
 switch side,1,transitioning
 then get up,0,transitioning
@@ -2905,6 +2906,8 @@ it's over,0,stoppingAnExercise
 done okay,0,stoppingAnExercise
 it is done,0,stoppingAnExercise
 that's the end,0,stoppingAnExercise
+are done,1,stoppingAnExercise
+re done,2,stoppingAnExercise
 we have five seconds,1,duration
 we've got 40 seconds,0,duration
 work for 20 seconds,1,duration
@@ -2914,12 +2917,16 @@ got 10 more seconds,0,duration
 20 seconds of,0,duration
 20 seconds,2,duration
 20 second,2,duration
+30 seconds,1,duration
 30 second,1,duration
 40 seconds of work,0,duration
 40 seconds,0,duration
 40 second,0,duration
+50 seconds,0,duration
+50 second,0,duration
 last 60 seconds,0,duration
 60 seconds,0,duration
+60 second,0,duration
 almost done,0,duration
 almost there,4,duration
 can see the finish line,0,duration
@@ -2942,6 +2949,44 @@ twenty seconds,1,duration
 twenty second,2,duration
 we are almost there,0,duration
 seconds,15,duration
+halfway there,0,duration
+fifty seconds,0,duration
+fifty second,0,duration
+thirty seconds,0,duration
+thirty second,0,duration
+1 minute,0,duration
+2 minute,0,duration
+3 minute,0,duration
+4 minute,0,duration
+5 minute,0,duration
+10 minute,0,duration
+15 minute,0,duration
+20 minute,0,duration
+25 minute,0,duration
+30 minute,0,duration
+35 minute,0,duration
+40 minute,0,duration
+45 minute,0,duration
+50 minute,0,duration
+55 minute,0,duration
+60 minute,0,duration
+one minute,0,duration
+two minute,0,duration
+three minute,0,duration
+four minute,0,duration
+five minute,0,duration
+ten minute,0,duration
+fifteen minute,0,duration
+twenty minute,0,duration
+twenty five minute,0,duration
+thirty minute,0,duration
+thirty five minute,0,duration
+forty minute,0,duration
+forty five minute,0,duration
+fifty minute,0,duration
+fifty five minute,0,duration
+sixty minute,0,duration
+hour,0,duration
 3 2 & 1,0,pacing
 3 2 1,0,pacing
 allotted time period,0,pacing
@@ -3047,6 +3092,13 @@ two different movement,2,quantityOfAnExercise
 two jumping jack,0,quantityOfAnExercise
 two more,8,quantityOfAnExercise
 two times,1,quantityOfAnExercise
+four more,0,quantityOfAnExercise
+five more,1,quantityOfAnExercise
+six more,0,quantityOfAnExercise
+seven more,0,quantityOfAnExercise
+eight more,0,quantityOfAnExercise
+nine more,0,quantityOfAnExercise
+ten more,1,quantityOfAnExercise
 ab crunch,0,familiarExercisePhrases
 curl up,0,familiarExercisePhrases
 curl-up,0,familiarExercisePhrases
@@ -3073,8 +3125,11 @@ v sit reach,0,familiarExercisePhrases
 v-sit reach,0,familiarExercisePhrases
 wall sit,0,familiarExercisePhrases
 wall-sit,0,familiarExercisePhrases
+abdominals,0,bodyParts
 abdominal,0,bodyParts
 abs,0,bodyParts
+upper arms,0,bodyParts
+arms,7,bodyParts
 upper arm,0,bodyParts
 arm,15,bodyParts
 back chest,1,bodyParts
@@ -3086,43 +3141,72 @@ back of your leg,0,bodyParts
 back of your,1,bodyParts
 back toe,1,bodyParts
 backside,0,bodyParts
+biceps,1,bodyParts
 bicep,1,bodyParts
+bones,0,bodyParts
 bone,3,bodyParts
 calf,0,bodyParts
 calves,0,bodyParts
 chin,0,bodyParts
 core,4,bodyParts
-ear,19,bodyParts
+ears,2,bodyParts
+ear,15,bodyParts
+elbows,3,bodyParts
 elbow,4,bodyParts
+eyes,0,bodyParts
 eye,0,bodyParts
+foot,4,bodyParts
 feet,28,bodyParts
+fingers,0,bodyParts
 finger,4,bodyParts
+forearms,0,bodyParts
 forearm,0,bodyParts
 front toe,1,bodyParts
+glutes,1,bodyParts
 glute,1,bodyParts
+gluts,0,bodyParts
 glut,1,bodyParts
+hands,9,bodyParts
 hand,11,bodyParts
+heels,3,bodyParts
 heel,9,bodyParts
+hips,17,bodyParts
 hip,21,bodyParts
+joints,0,bodyParts
 joint,0,bodyParts
+knees,15,bodyParts
 knee,21,bodyParts
+knucles,0,bodyParts
 knuckle,0,bodyParts
 lower back,0,bodyParts
 lower body,0,bodyParts
+muscles,1,bodyParts
 muscle,1,bodyParts
 neck,0,bodyParts
 our backs,0,bodyParts
 our back,2,bodyParts
+palms,0,bodyParts
 palm,0,bodyParts
+pinkies,0,bodyParts
 pinkie,0,bodyParts
+quadriceps,0,bodyParts
 quadricep,0,bodyParts
+quads,2,bodyParts
+quad,16,bodyParts
+ribs,0,bodyParts
 rib,1,bodyParts
+shins,0,bodyParts
 shin,7,bodyParts
+shoulders,9,bodyParts
 shoulder,13,bodyParts
+soles,0,bodyParts
 sole,0,bodyParts
 spine,0,bodyParts
 straight back,0,bodyParts
 tail,3,bodyParts
+toes,2,bodyParts
+toes,2,bodyParts
+triceps,1,bodyParts
 tricep,1,bodyParts
 upper body,0,bodyParts
 your back,2,bodyParts
@@ -3151,6 +3235,9 @@ climb back up,0,directionToMove
 come up,0,directionToMove
 degrees,0,directionToMove
 down your back,2,directionToMove
+take it down,3,directionToMove
+right down,0,directionToMove
+straight down,0,directionToMove
 down,41,directionToMove
 forward and back,1,directionToMove
 forward,26,directionToMove
@@ -3179,6 +3266,7 @@ pulling back,0,directionToMove
 push yourself back,1,directionToMove
 right into,1,directionToMove
 right,57,directionToMove
+each side,2,directionToMove
 side,37,directionToMove
 side to side,3,directionToMove
 sit back,2,directionToMove

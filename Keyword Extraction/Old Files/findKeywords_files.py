@@ -137,8 +137,6 @@ count=1
 for transcriptFilename in transcriptFiles:
     two_up = up(up(up(__file__)))
     txtFilename = two_up + "/Video Analysis/Transcripts/" + transcriptFilename
-    textLines = getTextLines(txtFilename=txtFilename)
-    textWords = getTextWords(txtFilename=txtFilename)
     fullText = getFullText(txtFilename=txtFilename)
     colorTextHTML = getColoredHTMLText(fullText)
     print(colorTextHTML)
