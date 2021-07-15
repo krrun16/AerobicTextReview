@@ -105,6 +105,9 @@ if page=="Youtube Link":
         # Get HTML highlights of the other non-filler keywords
         colorTextHTML, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers, "Output.txt")
 
+        # Get HTML highlights of silence spaces
+        colorTextHTML  =  colorTextHTML.replace(" () ", ' <span style="background-color:#ffffff" class="silences"> </span>')
+
         colorTextHTML = "<p>" + colorTextHTML + "</p>"
         colorTextHTML = colorTextHTML.replace("XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ", "")
 
