@@ -28,6 +28,31 @@ def getKeywordsArray(filename):
 
     return keywords
 
+# puts () where every silence is so it can be replaced with a highlight later
+def addSilencePlaceholders(fullText, vidNum):
+    fileName = os.path.split(os.path.abspath(os.getcwd()))[0] + "/../Video Analysis/Transcripts/video_" + str(
+        vidNum) + "_TimeStampsClean.csv"
+    timestamps = []
+    with open(fileName) as csvFile:
+        csvr = csv.reader(csvFile)
+        timestamps = list(csvr)
+    transcript = fullText.split(" ")
+    newTranscript = ""
+    pTS = 1 # timestamps pointer, starts at 1 because 0 is the headers
+    pTrans = 0 # transcript pointer
+    while pTS < len(timestamps)-1 and pTrans < len(transcript)-1:
+        wordTS1 = timestamps[pTS][0]
+        newTranscript += wordTS1 + " "
+        TSSilenceStart = timestamps[pTS][2]
+        TSSilenceStop = timestamps[pTS+1][1]
+        if len(TSSilenceStart) > 0 and len(TSSilenceStop) > 0:
+            if float(TSSilenceStop) - float(TSSilenceStart) > 2: # silence > 2 seconds
+                newTranscript += "() "
+        dashWords = wordTS1.split("-") # takes care of cases like "warm-up" because the time stamp splits it into 2 words
+        pTS += len(dashWords)
+        pTrans += 1
+    return newTranscript
+
 def getColoredHTMLText(fullText,transcriptFilename):
     familiarExercisePhrases = getKeywordsArray("familiarExercisePhrases")
     bodyParts = getKeywordsArray("bodyParts")

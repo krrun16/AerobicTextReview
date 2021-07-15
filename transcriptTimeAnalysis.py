@@ -48,7 +48,7 @@ for x in range(numVideos):
             if firstEnd == "" or secondStart == "":
                 continue
             silenceLength = secondStart - firstEnd
-            if silenceLength >= 4: # detects silences longer than 4 seconds
+            if silenceLength >= 2: # detects silences longer than 2 seconds
                 writer.writerow([str(firstEnd),str(secondStart),str(silenceLength)])
 
 # Going through the rows and connecting words into phrases based on silences (not effective)

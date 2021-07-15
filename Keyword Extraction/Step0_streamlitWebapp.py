@@ -94,6 +94,7 @@ if page=="Youtube Link":
             fullText += lineText.rstrip('\n') + " "
 
         fullText = fullText.lower()
+        fullText = addSilencePlaceholders(fullText,videoNumber) # replaces silences with () to not disrupt other code
 
         text_file.write(fullText)
         text_file.close()
