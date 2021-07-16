@@ -344,8 +344,8 @@ allKeywords=[[bodyParts,lightYellow,"bodyParts","none"],
              [breathing,lightRed,"breathing","none"]]
 
 def addSilences(fullText, vidNum):
-    fileName = os.path.split(os.path.abspath(os.getcwd()))[0] + "/../Video Analysis/Transcripts/video_" + str(
-        vidNum) + "_TimeStampsClean.csv"
+    fileName = os.path.split(os.path.abspath(os.getcwd()))[0] + "/../Video Analysis/Transcripts/Video_" + str(
+        vidNum) + "_TimeStamps.csv"
     timestamps = []
     with open(fileName) as csvFile:
         csvr = csv.reader(csvFile)
@@ -413,9 +413,9 @@ print(keywordMap)
 
 # CHANGE THE FILENAME HERE
 #txtFilename=os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/Video_5_ChloeTing.txt"
-#timestampFilename=os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/video_5_TimeStampsClean.csv"
+#timestampFilename=os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/Video_5_TimeStamps.csv"
 txtFilename=os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/Video_6_BeFit.txt"
-timestampFilename=os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/video_6_TimeStampsClean.csv"
+timestampFilename=os.path.split(os.path.abspath(os.getcwd()))[0]+"/../Video Analysis/Transcripts/Video_6_TimeStamps.csv"
 
 textLines=getTextLines(txtFilename=txtFilename)
 textWords=getTextWords(txtFilename=txtFilename)

@@ -165,7 +165,7 @@ here we,0,inaccessibleLocations
 all the way out,0,inaccessibleLocations
 look at,0,inaccessibleLocations
 down here,0,inaccessibleLocations
-over here,1,inaccessibleLocations
+over here,0,inaccessibleLocations
 right here,0,inaccessibleLocations
 right there,0,inaccessibleLocations
 there we go,0,inaccessibleLocations
@@ -179,7 +179,7 @@ everything squeezed,0,subjectivePhrases
 focus it,0,subjectivePhrases
 form right,0,subjectivePhrases
 good crisp movements,0,subjectivePhrases
-good form,0,subjectivePhrases
+good form,2,subjectivePhrases
 keep it strong,0,subjectivePhrases
 little bend,0,subjectivePhrases
 little easier,0,subjectivePhrases
@@ -224,7 +224,7 @@ childs pose,0,unfamiliarExercisePhrase
 cobra,0,unfamiliarExercisePhrase
 contralateral limb raise,0,unfamiliarExercisePhrase
 limb raise,0,unfamiliarExercisePhrase
-crunch,7,unfamiliarExercisePhrase
+crunch,6,unfamiliarExercisePhrase
 decline plank,0,unfamiliarExercisePhrase
 dirty dog,0,unfamiliarExercisePhrase
 forward hurdle run,0,unfamiliarExercisePhrase
@@ -307,7 +307,7 @@ stability ball sit-ups,0,unfamiliarExercisePhrase
 stability ball crunches,0,unfamiliarExercisePhrase
 stability ball wall squats,0,unfamiliarExercisePhrase
 sit-up,0,unfamiliarExercisePhrase
-crunches,1,unfamiliarExercisePhrase
+crunches,0,unfamiliarExercisePhrase
 wall squat,0,unfamiliarExercisePhrase
 bicep curl,0,unfamiliarExercisePhrase
 calf raises,0,unfamiliarExercisePhrase
@@ -497,7 +497,7 @@ lunge to single arm row,0,unfamiliarExercisePhrase
 lunge with overhead press,0,unfamiliarExercisePhrase
 medicine ball lunge,0,unfamiliarExercisePhrase
 medicine ball push-up,0,unfamiliarExercisePhrase
-mountain climber,0,unfamiliarExercisePhrase
+mountain climber,1,unfamiliarExercisePhrase
 ladder drill,0,unfamiliarExercisePhrase
 pistol squat,0,unfamiliarExercisePhrase
 power clean,0,unfamiliarExercisePhrase
@@ -1064,7 +1064,7 @@ leg lifts,0,unfamiliarExercisePhrase
 exercise ball oblique curl,0,unfamiliarExercisePhrase
 oblique curl,0,unfamiliarExercisePhrase
 exercise ball one leg crunch,0,unfamiliarExercisePhrase
-leg crunch,0,unfamiliarExercisePhrase
+leg crunch,1,unfamiliarExercisePhrase
 exercise ball one leg prone lower body rotation,0,unfamiliarExercisePhrase
 exercise ball one legged diagonal kick hamstring curl,0,unfamiliarExercisePhrase
 exercise ball pike pushup,0,unfamiliarExercisePhrase
@@ -1730,7 +1730,7 @@ cable standing biceps curls,0,unfamiliarExercisePhrase
 cable standing biceps curl,0,unfamiliarExercisePhrase
 cable standing crunches,0,unfamiliarExercisePhrase
 cable standing crunch,0,unfamiliarExercisePhrase
-standing crunch,1,unfamiliarExercisePhrase
+standing crunch,0,unfamiliarExercisePhrase
 cable standing curls,0,unfamiliarExercisePhrase
 cable standing curl,0,unfamiliarExercisePhrase
 cable standing deltoid raises,0,unfamiliarExercisePhrase
@@ -2469,7 +2469,7 @@ modified push-ups,0,unfamiliarExercisePhrase
 modified push-up,0,unfamiliarExercisePhrase
 modified push ups,0,unfamiliarExercisePhrase
 modified push up,0,unfamiliarExercisePhrase
-mountain climbers,0,unfamiliarExercisePhrase
+mountain climbers,1,unfamiliarExercisePhrase
 narrow grip lat pull-downs,0,unfamiliarExercisePhrase
 narrow grip lat pulldowns,0,unfamiliarExercisePhrase
 narrow grip lat pulldown,0,unfamiliarExercisePhrase
@@ -2884,7 +2884,7 @@ head to,0,transitioning
 into the next,0,transitioning
 it's coming next,0,transitioning
 it's time for,0,transitioning
-let's do,5,transitioning
+let's do,4,transitioning
 march now,0,transitioning
 now we're going up,0,transitioning
 now we're going,0,transitioning
@@ -2916,9 +2916,9 @@ got 10 more seconds,0,duration
 20 seconds of each,0,duration
 20 seconds of,0,duration
 20 seconds,0,duration
-20 second,0,duration
+20 second,1,duration
 30 seconds,2,duration
-30 second,2,duration
+30 second,3,duration
 40 seconds of work,0,duration
 40 seconds,0,duration
 40 second,0,duration
@@ -2999,7 +2999,7 @@ do it slow,1,pacing
 don't rush,0,pacing
 fast as you can,1,pacing
 fast pace,0,pacing
-fast,5,pacing
+fast,4,pacing
 5 come on 4 3 2 1,0,pacing
 5 4 3 2 and last 1 0,0,pacing
 5 4 3 2 and 1,0,pacing
@@ -3074,11 +3074,11 @@ last round,0,quantityOfAnExercise
 last time on,0,quantityOfAnExercise
 last time,0,quantityOfAnExercise
 not many left,0,quantityOfAnExercise
-one more exercise,0,quantityOfAnExercise
+one more exercise,1,quantityOfAnExercise
 one more round,0,quantityOfAnExercise
 one more set,0,quantityOfAnExercise
 one more time,0,quantityOfAnExercise
-one more,0,quantityOfAnExercise
+one more,1,quantityOfAnExercise
 one on each side,0,quantityOfAnExercise
 one right and one left,0,quantityOfAnExercise
 round one,0,quantityOfAnExercise
@@ -3108,9 +3108,9 @@ lunge,1,familiarExercisePhrases
 one-mile run,0,familiarExercisePhrases
 plank,4,familiarExercisePhrases
 push up and rotation,0,familiarExercisePhrases
-push up,0,familiarExercisePhrases
+push up,5,familiarExercisePhrases
 push-up and rotation,0,familiarExercisePhrases
-push-up,5,familiarExercisePhrases
+push-up,0,familiarExercisePhrases
 pushup and rotation,0,familiarExercisePhrases
 pushup,0,familiarExercisePhrases
 shuttle run,0,familiarExercisePhrases
@@ -3219,7 +3219,7 @@ at the top,0,directionToMove
 back down,0,directionToMove
 back flat,0,directionToMove
 back in the center,0,directionToMove
-back in,1,directionToMove
+back in,0,directionToMove
 back neutral,1,directionToMove
 back to center,0,directionToMove
 back to the center,0,directionToMove
@@ -3229,7 +3229,7 @@ back up,1,directionToMove
 backwards,0,directionToMove
 below,1,directionToMove
 bring it back,0,directionToMove
-bring them back,0,directionToMove
+bring them back,1,directionToMove
 center,1,directionToMove
 climb back up,1,directionToMove
 come up,0,directionToMove
@@ -3257,9 +3257,9 @@ move back,0,directionToMove
 off the ground,1,directionToMove
 on the ground,0,directionToMove
 open,0,directionToMove
-other side,3,directionToMove
-out,14,directionToMove
-over,1,directionToMove
+other side,4,directionToMove
+out,13,directionToMove
+over,0,directionToMove
 parallel,0,directionToMove
 pull back,0,directionToMove
 pulling back,0,directionToMove
@@ -3281,7 +3281,7 @@ straight,1,directionToMove
 to the ground,0,directionToMove
 towards the back,0,directionToMove
 toward,0,directionToMove
-up,25,directionToMove
+up,24,directionToMove
 the ground,1,directionToMove
 body parts worked,0,expectedBodySensation
 deep burn,0,expectedBodySensation
@@ -3308,8 +3308,8 @@ is engaged,1,expectedBodySensation
 pretend like you're,0,expectedBodySensation
 struggling,0,expectedBodySensation
 this one really hits,0,expectedBodySensation
-this works your,1,expectedBodySensation
-work those,1,expectedBodySensation
+this works your,2,expectedBodySensation
+work those,2,expectedBodySensation
 you might notice your,0,expectedBodySensation
 you're gonna feel those,0,expectedBodySensation
 you're gonna find that,0,expectedBodySensation

@@ -3,8 +3,8 @@ big exhales,0,brPhrase
 big exhale,0,brPhrase
 big inhales,0,brPhrase
 big inhale,0,brPhrase
-breather,0,brPhrase
-breathe,14,brPhrase
+breather,1,brPhrase
+breathe,19,brPhrase
 catch your breath,0,brPhrase
 deep breaths,5,brPhrase
 slow exhales,0,brPhrase
@@ -17,7 +17,7 @@ breathing,1,brPhrase
 be determined,1,encouragingPhrases
 be focused,1,encouragingPhrases
 be strong,2,encouragingPhrases
-believe in you,0,encouragingPhrases
+believe in you,1,encouragingPhrases
 best effort,4,encouragingPhrases
 big desire,1,encouragingPhrases
 big drive,1,encouragingPhrases
@@ -26,7 +26,7 @@ big energy,1,encouragingPhrases
 can do this,0,encouragingPhrases
 channeling it,1,encouragingPhrases
 come on squad,0,encouragingPhrases
-come on,43,encouragingPhrases
+come on,44,encouragingPhrases
 coming for you,1,encouragingPhrases
 couldn't do it without you,0,encouragingPhrases
 crushing it,0,encouragingPhrases
@@ -43,7 +43,7 @@ everybody's with us,1,encouragingPhrases
 everyone's doing great,0,encouragingPhrases
 excellent job,0,encouragingPhrases
 extra effort,1,encouragingPhrases
-fantastic,2,encouragingPhrases
+fantastic,1,encouragingPhrases
 feeling good,2,encouragingPhrases
 feeling the pain,1,encouragingPhrases
 fight,1,encouragingPhrases
@@ -63,10 +63,10 @@ great job,2,encouragingPhrases
 happy thoughts,0,encouragingPhrases
 high fives,0,encouragingPhrases
 how you feeling,1,encouragingPhrases
-I can't keep up,0,encouragingPhrases
+I can't keep up,1,encouragingPhrases
 I need you,0,encouragingPhrases
 I promise you,0,encouragingPhrases
-I'm feeling it,0,encouragingPhrases
+I'm feeling it,1,encouragingPhrases
 I'm just as tired,0,encouragingPhrases
 it really counts,0,encouragingPhrases
 it's about desire,1,encouragingPhrases
@@ -78,8 +78,8 @@ keep it up,0,encouragingPhrases
 keep stepping up,1,encouragingPhrases
 keep working,3,encouragingPhrases
 keep you moving,0,encouragingPhrases
-know you can,1,encouragingPhrases
-know you will,1,encouragingPhrases
+know you can,0,encouragingPhrases
+know you will,0,encouragingPhrases
 let's dig,3,encouragingPhrases
 let's do this,1,encouragingPhrases
 let's get it,0,encouragingPhrases
@@ -140,7 +140,7 @@ you're tired,0,encouragingPhrases
 you're with me,0,encouragingPhrases
 you've got this,1,encouragingPhrases
 your best,4,encouragingPhrases
-your heart,0,encouragingPhrases
+your heart,1,encouragingPhrases
 your life,1,encouragingPhrases
 your strength,0,encouragingPhrases
 squeeze these,0,inaccessibleLocations
@@ -159,16 +159,16 @@ stay there,0,inaccessibleLocations
 like this,1,inaccessibleLocations
 stay here,0,inaccessibleLocations
 their way,1,inaccessibleLocations
-be here,1,inaccessibleLocations
+be here,0,inaccessibleLocations
 here we are,1,inaccessibleLocations
-here we,13,inaccessibleLocations
+here we,10,inaccessibleLocations
 all the way out,6,inaccessibleLocations
 look at,3,inaccessibleLocations
 down here,1,inaccessibleLocations
 over here,0,inaccessibleLocations
 right here,0,inaccessibleLocations
 right there,1,inaccessibleLocations
-there we go,1,inaccessibleLocations
+there we go,0,inaccessibleLocations
 all out there,0,inaccessibleLocations
 see your,0,inaccessibleLocations
 a little bit more,1,subjectivePhrases
@@ -1348,7 +1348,7 @@ t row,0,unfamiliarExercisePhrase
 hollow rocks,0,unfamiliarExercisePhrase
 hip switches,0,unfamiliarExercisePhrase
 tuck jump burpee,0,unfamiliarExercisePhrase
-hamstring punches,2,unfamiliarExercisePhrase
+hamstring punches,1,unfamiliarExercisePhrase
 regular reverse lunge,0,unfamiliarExercisePhrase
 plyo jumping,0,unfamiliarExercisePhrase
 hooking knee,3,unfamiliarExercisePhrase
@@ -2839,7 +2839,7 @@ get right into it,0,startingAnExercise
 we're getting ready,0,startingAnExercise
 getting ready,0,startingAnExercise
 getting right into it,0,startingAnExercise
-here we go,9,startingAnExercise
+here we go,6,startingAnExercise
 join me now,0,startingAnExercise
 we're gonna start off,0,startingAnExercise
 start off,0,startingAnExercise
@@ -2895,14 +2895,14 @@ right into,0,transitioning
 switch sides,0,transitioning
 switch side,0,transitioning
 then get up,0,transitioning
-then I,0,transitioning
+then I,1,transitioning
 then we go to,0,transitioning
 then we'll go,0,transitioning
 then we'll,0,transitioning
 then you're,0,transitioning
 we are done,0,stoppingAnExercise
 we're done,0,stoppingAnExercise
-it's over,1,stoppingAnExercise
+it's over,0,stoppingAnExercise
 done okay,0,stoppingAnExercise
 it is done,0,stoppingAnExercise
 that's the end,0,stoppingAnExercise
@@ -2929,7 +2929,7 @@ last 60 seconds,1,duration
 60 second,2,duration
 almost done,1,duration
 almost there,1,duration
-can see the finish line,1,duration
+can see the finish line,0,duration
 five more seconds,0,duration
 forty seconds here,1,duration
 forty second,1,duration
@@ -2987,8 +2987,8 @@ fifty minute,0,duration
 fifty five minute,0,duration
 sixty minute,0,duration
 hour,0,duration
-3 2 & 1,1,pacing
-3 2 1,1,pacing
+3 2 & 1,0,pacing
+3 2 1,2,pacing
 allotted time period,0,pacing
 as quick as we can,0,pacing
 at my counts,0,pacing
@@ -3019,11 +3019,11 @@ in 3 2 1,0,pacing
 3 in 2 and in 1,0,pacing
 3 2 and 1,0,pacing
 3 2 1 and 0,0,pacing
-3 2 1,1,pacing
+3 2 1,2,pacing
 3 2,2,pacing
 2 and again 1,0,pacing
 2 and 1,0,pacing
-2 1,1,pacing
+2 1,2,pacing
 five come on four three two one,0,pacing
 five four three two and last one zero,0,pacing
 five four three two and one,0,pacing
@@ -3034,20 +3034,20 @@ four three two one zero,0,pacing
 last four three two one,0,pacing
 four three two one,0,pacing
 four three,0,pacing
-one two,5,pacing
+one two,4,pacing
 in three come on in two and one,1,pacing
-in three two and one,3,pacing
-in three two one ,3,pacing
+in three two and one,2,pacing
+in three two one ,2,pacing
 three come on two and one,1,pacing
 three come on two one,1,pacing
 three in two and in one,1,pacing
-three two and one,15,pacing
+three two and one,13,pacing
 three two one and zero,0,pacing
-three two one,23,pacing
-three two,38,pacing
+three two one,21,pacing
+three two,36,pacing
 two and again one,1,pacing
-two and one,18,pacing
-two one,26,pacing
+two and one,16,pacing
+two one,24,pacing
 go fast,3,pacing
 go in a tempo,0,pacing
 go slow,2,pacing
@@ -3244,7 +3244,7 @@ forward,1,directionToMove
 front,1,directionToMove
 go back,0,directionToMove
 higher,0,directionToMove
-high,4,directionToMove
+high,3,directionToMove
 in line,0,directionToMove
 in the ground,0,directionToMove
 into,7,directionToMove
@@ -3265,7 +3265,7 @@ pull back,0,directionToMove
 pulling back,0,directionToMove
 push yourself back,0,directionToMove
 right into,0,directionToMove
-right,12,directionToMove
+right,10,directionToMove
 each side,0,directionToMove
 side,9,directionToMove
 side to side,0,directionToMove
@@ -3288,11 +3288,11 @@ deep burn,2,expectedBodySensation
 feel a,1,expectedBodySensation
 feel every,0,expectedBodySensation
 feel in the,0,expectedBodySensation
-feel it,1,expectedBodySensation
-feel like,1,expectedBodySensation
+feel it,0,expectedBodySensation
+feel like,0,expectedBodySensation
 feel that stretch,0,expectedBodySensation
 feel that,1,expectedBodySensation
-feel the,1,expectedBodySensation
+feel the,2,expectedBodySensation
 feel those,0,expectedBodySensation
 feeling a,0,expectedBodySensation
 feeling it,3,expectedBodySensation
@@ -3313,12 +3313,12 @@ work those,0,expectedBodySensation
 you might notice your,0,expectedBodySensation
 you're gonna feel those,0,expectedBodySensation
 you're gonna find that,1,expectedBodySensation
-weight,2,equipment
+weight,1,equipment
 dumbbell,0,equipment
 box,0,equipment
 chair,0,equipment
 seat,0,equipment
-water,4,equipment
+water,5,equipment
 mat,5,equipment
 towel,2,equipment
 jump rope,0,equipment

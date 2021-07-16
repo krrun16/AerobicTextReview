@@ -11,14 +11,13 @@
 
 # /////////////////////////////
 from Step1_highlightFillers import *
-from Step2_highlightSearchableKeywords import *
-from Step3_calculatePercentageSilence import *
+from Step2_annotateSilence import *
+from Step3_highlightSearchableKeywords import *
 
 from pytube import YouTube
-
 from os.path import dirname as up
-
 import streamlit as st
+import re
 
 st.title("Exercise Transcript Analysis")
 st.write("Identifies 17 different classes of exercise transcript phrases")
@@ -53,7 +52,8 @@ myClasses = ["familiarExercisePhrases",
                      "inaccessibleLocations",
                      "filler",
                      "subjectivePhrases",
-                     "unfamiliarExercisePhrase"]
+                     "unfamiliarExercisePhrase",
+                    "silences"]
 
 def countNumberOfKeywordsPerClass(colorTextHTML):
 
@@ -61,7 +61,7 @@ def countNumberOfKeywordsPerClass(colorTextHTML):
 
     for myClass in myClasses:
         numberOfKeywordsPerClassDictionary[myClass]=colorTextHTML.count('class="'+myClass+'"')
-    print(numberOfKeywordsPerClassDictionary)
+
     return numberOfKeywordsPerClassDictionary
 
 if page=="Youtube Link":
@@ -75,38 +75,35 @@ if page=="Youtube Link":
         source = YouTube(youtubeLink)
 
         try:
-            en_caption = source.captions.get_by_language_code('en')
+            en_caption = source.captions['en']
         except:
-            en_caption = source.captions.get_by_language_code('a.en')
+            en_caption = source.captions['a.en']
 
         en_caption_convert_to_srt = (en_caption.generate_srt_captions())
         lineTextArray = en_caption_convert_to_srt.splitlines()
         lineTextArray = lineTextArray[2:]
-        print(lineTextArray)
 
         desired_lines = lineTextArray[::4]
-        print(desired_lines)
 
         # save the caption to a file named Output.txt
-        text_file = open("Output.txt", "w")
+        text_file = open("YoutubeOutput.txt", "w")
         fullText = ""
         for lineText in desired_lines:
             fullText += lineText.rstrip('\n') + " "
 
         fullText = fullText.lower()
-        fullText = addSilencePlaceholders(fullText,videoNumber) # replaces silences with () to not disrupt other code
 
         text_file.write(fullText)
         text_file.close()
 
         # Detect fillers, get HTML red highlight
-        highlightedFillers, numberOfFillers = highlightFillers("Output.txt", "Output.txt", hasFullTxtFilename=False)
+        highlightedFillers, numberOfFillers = highlightFillers("YoutubeOutput.txt", "YoutubeOutput.txt", hasFullTxtFilename=False)
 
         # Get HTML highlights of the other non-filler keywords
-        colorTextHTML, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers, "Output.txt")
+        colorTextHTML, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers, "YoutubeOutput.txt")
 
         # Get HTML highlights of silence spaces
-        colorTextHTML  =  colorTextHTML.replace(" () ", ' <span style="background-color:#ffffff" class="silences"> </span>')
+        # colorTextHTML  =  colorTextHTML.replace(" () ", ' <span style="background-color:#ffffff" class="silences"> </span>')
 
         colorTextHTML = "<p>" + colorTextHTML + "</p>"
         colorTextHTML = colorTextHTML.replace("XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ", "")
@@ -150,7 +147,7 @@ if page=="Youtube Link":
     transitioning = placeholder11.checkbox("Transitioning", key="a11")
     st.sidebar.markdown("____")
 
-    st.sidebar.markdown("<b style='background-color:#f0986c'>Table 3 (does not specify movements or time):</b>",
+    st.sidebar.markdown("<b style='background-color:#f0986c'>Table 3 (does not specify movements or timing):</b>",
                         unsafe_allow_html=True)
     placeholder12 = st.sidebar.empty()
     placeholder13 = st.sidebar.empty()
@@ -175,47 +172,25 @@ if page=="Youtube Link":
         numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTML)
 
         # Update the checkbox itself
-        familiarExercisePhrases = placeholder1.checkbox(
-            "Familiar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["familiarExercisePhrases"]) + ")",
-            key="c1")
-        bodyParts = placeholder2.checkbox("Body Parts (" + str(numberOfKeywordsPerClassDictionary["bodyParts"]) + ")",
-                                          key="c2")
-        directionToMove = placeholder3.checkbox(
-            "Direction to Move (" + str(numberOfKeywordsPerClassDictionary["directionToMove"]) + ")", key="c3")
-        expectedBodySensation = placeholder4.checkbox(
-            "Expected Body Sensation (" + str(numberOfKeywordsPerClassDictionary["expectedBodySensation"]) + ")",
-            key="c4")
-        equipment = placeholder5.checkbox("Equipment (" + str(numberOfKeywordsPerClassDictionary["equipment"]) + ")",
-                                          key="c5")
+        familiarExercisePhrases = placeholder1.checkbox("Familiar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["familiarExercisePhrases"]) + ")",key="c1")
+        bodyParts = placeholder2.checkbox("Body Parts (" + str(numberOfKeywordsPerClassDictionary["bodyParts"]) + ")",key="c2")
+        directionToMove = placeholder3.checkbox("Direction to Move (" + str(numberOfKeywordsPerClassDictionary["directionToMove"]) + ")", key="c3")
+        expectedBodySensation = placeholder4.checkbox("Expected Body Sensation (" + str(numberOfKeywordsPerClassDictionary["expectedBodySensation"]) + ")",key="c4")
+        equipment = placeholder5.checkbox("Equipment (" + str(numberOfKeywordsPerClassDictionary["equipment"]) + ")",key="c5")
 
-        startingAnExercise = placeholder6.checkbox(
-            "Starting an Exercise (" + str(numberOfKeywordsPerClassDictionary["startingAnExercise"]) + ")", key="c6")
-        stoppingAnExercise = placeholder7.checkbox(
-            "Stopping an Exercise (" + str(numberOfKeywordsPerClassDictionary["stoppingAnExercise"]) + ")", key="c7")
-        duration = placeholder8.checkbox(
-            "Duration (" + str(numberOfKeywordsPerClassDictionary["duration"]) + ")", key="c8")
-        pacing = placeholder9.checkbox(
-            "Pacing (" + str(numberOfKeywordsPerClassDictionary["pacing"]) + ")", key="c9")
-        quantityOfAnExercise = placeholder10.checkbox(
-            "Quantity of an Exercise (" + str(numberOfKeywordsPerClassDictionary["quantityOfAnExercise"]) + ")",
-            key="c10")
-        transitioning = placeholder11.checkbox(
-            "Transitioning (" + str(numberOfKeywordsPerClassDictionary["transitioning"]) + ")", key="c11")
+        startingAnExercise = placeholder6.checkbox("Starting an Exercise (" + str(numberOfKeywordsPerClassDictionary["startingAnExercise"]) + ")", key="c6")
+        stoppingAnExercise = placeholder7.checkbox("Stopping an Exercise (" + str(numberOfKeywordsPerClassDictionary["stoppingAnExercise"]) + ")", key="c7")
+        duration = placeholder8.checkbox("Duration (" + str(numberOfKeywordsPerClassDictionary["duration"]) + ")", key="c8")
+        pacing = placeholder9.checkbox("Pacing (" + str(numberOfKeywordsPerClassDictionary["pacing"]) + ")", key="c9")
+        quantityOfAnExercise = placeholder10.checkbox("Quantity of an Exercise (" + str(numberOfKeywordsPerClassDictionary["quantityOfAnExercise"]) + ")",key="c10")
+        transitioning = placeholder11.checkbox("Transitioning (" + str(numberOfKeywordsPerClassDictionary["transitioning"]) + ")", key="c11")
 
-        brPhrase = placeholder12.checkbox(
-            "Breathing (" + str(numberOfKeywordsPerClassDictionary["brPhrase"]) + ")", key="c12")
-        encouragingPhrases = placeholder13.checkbox(
-            "Encouraging Phrases (" + str(numberOfKeywordsPerClassDictionary["encouragingPhrases"]) + ")", key="c13")
-        inaccessibleLocations = placeholder14.checkbox(
-            "Inaccessible Locations (" + str(numberOfKeywordsPerClassDictionary["inaccessibleLocations"]) + ")",
-            key="c14")
-        filler = placeholder15.checkbox(
-            "Filler (" + str(numberOfKeywordsPerClassDictionary["filler"]) + ")", key="c15")
-        subjectivePhrases = placeholder16.checkbox(
-            "Subjective Phrases (" + str(numberOfKeywordsPerClassDictionary["subjectivePhrases"]) + ")", key="c16")
-        unfamiliarExercisePhrase = placeholder17.checkbox(
-            "Unfamiliar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["unfamiliarExercisePhrase"]) + ")",
-            key="c17")
+        brPhrase = placeholder12.checkbox("Breathing (" + str(numberOfKeywordsPerClassDictionary["brPhrase"]) + ")", key="c12")
+        encouragingPhrases = placeholder13.checkbox("Encouraging Phrases (" + str(numberOfKeywordsPerClassDictionary["encouragingPhrases"]) + ")", key="c13")
+        inaccessibleLocations = placeholder14.checkbox("Inaccessible Locations (" + str(numberOfKeywordsPerClassDictionary["inaccessibleLocations"]) + ")",key="c14")
+        filler = placeholder15.checkbox("Filler (" + str(numberOfKeywordsPerClassDictionary["filler"]) + ")", key="c15")
+        subjectivePhrases = placeholder16.checkbox("Subjective Phrases (" + str(numberOfKeywordsPerClassDictionary["subjectivePhrases"]) + ")", key="c16")
+        unfamiliarExercisePhrase = placeholder17.checkbox("Unfamiliar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["unfamiliarExercisePhrase"]) + ")",key="c17")
 
     # /////////////////////////////
     # Changes the highlight colors when checkboxes are pressed
@@ -363,7 +338,8 @@ else:
                  "inaccessibleLocations",
                  "filler",
                  "subjectivePhrases",
-                 "unfamiliarExercisePhrase"]
+                 "unfamiliarExercisePhrase",
+                 "silences"]
 
     videoList = ["", "Video 1 HASFit", "Video 2 NTC", "Video 3 BodyProject", "Video 4 MadFit", "Video 5 CT","Video 6 BeFit"]
     videoSelected = st.selectbox("Pick a predownloaded video:", videoList)
@@ -372,32 +348,45 @@ else:
     transcriptTexta = st.empty()
 
     @st.cache
-    def getColorHTMLNoYoutube(transcriptFilenameShort):
+    def getColorHTMLNoYoutube(transcriptFilenameShort,timestampsFilenameShort, videoNumber):
         one_up = up(up(__file__))
         txtFilename = one_up + "/Video Analysis/Transcripts/" + transcriptFilenameShort
 
+        # Get the silences included
+        fullText=getFullText(txtFilename)
+        fullText = addSilencePlaceholders(fullText, videoNumber)  # replaces silences with () to not disrupt other code
+
         # Detect fillers, get HTML red highlight
-        highlightedFillers, numberOfFillers = highlightFillers(txtFilename, transcriptFilenameShort,
-                                                               hasFullTxtFilename=True)
+        highlightedFillers, numberOfFillers = highlightFillersOnText(fullText)
 
         # Get HTML highlights of the other non-filler keywords
-        colorTextHTMLa, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers,
-                                                                               transcriptFilenameShort)
+        colorTextHTMLa, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers,transcriptFilenameShort)
 
         colorTextHTMLa = "<p>" + colorTextHTMLa + "</p>"
         colorTextHTMLa = colorTextHTMLa.replace("XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ", "")
+
+        #Put a span around the silences
+        silenceRegex = re.findall(r'\([0-9]+ second silence\)',colorTextHTMLa)
+
+        noDuplicates = []
+        for i in silenceRegex:
+            if i not in noDuplicates:
+                noDuplicates.append(i)
+
+        for silence in noDuplicates:
+            colorTextHTMLa=colorTextHTMLa.replace(silence,'<span style="background-color:#ffffff" class="silences">'+silence+'</span>')
+
         return colorTextHTMLa
 
     # /////////////////////////////
     # Different checkbox options
-
 
     st.sidebar.markdown("<b style='background-color:#c2c2c2'>Silences:</b>",
                         unsafe_allow_html=True)
     placeholderTwoSecondSilence = st.sidebar.empty()
     placeholderAverageSilence = st.sidebar.empty()
 
-    twoSecondSilence = placeholderTwoSecondSilence.checkbox("2 Seconds or Greater Silences", key="twoSecond")
+    twoSecondSilence = placeholderTwoSecondSilence.checkbox("2 Second or Greater Silences", key="twoSecond")
     st.sidebar.markdown("____")
 
     st.sidebar.write("Select New Classes:")
@@ -434,7 +423,7 @@ else:
     transitioninga = placeholder11a.checkbox("Transitioning", key="b11")
     st.sidebar.markdown("____")
 
-    st.sidebar.markdown("<b style='background-color:#f0986c'>Table 3 (does not specify movements or time):</b>",
+    st.sidebar.markdown("<b style='background-color:#f0986c'>Table 3 (does not specify movements or timing):</b>",
                         unsafe_allow_html=True)
     placeholder12a = st.sidebar.empty()
     placeholder13a = st.sidebar.empty()
@@ -457,140 +446,133 @@ else:
         numberOfKeywordsPerClassDictionary = {}
 
         if videoSelected == "Video 1 HASFit":
+            one_up = up(up(__file__))
+            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/Video_1_TimeStamps.csv"
+            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
+            placeholderAverageSilence.markdown("<p>"+str(percentageSilence)+"% of the audio was silence</p>",unsafe_allow_html=True)
+
             videoNumber = 1
-            transcriptFilenameShort = "Video_1_Hasfit_sentences.txt"
-            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort)
+            transcriptFilenameShort = "Video_1_Hasfit.txt"
+            timestampsFilenameShort = "Video_1_TimeStamps.csv"
+            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort,timestampsFilenameShort, videoNumber)
             transcriptTexta.empty()
             transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
             numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTMLa)
-
-            one_up = up(up(__file__))
-            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/video_1_TimeStampsClean.csv"
-            percentageSilence=getPercentageSilence(cleanTimestampsFilename)
-            placeholderAverageSilence.markdown("<p>"+str(percentageSilence)+"% of the video was silence</p>",unsafe_allow_html=True)
 
         elif videoSelected == "Video 2 NTC":
+            one_up = up(up(__file__))
+            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/Video_2_TimeStamps.csv"
+            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
+            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the audio was silence</p>",
+                                               unsafe_allow_html=True)
+
             videoNumber = 2
             transcriptFilenameShort = "Video_2_nikeTrainerClub.txt"
-            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort)
+            timestampsFilenameShort = "Video_2_TimeStamps.csv"
+            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort, timestampsFilenameShort, videoNumber)
             transcriptTexta.empty()
             transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
             numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTMLa)
-
-            one_up = up(up(__file__))
-            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/video_2_TimeStampsClean.csv"
-            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
-            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the video was silence</p>",
-                                               unsafe_allow_html=True)
 
         elif videoSelected == "Video 3 BodyProject":
+            one_up = up(up(__file__))
+            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/Video_3_TimeStamps.csv"
+            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
+            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the audio was silence</p>",
+                                               unsafe_allow_html=True)
+
             videoNumber = 3
             transcriptFilenameShort = "Video_3_BodyProject.txt"
-            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort)
+            timestampsFilenameShort = "Video_3_TimeStamps.csv"
+            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort, timestampsFilenameShort, videoNumber)
             transcriptTexta.empty()
             transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
             numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTMLa)
-
-            one_up = up(up(__file__))
-            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/video_3_TimeStampsClean.csv"
-            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
-            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the video was silence</p>",
-                                               unsafe_allow_html=True)
 
         elif videoSelected == "Video 4 MadFit":
+            one_up = up(up(__file__))
+            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/Video_4_TimeStamps.csv"
+            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
+            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the audio was silence</p>",
+                                               unsafe_allow_html=True)
+
             videoNumber = 4
             transcriptFilenameShort = "Video_4_MadFit.txt"
-            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort)
+            timestampsFilenameShort = "Video_4_TimeStamps.csv"
+            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort, timestampsFilenameShort, videoNumber)
             transcriptTexta.empty()
             transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
             numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTMLa)
-
-            one_up = up(up(__file__))
-            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/video_4_TimeStampsClean.csv"
-            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
-            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the video was silence</p>",
-                                               unsafe_allow_html=True)
 
         elif videoSelected == "Video 5 CT":
+            one_up = up(up(__file__))
+            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/Video_5_TimeStamps.csv"
+            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
+            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the audio was silence</p>",
+                                               unsafe_allow_html=True)
+
             videoNumber = 5
             transcriptFilenameShort = "Video_5_ChloeTing.txt"
-            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort)
+            timestampsFilenameShort = "Video_5_TimeStamps.csv"
+            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort, timestampsFilenameShort, videoNumber)
             transcriptTexta.empty()
             transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
             numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTMLa)
-
-            one_up = up(up(__file__))
-            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/video_5_TimeStampsClean.csv"
-            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
-            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the video was silence</p>",
-                                               unsafe_allow_html=True)
 
         elif videoSelected == "Video 6 BeFit":
+            one_up = up(up(__file__))
+            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/Video_6_TimeStamps.csv"
+            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
+            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the audio was silence</p>",
+                                               unsafe_allow_html=True)
+
             videoNumber = 6
             transcriptFilenameShort = "Video_6_BeFit.txt"
-            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort)
+            timestampsFilenameShort = "Video_6_TimeStamps.csv"
+            colorTextHTMLa = getColorHTMLNoYoutube(transcriptFilenameShort, timestampsFilenameShort, videoNumber)
             transcriptTexta.empty()
             transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
             numberOfKeywordsPerClassDictionary = countNumberOfKeywordsPerClass(colorTextHTMLa)
-
-            one_up = up(up(__file__))
-            cleanTimestampsFilename = one_up + "/Video Analysis/Transcripts/video_6_TimeStampsClean.csv"
-            percentageSilence = getPercentageSilence(cleanTimestampsFilename)
-            placeholderAverageSilence.markdown("<p>" + str(percentageSilence) + "% of the video was silence</p>",
-                                               unsafe_allow_html=True)
 
         if all(name in numberOfKeywordsPerClassDictionary for name in myClasses):
             # Update the checkbox itself
-            familiarExercisePhrasesa = placeholder1a.checkbox(
-                "Familiar Exercise Phrases (" + str(
-                    numberOfKeywordsPerClassDictionary["familiarExercisePhrases"]) + ")", key="d1")
-            bodyPartsa = placeholder2a.checkbox(
-                "Body Parts (" + str(numberOfKeywordsPerClassDictionary["bodyParts"]) + ")", key="d2")
-            directionToMovea = placeholder3a.checkbox(
-                "Direction to Move (" + str(numberOfKeywordsPerClassDictionary["directionToMove"]) + ")", key="d3")
-            expectedBodySensationa = placeholder4a.checkbox(
-                "Expected Body Sensation (" + str(numberOfKeywordsPerClassDictionary["expectedBodySensation"]) + ")",
-                key="d4")
-            equipmenta = placeholder5a.checkbox(
-                "Equipment (" + str(numberOfKeywordsPerClassDictionary["equipment"]) + ")", key="d5")
 
-            startingAnExercisea = placeholder6a.checkbox(
-                "Starting an Exercise (" + str(numberOfKeywordsPerClassDictionary["startingAnExercise"]) + ")",
-                key="d6")
-            stoppingAnExercisea = placeholder7a.checkbox(
-                "Stopping an Exercise (" + str(numberOfKeywordsPerClassDictionary["stoppingAnExercise"]) + ")",
-                key="d7")
-            durationa = placeholder8a.checkbox(
-                "Duration (" + str(numberOfKeywordsPerClassDictionary["duration"]) + ")", key="d8")
-            pacinga = placeholder9a.checkbox(
-                "Pacing (" + str(numberOfKeywordsPerClassDictionary["pacing"]) + ")", key="d9")
-            quantityOfAnExercisea = placeholder10a.checkbox(
-                "Quantity of an Exercise (" + str(numberOfKeywordsPerClassDictionary["quantityOfAnExercise"]) + ")",
-                key="d10")
-            transitioninga = placeholder11a.checkbox(
-                "Transitioning (" + str(numberOfKeywordsPerClassDictionary["transitioning"]) + ")", key="d11")
+            twoSecondSilence = placeholderTwoSecondSilence.checkbox("2 Second or Greater Silences (" + str(numberOfKeywordsPerClassDictionary["silences"]) + ")", key="d0")
 
-            brPhrasea = placeholder12a.checkbox(
-                "Breathing (" + str(numberOfKeywordsPerClassDictionary["brPhrase"]) + ")", key="d12")
-            encouragingPhrasesa = placeholder13a.checkbox(
-                "Encouraging Phrases (" + str(numberOfKeywordsPerClassDictionary["encouragingPhrases"]) + ")",
-                key="d13")
-            inaccessibleLocationsa = placeholder14a.checkbox(
-                "Inaccessible Locations (" + str(numberOfKeywordsPerClassDictionary["inaccessibleLocations"]) + ")",
-                key="d14")
-            fillera = placeholder15a.checkbox(
-                "Filler (" + str(numberOfKeywordsPerClassDictionary["filler"]) + ")", key="d15")
-            subjectivePhrasesa = placeholder16a.checkbox(
-                "Subjective Phrases (" + str(numberOfKeywordsPerClassDictionary["subjectivePhrases"]) + ")", key="d16")
-            unfamiliarExercisePhrasea = placeholder17a.checkbox(
-                "Unfamiliar Exercise Phrases (" + str(
-                    numberOfKeywordsPerClassDictionary["unfamiliarExercisePhrase"]) + ")", key="d17")
+            familiarExercisePhrasesa = placeholder1a.checkbox("Familiar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["familiarExercisePhrases"]) + ")", key="d1")
+            bodyPartsa = placeholder2a.checkbox("Body Parts (" + str(numberOfKeywordsPerClassDictionary["bodyParts"]) + ")", key="d2")
+            directionToMovea = placeholder3a.checkbox("Direction to Move (" + str(numberOfKeywordsPerClassDictionary["directionToMove"]) + ")", key="d3")
+            expectedBodySensationa = placeholder4a.checkbox("Expected Body Sensation (" + str(numberOfKeywordsPerClassDictionary["expectedBodySensation"]) + ")",key="d4")
+            equipmenta = placeholder5a.checkbox("Equipment (" + str(numberOfKeywordsPerClassDictionary["equipment"]) + ")", key="d5")
+
+            startingAnExercisea = placeholder6a.checkbox("Starting an Exercise (" + str(numberOfKeywordsPerClassDictionary["startingAnExercise"]) + ")",key="d6")
+            stoppingAnExercisea = placeholder7a.checkbox("Stopping an Exercise (" + str(numberOfKeywordsPerClassDictionary["stoppingAnExercise"]) + ")",key="d7")
+            durationa = placeholder8a.checkbox("Duration (" + str(numberOfKeywordsPerClassDictionary["duration"]) + ")", key="d8")
+            pacinga = placeholder9a.checkbox("Pacing (" + str(numberOfKeywordsPerClassDictionary["pacing"]) + ")", key="d9")
+            quantityOfAnExercisea = placeholder10a.checkbox("Quantity of an Exercise (" + str(numberOfKeywordsPerClassDictionary["quantityOfAnExercise"]) + ")",key="d10")
+            transitioninga = placeholder11a.checkbox("Transitioning (" + str(numberOfKeywordsPerClassDictionary["transitioning"]) + ")", key="d11")
+
+            brPhrasea = placeholder12a.checkbox("Breathing (" + str(numberOfKeywordsPerClassDictionary["brPhrase"]) + ")", key="d12")
+            encouragingPhrasesa = placeholder13a.checkbox("Encouraging Phrases (" + str(numberOfKeywordsPerClassDictionary["encouragingPhrases"]) + ")",key="d13")
+            inaccessibleLocationsa = placeholder14a.checkbox("Inaccessible Locations (" + str(numberOfKeywordsPerClassDictionary["inaccessibleLocations"]) + ")",key="d14")
+            fillera = placeholder15a.checkbox("Filler (" + str(numberOfKeywordsPerClassDictionary["filler"]) + ")", key="d15")
+            subjectivePhrasesa = placeholder16a.checkbox("Subjective Phrases (" + str(numberOfKeywordsPerClassDictionary["subjectivePhrases"]) + ")", key="d16")
+            unfamiliarExercisePhrasea = placeholder17a.checkbox("Unfamiliar Exercise Phrases (" + str(numberOfKeywordsPerClassDictionary["unfamiliarExercisePhrase"]) + ")", key="d17")
 
         # /////////////////////////////
         # Changes the highlight colors when checkboxes are pressed
+        lightGrey = "#c2c2c2"
         lightYellow = "#ffeb91"
         lightGreen = "#a1e3aa"
         lightRed = "#f0986c"
+
+        if twoSecondSilence:
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="silences">',
+                '<span style="background-color:' + str(
+                    lightGrey) + '" class="silences">')
+            transcriptTexta.empty()
+            transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
 
         # Table 1
 

@@ -1,8 +1,8 @@
 big breathes,0,brPhrase
-big exhales,0,brPhrase
-big exhale,0,brPhrase
-big inhales,0,brPhrase
-big inhale,0,brPhrase
+big exhales,1,brPhrase
+big exhale,1,brPhrase
+big inhales,1,brPhrase
+big inhale,1,brPhrase
 breather,0,brPhrase
 breathe,0,brPhrase
 catch your breath,0,brPhrase
@@ -52,7 +52,7 @@ finishing strong,0,encouragingPhrases
 focus on your goals,0,encouragingPhrases
 game faces,0,encouragingPhrases
 get that much better,0,encouragingPhrases
-give it all,1,encouragingPhrases
+give it all,0,encouragingPhrases
 good job,0,encouragingPhrases
 good pain,0,encouragingPhrases
 got plenty left,0,encouragingPhrases
@@ -194,7 +194,7 @@ nice and narrow,0,subjectivePhrases
 nice and quick,0,subjectivePhrases
 nice and small,1,subjectivePhrases
 nice and stable,0,subjectivePhrases
-nice and strong,1,subjectivePhrases
+nice and strong,0,subjectivePhrases
 nice and tight,2,subjectivePhrases
 nice and under control,0,subjectivePhrases
 nice and wide,1,subjectivePhrases
@@ -224,7 +224,7 @@ childs pose,0,unfamiliarExercisePhrase
 cobra,0,unfamiliarExercisePhrase
 contralateral limb raise,0,unfamiliarExercisePhrase
 limb raise,0,unfamiliarExercisePhrase
-crunch,2,unfamiliarExercisePhrase
+crunch,1,unfamiliarExercisePhrase
 decline plank,0,unfamiliarExercisePhrase
 dirty dog,0,unfamiliarExercisePhrase
 forward hurdle run,0,unfamiliarExercisePhrase
@@ -2468,7 +2468,7 @@ modified pushup,0,unfamiliarExercisePhrase
 modified push-ups,0,unfamiliarExercisePhrase
 modified push-up,0,unfamiliarExercisePhrase
 modified push ups,0,unfamiliarExercisePhrase
-modified push up,0,unfamiliarExercisePhrase
+modified push up,1,unfamiliarExercisePhrase
 mountain climbers,0,unfamiliarExercisePhrase
 narrow grip lat pull-downs,0,unfamiliarExercisePhrase
 narrow grip lat pulldowns,0,unfamiliarExercisePhrase
@@ -2837,7 +2837,7 @@ first we're,0,startingAnExercise
 first workout,0,startingAnExercise
 get right into it,0,startingAnExercise
 we're getting ready,0,startingAnExercise
-getting ready,3,startingAnExercise
+getting ready,2,startingAnExercise
 getting right into it,0,startingAnExercise
 here we go,2,startingAnExercise
 join me now,0,startingAnExercise
@@ -2851,7 +2851,7 @@ start with,0,startingAnExercise
 starting off,2,startingAnExercise
 the first exercise,0,startingAnExercise
 we're going to start,0,startingAnExercise
-we're starting,1,startingAnExercise
+we're starting,2,startingAnExercise
 you ready,0,startingAnExercise
 we are headed to,1,transitioning
 we'll take it to,0,transitioning
@@ -2916,9 +2916,9 @@ got 10 more seconds,0,duration
 20 seconds of each,0,duration
 20 seconds of,0,duration
 20 seconds,0,duration
-20 second,0,duration
-30 seconds,0,duration
-30 second,0,duration
+20 second,2,duration
+30 seconds,1,duration
+30 second,1,duration
 40 seconds of work,0,duration
 40 seconds,0,duration
 40 second,0,duration
@@ -2930,13 +2930,13 @@ last 60 seconds,0,duration
 almost done,0,duration
 almost there,0,duration
 can see the finish line,0,duration
-five more seconds,1,duration
+five more seconds,0,duration
 forty seconds here,0,duration
 forty second,0,duration
 getting close to the end,0,duration
 halfway done,0,duration
 more seconds left,0,duration
-more seconds,1,duration
+more seconds,0,duration
 not done yet,0,duration
 not much left,0,duration
 not much time left,0,duration
@@ -2948,7 +2948,7 @@ ten second,1,duration
 twenty seconds,0,duration
 twenty second,0,duration
 we are almost there,0,duration
-seconds,3,duration
+seconds,2,duration
 halfway there,0,duration
 fifty seconds,0,duration
 fifty second,0,duration
@@ -2958,9 +2958,9 @@ thirty second,0,duration
 2 minute,0,duration
 3 minute,0,duration
 4 minute,0,duration
-5 minute,4,duration
+5 minute,2,duration
 10 minute,0,duration
-15 minute,4,duration
+15 minute,2,duration
 20 minute,0,duration
 25 minute,0,duration
 30 minute,0,duration
@@ -3034,7 +3034,7 @@ four three two one zero,0,pacing
 last four three two one,0,pacing
 four three two one,0,pacing
 four three,0,pacing
-one two,3,pacing
+one two,4,pacing
 in three come on in two and one,0,pacing
 in three two and one,0,pacing
 in three two one ,0,pacing
@@ -3047,7 +3047,7 @@ three two one,0,pacing
 three two,0,pacing
 two and again one,0,pacing
 two and one,0,pacing
-two one,0,pacing
+two one,1,pacing
 go fast,0,pacing
 go in a tempo,0,pacing
 go slow,0,pacing
@@ -3063,7 +3063,7 @@ switch switch switch,0,pacing
 take a break whenever,0,pacing
 the pace is high,0,pacing
 your pace,0,pacing
-circuit number,4,quantityOfAnExercise
+circuit number,6,quantityOfAnExercise
 don't have much left,0,quantityOfAnExercise
 few more,0,quantityOfAnExercise
 few times,0,quantityOfAnExercise
@@ -3093,7 +3093,7 @@ two jumping jack,2,quantityOfAnExercise
 two more,0,quantityOfAnExercise
 two times,0,quantityOfAnExercise
 four more,0,quantityOfAnExercise
-five more,1,quantityOfAnExercise
+five more,0,quantityOfAnExercise
 six more,0,quantityOfAnExercise
 seven more,0,quantityOfAnExercise
 eight more,0,quantityOfAnExercise
@@ -3103,14 +3103,14 @@ ab crunch,0,familiarExercisePhrases
 curl up,0,familiarExercisePhrases
 curl-up,0,familiarExercisePhrases
 high knee,0,familiarExercisePhrases
-jumping jack,3,familiarExercisePhrases
+jumping jack,4,familiarExercisePhrases
 lunge,3,familiarExercisePhrases
 one-mile run,0,familiarExercisePhrases
 plank,2,familiarExercisePhrases
 push up and rotation,0,familiarExercisePhrases
-push up,2,familiarExercisePhrases
+push up,3,familiarExercisePhrases
 push-up and rotation,0,familiarExercisePhrases
-push-up,1,familiarExercisePhrases
+push-up,0,familiarExercisePhrases
 pushup and rotation,0,familiarExercisePhrases
 pushup,0,familiarExercisePhrases
 shuttle run,0,familiarExercisePhrases
@@ -3214,20 +3214,20 @@ above,1,directionToMove
 all the way up,1,directionToMove
 angle,0,directionToMove
 are back,0,directionToMove
-around,1,directionToMove
+around,0,directionToMove
 at the top,0,directionToMove
 back down,0,directionToMove
 back flat,0,directionToMove
 back in the center,0,directionToMove
 back in,0,directionToMove
 back neutral,0,directionToMove
-back to center,1,directionToMove
+back to center,2,directionToMove
 back to the center,0,directionToMove
 back to the middle,0,directionToMove
 back together,0,directionToMove
 back up,0,directionToMove
 backwards,0,directionToMove
-below,2,directionToMove
+below,0,directionToMove
 bring it back,0,directionToMove
 bring them back,0,directionToMove
 center,4,directionToMove
@@ -3238,7 +3238,7 @@ down your back,0,directionToMove
 take it down,0,directionToMove
 right down,0,directionToMove
 straight down,0,directionToMove
-down,10,directionToMove
+down,9,directionToMove
 forward and back,0,directionToMove
 forward,0,directionToMove
 front,0,directionToMove
@@ -3258,14 +3258,14 @@ off the ground,0,directionToMove
 on the ground,0,directionToMove
 open,0,directionToMove
 other side,0,directionToMove
-out,10,directionToMove
+out,8,directionToMove
 over,1,directionToMove
 parallel,0,directionToMove
 pull back,0,directionToMove
 pulling back,0,directionToMove
 push yourself back,0,directionToMove
 right into,0,directionToMove
-right,12,directionToMove
+right,11,directionToMove
 each side,0,directionToMove
 side,1,directionToMove
 side to side,0,directionToMove
@@ -3281,7 +3281,7 @@ straight,0,directionToMove
 to the ground,2,directionToMove
 towards the back,0,directionToMove
 toward,0,directionToMove
-up,27,directionToMove
+up,26,directionToMove
 the ground,2,directionToMove
 body parts worked,0,expectedBodySensation
 deep burn,0,expectedBodySensation

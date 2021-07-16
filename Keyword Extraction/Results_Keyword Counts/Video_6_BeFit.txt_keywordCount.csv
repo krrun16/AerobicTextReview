@@ -32,7 +32,7 @@ couldn't do it without you,0,encouragingPhrases
 crushing it,0,encouragingPhrases
 designed to be tough,0,encouragingPhrases
 determination,0,encouragingPhrases
-doing great,3,encouragingPhrases
+doing great,4,encouragingPhrases
 doing this together,0,encouragingPhrases
 don't worry if,0,encouragingPhrases
 drive come on,0,encouragingPhrases
@@ -73,7 +73,7 @@ it's about desire,0,encouragingPhrases
 it's all mental,0,encouragingPhrases
 it's intense,0,encouragingPhrases
 keep getting it,0,encouragingPhrases
-keep going,1,encouragingPhrases
+keep going,2,encouragingPhrases
 keep it up,0,encouragingPhrases
 keep stepping up,0,encouragingPhrases
 keep working,0,encouragingPhrases
@@ -83,7 +83,7 @@ know you will,0,encouragingPhrases
 let's dig,0,encouragingPhrases
 let's do this,0,encouragingPhrases
 let's get it,0,encouragingPhrases
-let's go,6,encouragingPhrases
+let's go,7,encouragingPhrases
 let's push,0,encouragingPhrases
 let's work,0,encouragingPhrases
 let's work this,0,encouragingPhrases
@@ -114,7 +114,7 @@ that's drive,0,encouragingPhrases
 the enemy's coming,0,encouragingPhrases
 the finish line,0,encouragingPhrases
 these are tough,0,encouragingPhrases
-this is hard,1,encouragingPhrases
+this is hard,0,encouragingPhrases
 this is it,0,encouragingPhrases
 this might feel really new,0,encouragingPhrases
 totally fine,0,encouragingPhrases
@@ -187,7 +187,7 @@ little explosion,0,subjectivePhrases
 little harder,0,subjectivePhrases
 nice and controlled,0,subjectivePhrases
 nice and easy,1,subjectivePhrases
-nice and flat,2,subjectivePhrases
+nice and flat,3,subjectivePhrases
 nice and high,0,subjectivePhrases
 nice and low,0,subjectivePhrases
 nice and narrow,0,subjectivePhrases
@@ -200,7 +200,7 @@ nice and under control,0,subjectivePhrases
 nice and wide,0,subjectivePhrases
 nice strong,0,subjectivePhrases
 powerfully,0,subjectivePhrases
-really reach,0,subjectivePhrases
+really reach,1,subjectivePhrases
 safe manner,0,subjectivePhrases
 stay nice,0,subjectivePhrases
 stay with it,0,subjectivePhrases
@@ -213,7 +213,7 @@ works for you,0,subjectivePhrases
 90 lat stretch,0,unfamiliarExercisePhrase
 ankle flexion,0,unfamiliarExercisePhrase
 anti-rotation reverse lunge,0,unfamiliarExercisePhrase
-reverse lunge,3,unfamiliarExercisePhrase
+reverse lunge,4,unfamiliarExercisePhrase
 bent knee push-up,0,unfamiliarExercisePhrase
 knee push-up,0,unfamiliarExercisePhrase
 bodyweight squat,0,unfamiliarExercisePhrase
@@ -309,7 +309,7 @@ stability ball wall squats,0,unfamiliarExercisePhrase
 sit-up,0,unfamiliarExercisePhrase
 crunches,0,unfamiliarExercisePhrase
 wall squat,0,unfamiliarExercisePhrase
-bicep curl,1,unfamiliarExercisePhrase
+bicep curl,2,unfamiliarExercisePhrase
 calf raises,0,unfamiliarExercisePhrase
 chest stretch,0,unfamiliarExercisePhrase
 dorsi-flexion,0,unfamiliarExercisePhrase
@@ -2852,7 +2852,7 @@ starting off,0,startingAnExercise
 the first exercise,0,startingAnExercise
 we're going to start,1,startingAnExercise
 we're starting,0,startingAnExercise
-you ready,2,startingAnExercise
+you ready,1,startingAnExercise
 we are headed to,0,transitioning
 we'll take it to,0,transitioning
 we're back to,0,transitioning
@@ -2863,12 +2863,12 @@ we're going back,0,transitioning
 we're going into,1,transitioning
 we're going to go back,0,transitioning
 we're going to go,1,transitioning
-we're going to,2,transitioning
+we're going to,3,transitioning
 we're gonna go to,0,transitioning
 we're gonna go,1,transitioning
 we're gonna do,0,transitioning
-we're gonna move,0,transitioning
-we're gonna,5,transitioning
+we're gonna move,1,transitioning
+we're gonna,7,transitioning
 we're moving into,0,transitioning
 we've got another,0,transitioning
 we've got some,0,transitioning
@@ -2878,7 +2878,7 @@ another combo,0,transitioning
 do another,0,transitioning
 going back to,0,transitioning
 going into our,0,transitioning
-going to go back,0,transitioning
+going to go back,1,transitioning
 gonna move straight into,0,transitioning
 head to,0,transitioning
 into the next,0,transitioning
@@ -2888,10 +2888,10 @@ let's do,2,transitioning
 march now,0,transitioning
 now we're going up,0,transitioning
 now we're going,0,transitioning
-now I want you to,0,transitioning
+now I want you to,1,transitioning
 now we're going,0,transitioning
-right into the,0,transitioning
-right into,2,transitioning
+right into the,1,transitioning
+right into,3,transitioning
 switch sides,2,transitioning
 switch side,2,transitioning
 then get up,0,transitioning
@@ -3069,7 +3069,7 @@ few more,0,quantityOfAnExercise
 few times,0,quantityOfAnExercise
 four high knee,1,quantityOfAnExercise
 last five,0,quantityOfAnExercise
-last one,8,quantityOfAnExercise
+last one,10,quantityOfAnExercise
 last round,0,quantityOfAnExercise
 last time on,0,quantityOfAnExercise
 last time,0,quantityOfAnExercise
@@ -3090,7 +3090,7 @@ three times,0,quantityOfAnExercise
 try that again,0,quantityOfAnExercise
 two different movement,0,quantityOfAnExercise
 two jumping jack,0,quantityOfAnExercise
-two more,4,quantityOfAnExercise
+two more,5,quantityOfAnExercise
 two times,0,quantityOfAnExercise
 four more,1,quantityOfAnExercise
 five more,3,quantityOfAnExercise
@@ -3127,7 +3127,7 @@ wall sit,0,familiarExercisePhrases
 wall-sit,0,familiarExercisePhrases
 abdominals,0,bodyParts
 abdominal,0,bodyParts
-abs,10,bodyParts
+abs,8,bodyParts
 upper arms,0,bodyParts
 arms,10,bodyParts
 upper arm,0,bodyParts
@@ -3135,7 +3135,7 @@ arm,13,bodyParts
 back chest,0,bodyParts
 back heel,0,bodyParts
 back muscles,0,bodyParts
-back of the,1,bodyParts
+back of the,2,bodyParts
 back of those,0,bodyParts
 back of your leg,0,bodyParts
 back of your,0,bodyParts
@@ -3151,8 +3151,8 @@ chin,0,bodyParts
 core,0,bodyParts
 ears,1,bodyParts
 ear,2,bodyParts
-elbows,6,bodyParts
-elbow,6,bodyParts
+elbows,5,bodyParts
+elbow,5,bodyParts
 eyes,0,bodyParts
 eye,0,bodyParts
 foot,0,bodyParts
@@ -3181,7 +3181,7 @@ knuckle,1,bodyParts
 lower back,0,bodyParts
 lower body,0,bodyParts
 muscles,0,bodyParts
-muscle,1,bodyParts
+muscle,0,bodyParts
 neck,0,bodyParts
 our backs,0,bodyParts
 our back,1,bodyParts
@@ -3222,8 +3222,8 @@ back in the center,1,directionToMove
 back in,1,directionToMove
 back neutral,0,directionToMove
 back to center,0,directionToMove
-back to the center,2,directionToMove
-back to the middle,3,directionToMove
+back to the center,3,directionToMove
+back to the middle,5,directionToMove
 back together,0,directionToMove
 back up,0,directionToMove
 backwards,0,directionToMove
@@ -3236,7 +3236,7 @@ come up,2,directionToMove
 degrees,0,directionToMove
 down your back,0,directionToMove
 take it down,1,directionToMove
-right down,1,directionToMove
+right down,2,directionToMove
 straight down,1,directionToMove
 down,41,directionToMove
 forward and back,0,directionToMove
@@ -3258,17 +3258,17 @@ off the ground,0,directionToMove
 on the ground,0,directionToMove
 open,2,directionToMove
 other side,3,directionToMove
-out,12,directionToMove
+out,11,directionToMove
 over,1,directionToMove
 parallel,0,directionToMove
 pull back,0,directionToMove
 pulling back,0,directionToMove
 push yourself back,0,directionToMove
-right into,2,directionToMove
+right into,3,directionToMove
 right,32,directionToMove
 each side,4,directionToMove
 side,24,directionToMove
-side to side,0,directionToMove
+side to side,1,directionToMove
 sit back,0,directionToMove
 sit it back,0,directionToMove
 sitting back,0,directionToMove
@@ -3295,7 +3295,7 @@ feel that,0,expectedBodySensation
 feel the,0,expectedBodySensation
 feel those,1,expectedBodySensation
 feeling a,0,expectedBodySensation
-feeling it,1,expectedBodySensation
+feeling it,0,expectedBodySensation
 feeling that,0,expectedBodySensation
 feeling those,0,expectedBodySensation
 get that heart rate up,0,expectedBodySensation
@@ -3319,6 +3319,6 @@ box,0,equipment
 chair,0,equipment
 seat,1,equipment
 water,1,equipment
-mat,1,equipment
+mat,0,equipment
 towel,0,equipment
 jump rope,2,equipment

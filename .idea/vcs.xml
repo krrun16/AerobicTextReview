@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Keyword Extraction/gentle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Keyword Extraction/gentle/ext/kaldi" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/gentle" vcs="Git" />
   </component>
 </project>
