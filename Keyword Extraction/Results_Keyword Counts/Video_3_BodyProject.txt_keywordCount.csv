@@ -3251,7 +3251,7 @@ into,7,directionToMove
 jump them back,0,directionToMove
 left,5,directionToMove
 level,0,directionToMove
-low,12,directionToMove
+low,13,directionToMove
 lower,2,directionToMove
 move back,1,directionToMove
 off the ground,0,directionToMove

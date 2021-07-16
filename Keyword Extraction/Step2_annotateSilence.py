@@ -36,7 +36,7 @@ def addSilencePlaceholders(fullText, vidNum):
         timestamps = list(csvr)
     transcript = fullText.split(" ")
     newTranscript = ""
-    pTS = 1 # timestamps pointer, starts at 1 because 0 is the headers
+    pTS = 0 # timestamps pointer, starts at 1 because 0 is the headers
     pTrans = 0 # transcript pointer
     while pTS < len(timestamps)-1 and pTrans < len(transcript)-1:
         wordTS1 = timestamps[pTS][0]
