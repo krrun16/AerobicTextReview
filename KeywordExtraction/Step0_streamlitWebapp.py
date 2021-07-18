@@ -1,14 +1,32 @@
-# Stuff to install:
-
+# STUFF TO INSTALL:
+# Python 3.7 (There could be bugs with other versions like 3.8)
 # pip install streamlit
 # pip install pytube3==10.8.5
+# pip install youtube_dl
 # pip install deepsegment
 # pip install tensorflow==1.14
 # pip install keras==2.2.5
 # pip install nltk
-# Make sure that if you train a new filler CNN, it's trained with the above tensorflow and keras versions
 
-# Run this in terminal to start the app on your computer: streamlit run Step0_streamlitWebapp.py
+# IMPORTANT IF YOU WANT THE WEB APP TO WORK FOR YOUTUBE LINKS:
+# 1) Go to this link, download m3: https://github.com/david-littlefield/pretrained-models/blob/main/gentle/m3
+# 2) Go to this link, download k3: https://github.com/david-littlefield/pretrained-models/blob/main/gentle/k3
+# 3) Put both of these files into aerobictextreviewLFS/KewywordExtraction/gentle/ext
+# 4) Make k3 and m3 executable files:
+# For Macs:
+# cd into aerobictextreviewLFS/KewywordExtraction/gentle/ext
+# Enter: sudo chmod +x k3
+# Enter: sudo chmod +x m3
+
+# I'm pretty sure this is how you make files exectuable in PCs but I'm not sure
+# For PCs:
+# cd into aerobictextreviewLFS/KewywordExtraction/gentle/ext
+# Enter: csc k3
+# Enter: csc m3
+
+# MORE NOTES:
+# 1) The web app will take about 1 min for a 30 min Youtube video
+# 2) Run this in terminal to start the app on your computer: streamlit run Step0_streamlitWebapp.py
 
 # /////////////////////////////
 from Step1_highlightFillers import *

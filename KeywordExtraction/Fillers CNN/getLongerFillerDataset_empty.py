@@ -1,3 +1,9 @@
+# STUFF TO INSTALL:
+# pip install tensorflow==1.14
+# pip install keras==2.2.5
+# pip install pytube3==10.8.5
+# pip install deepsegment
+
 from pytube import YouTube
 from deepsegment import DeepSegment
 

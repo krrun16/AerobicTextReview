@@ -1,4 +1,12 @@
-from pytube import YouTube
+# Python 3.7 (There could be bugs with other versions like 3.8)
+# pip install streamlit
+# pip install pytube3==10.8.5
+# pip install youtube_dl
+# pip install deepsegment
+# pip install tensorflow==1.14
+# pip install keras==2.2.5
+# pip install nltk
+
 import youtube_dl
 import os
 import subprocess

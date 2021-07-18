@@ -1,10 +1,6 @@
-# Keras and TensorFlow library versions that I installed in terminal (Mac) or command line (Windows).
-# Keras and TensorFlow tend to have lots of bugs if you install different combinations of versions
-
-# pip install Keras==2.4.3
-# pip install Keras-Applications==1.0.8
-# pip install Keras-Preprocessing==1.1.2
-# pip install tensorflow==2.2.0
+# STUFF TO INSTALL:
+# pip install tensorflow==1.14
+# pip install keras==2.2.5
 
 import csv
 import os

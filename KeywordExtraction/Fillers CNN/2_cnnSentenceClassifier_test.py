@@ -1,3 +1,7 @@
+# STUFF TO INSTALL:
+# pip install tensorflow==1.14
+# pip install keras==2.2.5
+
 import keras
 from keras.preprocessing import sequence
 import nltk
