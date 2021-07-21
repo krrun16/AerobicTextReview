@@ -49,7 +49,7 @@ def create_word_embedding(comments, add_pos_tags=False):
 # Get test sets for x (comments) and y (phrase category)
 results = [["x","y"]]
 
-csvfile=open(os.getcwd()+"/Sentences_Vids4.csv")
+csvfile=open(os.getcwd()+"/0_validationSet.csv")
 reader = csv.reader(csvfile)
 for row in reader:
     results.append(row)
@@ -92,7 +92,7 @@ print(score)
 # ///////////////////////////////////////////////////
 # Get a more detailed accuracy report
 import xlsxwriter
-workbook = xlsxwriter.Workbook('2_detailedAccuracy_Vid4.xlsx')
+workbook = xlsxwriter.Workbook('2_detailedAccuracy.xlsx')
 worksheet = workbook.add_worksheet()
 worksheet.write_row(0,0,["Original Text","Actual Category","Predicted Category","Confidence Level"])
 

@@ -1,6 +1,5 @@
 import csv
 
-
 def getPercentageSilence(cleanTimestampsFilename):
     cleanTimestampsCSV = open(cleanTimestampsFilename)
     reader = csv.reader(cleanTimestampsCSV)
@@ -23,7 +22,7 @@ def getPercentageSilence(cleanTimestampsFilename):
         except:
             totalSilence += 0
 
-    lastEndTime = float(allRowsIncludingEmpty[1][2])
+    lastEndTime = float(allRows[0][2])
     previousWordHasNoTimestamp = False
     totalSkipTime = 0
     for i in range(1, len(allRowsIncludingEmpty)):
@@ -46,7 +45,7 @@ def getPercentageSilence(cleanTimestampsFilename):
 
 import os
 
-# puts () where every silence is so it can be replaced with a highlight later
+# puts (X second silence) where every silence is so it can be replaced with a highlight later
 def addSilencePlaceholders(fullText, vidNum):
     fileName = os.path.split(os.path.abspath(os.getcwd()))[0] + "/Video Analysis/Transcripts/Video_" + str(
         vidNum) + "_TimeStamps.csv"
@@ -55,9 +54,10 @@ def addSilencePlaceholders(fullText, vidNum):
         timestamps = list(csvr)
     transcript = fullText.split(" ")
     newTranscript = ""
-    pTS = 0 # timestamps pointer, starts at 1 because 0 is the headers
+    pTS = 0 # timestamps pointer, starts at 0 because 0 is the headers
     pTrans = 0 # transcript pointer
-    while pTS < len(timestamps)-1 and pTrans < len(transcript)-1:
+
+    while pTS < len(timestamps) - 1:
         wordTS1 = timestamps[pTS][0]
         newTranscript += wordTS1 + " "
         TSSilenceStart = timestamps[pTS][3]
@@ -69,9 +69,13 @@ def addSilencePlaceholders(fullText, vidNum):
         dashWords = wordTS1.split("-") # takes care of cases like "warm-up" because the time stamp splits it into 2 words
         pTS += len(dashWords)
         pTrans += 1
+
+    # Have to add in the last word that gets left out
+    newTranscript += timestamps[pTS][0]
+
     return newTranscript
 
-# puts () where every silence is so it can be replaced with a highlight later
+# puts (X second silence) where every silence is so it can be replaced with a highlight later
 def addSilencePlaceholdersForYoutubeVideo(fullText):
     fileName = os.getcwd()+"/YoutubeOutput_timestamps.csv"
     with open(fileName) as csvFile:
@@ -79,9 +83,10 @@ def addSilencePlaceholdersForYoutubeVideo(fullText):
         timestamps = list(csvr)
     transcript = fullText.split(" ")
     newTranscript = ""
-    pTS = 0 # timestamps pointer, starts at 1 because 0 is the headers
+    pTS = 0 # timestamps pointer, starts at 0 because 0 is the headers
     pTrans = 0 # transcript pointer
-    while pTS < len(timestamps)-1 and pTrans < len(transcript)-1:
+
+    while pTS < len(timestamps) - 1:
         wordTS1 = timestamps[pTS][0]
         newTranscript += wordTS1 + " "
         TSSilenceStart = timestamps[pTS][3]
@@ -94,4 +99,8 @@ def addSilencePlaceholdersForYoutubeVideo(fullText):
         dashWords = wordTS1.split("-") # takes care of cases like "warm-up" because the time stamp splits it into 2 words
         pTS += len(dashWords)
         pTrans += 1
+
+    # Have to add in the last word that gets left out
+    newTranscript += timestamps[pTS][0]
+
     return newTranscript

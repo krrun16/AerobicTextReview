@@ -1,7 +1,7 @@
 # STUFF TO INSTALL:
 # Python 3.7 (There could be bugs with other versions like 3.8)
 # pip install streamlit
-# pip install pytube3==10.8.5
+# pip install pytube==10.8.5
 # pip install youtube_dl
 # pip install deepsegment
 # pip install tensorflow==1.14
@@ -146,6 +146,7 @@ def create_word_embedding(comments, wordEmbeddings, add_pos_tags=False):
 
 # If you just want to feed in the transcript as a long string of text
 def highlightFillersOnText(fullText):
+
     # The default language is 'en' for English
     segmenter = DeepSegment('en')
 

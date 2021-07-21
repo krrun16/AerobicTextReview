@@ -116,12 +116,13 @@ model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strid
 # Create the pooling layer
 model.add(GlobalMaxPooling1D())
 
-# Create the 1st fully connected layer
-model.add(Dense(hidden_dims))
-model.add(Dropout(0.2))
-model.add(Activation('relu'))
+# Create the convolutional layer
+model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
 
-# Create the 2nd fully connected layer (improves accuracy as opposed to only 1 fully connected layer)
+# Create the pooling layer
+model.add(GlobalMaxPooling1D())
+
+# Create the 1st fully connected layer
 model.add(Dense(hidden_dims))
 model.add(Dropout(0.2))
 model.add(Activation('relu'))

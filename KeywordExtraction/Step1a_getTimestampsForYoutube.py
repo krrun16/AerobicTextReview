@@ -1,6 +1,6 @@
 # Python 3.7 (There could be bugs with other versions like 3.8)
 # pip install streamlit
-# pip install pytube3==10.8.5
+# pip install pytube==10.8.5
 # pip install youtube_dl
 # pip install deepsegment
 # pip install tensorflow==1.14
@@ -87,4 +87,3 @@ def turnTimestampsJsonIntoCSV(jsonText):
                 myWriter.writerow([word['alignedWord'],word['alignedWord'],word['start'],word['end']])
             else:
                 myWriter.writerow([word['word'],word['word'],"",""])
-

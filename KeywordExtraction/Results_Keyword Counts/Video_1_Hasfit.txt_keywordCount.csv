@@ -6,7 +6,9 @@ big inhale,0,brPhrase
 breather,0,brPhrase
 breathe,4,brPhrase
 catch your breath,0,brPhrase
-deep breaths,0,brPhrase
+deep breaths,1,brPhrase
+breaths,1,brPhrase
+breath,6,brPhrase
 slow exhales,0,brPhrase
 exhales,0,brPhrase
 exhale,0,brPhrase
@@ -14,6 +16,63 @@ inhales,0,brPhrase
 inhale,0,brPhrase
 keep breathing,0,brPhrase
 breathing,1,brPhrase
+keep on going,0,encouragingPhrases
+stick with me,0,encouragingPhrases
+smile,0,encouragingPhrases
+finishing up strong,0,encouragingPhrases
+finish strong,0,encouragingPhrases
+doing well,0,encouragingPhrases
+perfect,0,encouragingPhrases
+you've got it,0,encouragingPhrases
+you got it,10,encouragingPhrases
+we've got it,0,encouragingPhrases
+we got it,1,encouragingPhrases
+good good work,0,encouragingPhrases
+well done,0,encouragingPhrases
+becomes mental,0,encouragingPhrases
+whatever you need to get this done,0,encouragingPhrases
+couldn't do it without you,0,encouragingPhrases
+couldn't do it,0,encouragingPhrases
+motivation,0,encouragingPhrases
+I'm so excited,0,encouragingPhrases
+we're so excited,0,encouragingPhrases
+excited,0,encouragingPhrases
+ton of fun,0,encouragingPhrases
+lots of fun,0,encouragingPhrases
+really fun,0,encouragingPhrases
+great workout,0,encouragingPhrases
+love having you,0,encouragingPhrases
+loving having you,0,encouragingPhrases
+so awesome,0,encouragingPhrases
+so glad,0,encouragingPhrases
+so super,0,encouragingPhrases
+love this so much,0,encouragingPhrases
+make it this week,0,encouragingPhrases
+make it today,0,encouragingPhrases
+enjoy this,0,encouragingPhrases
+it's tough,0,encouragingPhrases
+loving this,0,encouragingPhrases
+love the energy,0,encouragingPhrases
+loving that,0,encouragingPhrases
+how are you,0,encouragingPhrases
+so happy,0,encouragingPhrases
+great job,0,encouragingPhrases
+good job,0,encouragingPhrases
+how well did you do,0,encouragingPhrases
+how well did these guys do,0,encouragingPhrases
+how you feeling,0,encouragingPhrases
+how'd it go,0,encouragingPhrases
+great session,0,encouragingPhrases
+good session,0,encouragingPhrases
+great work,0,encouragingPhrases
+good work,0,encouragingPhrases
+worked hard,0,encouragingPhrases
+work hard,0,encouragingPhrases
+it's okay,0,encouragingPhrases
+it's always okay,0,encouragingPhrases
+it's ok,0,encouragingPhrases
+it's always ok,0,encouragingPhrases
+earn it,0,encouragingPhrases
 be determined,0,encouragingPhrases
 be focused,0,encouragingPhrases
 be strong,0,encouragingPhrases
@@ -23,18 +82,21 @@ big desire,0,encouragingPhrases
 big drive,0,encouragingPhrases
 big effort,0,encouragingPhrases
 big energy,0,encouragingPhrases
+push hard,0,encouragingPhrases
 can do this,0,encouragingPhrases
 channeling it,0,encouragingPhrases
 come on squad,0,encouragingPhrases
 come on,5,encouragingPhrases
 coming for you,0,encouragingPhrases
-couldn't do it without you,0,encouragingPhrases
 crushing it,0,encouragingPhrases
 designed to be tough,0,encouragingPhrases
 determination,0,encouragingPhrases
 doing great,1,encouragingPhrases
 doing this together,0,encouragingPhrases
 don't worry if,0,encouragingPhrases
+don't give up,0,encouragingPhrases
+don't stop,0,encouragingPhrases
+don't walk away,0,encouragingPhrases
 drive come on,0,encouragingPhrases
 effort,0,encouragingPhrases
 every single second matters,0,encouragingPhrases
@@ -45,6 +107,8 @@ excellent job,0,encouragingPhrases
 extra effort,0,encouragingPhrases
 fantastic,0,encouragingPhrases
 feeling good,1,encouragingPhrases
+feels good,0,encouragingPhrases
+feel good,0,encouragingPhrases
 feeling the pain,0,encouragingPhrases
 fight,3,encouragingPhrases
 fighting through,2,encouragingPhrases
@@ -53,21 +117,19 @@ focus on your goals,1,encouragingPhrases
 game faces,0,encouragingPhrases
 get that much better,1,encouragingPhrases
 give it all,0,encouragingPhrases
-good job,0,encouragingPhrases
 good pain,0,encouragingPhrases
 got plenty left,1,encouragingPhrases
 got to do it,0,encouragingPhrases
 got to find it,0,encouragingPhrases
 got to put it in,0,encouragingPhrases
-great job,0,encouragingPhrases
 happy thoughts,0,encouragingPhrases
 high fives,0,encouragingPhrases
-how you feeling,0,encouragingPhrases
-I can't keep up,0,encouragingPhrases
-I need you,0,encouragingPhrases
-I promise you,1,encouragingPhrases
-I'm feeling it,0,encouragingPhrases
-I'm just as tired,0,encouragingPhrases
+how you feel,0,encouragingPhrases
+i can't keep up,0,encouragingPhrases
+i need you,0,encouragingPhrases
+i promise you,0,encouragingPhrases
+i'm feeling it,0,encouragingPhrases
+i'm just as tired,0,encouragingPhrases
 it really counts,0,encouragingPhrases
 it's about desire,0,encouragingPhrases
 it's all mental,1,encouragingPhrases
@@ -99,7 +161,7 @@ not quitting,0,encouragingPhrases
 perseverance,0,encouragingPhrases
 personal best,0,encouragingPhrases
 power power,0,encouragingPhrases
-promise,1,encouragingPhrases
+promise,2,encouragingPhrases
 push push,0,encouragingPhrases
 push together,0,encouragingPhrases
 push yourself,1,encouragingPhrases
@@ -120,7 +182,6 @@ this might feel really new,0,encouragingPhrases
 totally fine,0,encouragingPhrases
 tough stuff,0,encouragingPhrases
 warrior,0,encouragingPhrases
-we got it,1,encouragingPhrases
 we got this,0,encouragingPhrases
 we're all there,0,encouragingPhrases
 we've got this,0,encouragingPhrases
@@ -129,11 +190,10 @@ wonderful,0,encouragingPhrases
 work through now,0,encouragingPhrases
 work through,0,encouragingPhrases
 you can do this,0,encouragingPhrases
-you got it,10,encouragingPhrases
 you got this,1,encouragingPhrases
 you guys rock,0,encouragingPhrases
 you still with me,0,encouragingPhrases
-you will see the results,0,encouragingPhrases
+you will see the results,1,encouragingPhrases
 you're doing great,0,encouragingPhrases
 you're stronger,0,encouragingPhrases
 you're tired,0,encouragingPhrases
@@ -143,36 +203,37 @@ your best,2,encouragingPhrases
 your heart,0,encouragingPhrases
 your life,0,encouragingPhrases
 your strength,0,encouragingPhrases
-squeeze these,1,inaccessibleLocations
-show you,1,inaccessibleLocations
-notice how,1,inaccessibleLocations
-move this,1,inaccessibleLocations
-side view,1,inaccessibleLocations
-going here,1,inaccessibleLocations
-end up here,1,inaccessibleLocations
-out there,1,inaccessibleLocations
-go here,0,inaccessibleLocations
-stays here,0,inaccessibleLocations
-this way,0,inaccessibleLocations
-this plank,0,inaccessibleLocations
-stay there,0,inaccessibleLocations
-like this,0,inaccessibleLocations
-stay here,0,inaccessibleLocations
-their way,0,inaccessibleLocations
-be here,0,inaccessibleLocations
-here we are,0,inaccessibleLocations
-here we,3,inaccessibleLocations
-all the way out,0,inaccessibleLocations
-look at,0,inaccessibleLocations
-down here,0,inaccessibleLocations
-over here,1,inaccessibleLocations
-right here,3,inaccessibleLocations
-right there,1,inaccessibleLocations
-there we go,1,inaccessibleLocations
-all out there,1,inaccessibleLocations
-see your,0,inaccessibleLocations
+you made it,0,encouragingPhrases
+congratulations,0,encouragingPhrases
+congrats,0,encouragingPhrases
+congratulation,0,encouragingPhrases
+congrat,0,encouragingPhrases
+looking good,0,encouragingPhrases
+look good,0,encouragingPhrases
+earned it,0,encouragingPhrases
+beautiful,0,encouragingPhrases
+terrific,0,encouragingPhrases
+awesome,0,encouragingPhrases
+tremendous,0,encouragingPhrases
+great,3,encouragingPhrases
+amazing,0,encouragingPhrases
+incredible,0,encouragingPhrases
+killer work,0,encouragingPhrases
+killer job,0,encouragingPhrases
+good,7,encouragingPhrases
+super,0,encouragingPhrases
+you're not alone,0,encouragingPhrases
+not alone,0,encouragingPhrases
+really tough,0,subjectivePhrases
+that easy,0,subjectivePhrases
+really hitting those,0,subjectivePhrases
 a little bit more,2,subjectivePhrases
 a little bit,7,subjectivePhrases
+bit of a,0,subjectivePhrases
+a bit,0,subjectivePhrases
+very big,0,subjectivePhrases
+very small,0,subjectivePhrases
+completely good,0,subjectivePhrases
 big reach,0,subjectivePhrases
 everything active,0,subjectivePhrases
 everything squeezed,0,subjectivePhrases
@@ -184,20 +245,28 @@ keep it strong,0,subjectivePhrases
 little bend,2,subjectivePhrases
 little easier,1,subjectivePhrases
 little explosion,0,subjectivePhrases
+explosion,0,subjectivePhrases
 little harder,1,subjectivePhrases
+nice and fast,0,subjectivePhrases
+nice and quick,0,subjectivePhrases
 nice and controlled,0,subjectivePhrases
 nice and easy,0,subjectivePhrases
 nice and flat,0,subjectivePhrases
 nice and high,0,subjectivePhrases
 nice and low,0,subjectivePhrases
 nice and narrow,0,subjectivePhrases
-nice and quick,0,subjectivePhrases
 nice and small,0,subjectivePhrases
 nice and stable,0,subjectivePhrases
 nice and strong,0,subjectivePhrases
+nice and light,0,subjectivePhrases
+nice and tall,0,subjectivePhrases
 nice and tight,2,subjectivePhrases
 nice and under control,1,subjectivePhrases
 nice and wide,0,subjectivePhrases
+nice and steady,0,subjectivePhrases
+nice and shallow,0,subjectivePhrases
+nice and slow,0,subjectivePhrases
+nice and,4,subjectivePhrases
 nice strong,0,subjectivePhrases
 powerfully,0,subjectivePhrases
 really reach,0,subjectivePhrases
@@ -210,6 +279,48 @@ under control,3,subjectivePhrases
 work it through,0,subjectivePhrases
 working through,0,subjectivePhrases
 works for you,1,subjectivePhrases
+kind of,0,subjectivePhrases
+sort of,0,subjectivePhrases
+somewhat,0,subjectivePhrases
+quite easy,0,subjectivePhrases
+quite hard,0,subjectivePhrases
+quite difficult,0,subjectivePhrases
+quite simple,0,subjectivePhrases
+easy stuff,0,subjectivePhrases
+hard stuff,0,subjectivePhrases
+difficult stuff,0,subjectivePhrases
+simple stuff,0,subjectivePhrases
+get a little,2,subjectivePhrases
+a little,10,subjectivePhrases
+easier version,0,subjectivePhrases
+harder version,0,subjectivePhrases
+as high as you can,0,subjectivePhrases
+as far as you can,0,subjectivePhrases
+a lot,3,subjectivePhrases
+a million times,0,subjectivePhrases
+a ton,0,subjectivePhrases
+a bunch,1,subjectivePhrases
+as you can,1,subjectivePhrases
+as much as you need,0,subjectivePhrases
+as you need,0,subjectivePhrases
+nice stretch,0,subjectivePhrases
+nice movement,0,subjectivePhrases
+nice,29,subjectivePhrases
+as much,0,subjectivePhrases
+fast feet,0,unfamiliarExercisePhrase
+plank reach,0,unfamiliarExercisePhrase
+runners lunge,0,unfamiliarExercisePhrase
+deep lunge,0,unfamiliarExercisePhrase
+sidestep jacks,0,unfamiliarExercisePhrase
+back bows,0,unfamiliarExercisePhrase
+overhead reach,0,unfamiliarExercisePhrase
+toe reach,0,unfamiliarExercisePhrase
+foot jump,0,unfamiliarExercisePhrase
+knee pull,0,unfamiliarExercisePhrase
+plank jack lift,0,unfamiliarExercisePhrase
+plank jack,0,unfamiliarExercisePhrase
+supine plank reach,0,unfamiliarExercisePhrase
+boxer shuffle,0,unfamiliarExercisePhrase
 90 lat stretch,0,unfamiliarExercisePhrase
 ankle flexion,0,unfamiliarExercisePhrase
 anti-rotation reverse lunge,0,unfamiliarExercisePhrase
@@ -220,11 +331,11 @@ bodyweight squat,0,unfamiliarExercisePhrase
 calf raise,0,unfamiliarExercisePhrase
 cat-cow,0,unfamiliarExercisePhrase
 chest press,2,unfamiliarExercisePhrase
+child's pose,0,unfamiliarExercisePhrase
 childs pose,0,unfamiliarExercisePhrase
 cobra,0,unfamiliarExercisePhrase
 contralateral limb raise,0,unfamiliarExercisePhrase
 limb raise,0,unfamiliarExercisePhrase
-crunch,3,unfamiliarExercisePhrase
 decline plank,0,unfamiliarExercisePhrase
 dirty dog,0,unfamiliarExercisePhrase
 forward hurdle run,0,unfamiliarExercisePhrase
@@ -1812,7 +1923,6 @@ chair lower back stretch,0,unfamiliarExercisePhrase
 chair upper body stretch,0,unfamiliarExercisePhrase
 body stretch,0,unfamiliarExercisePhrase
 chest and shoulder stretch,0,unfamiliarExercisePhrase
-child's pose,0,unfamiliarExercisePhrase
 close grip front lat pulldowns,0,unfamiliarExercisePhrase
 close grip front lat pulldown,0,unfamiliarExercisePhrase
 close grip front lat pull-downs,0,unfamiliarExercisePhrase
@@ -2833,47 +2943,1312 @@ wrist circle,0,unfamiliarExercisePhrase
 wrist rollers,0,unfamiliarExercisePhrase
 wrist roller,0,unfamiliarExercisePhrase
 z pose,0,unfamiliarExercisePhrase
-first we're,0,startingAnExercise
-first workout,0,startingAnExercise
+power jack,0,unfamiliarExercisePhrase
+walking out,0,unfamiliarExercisePhrase
+walk out,0,unfamiliarExercisePhrase
+walkout,0,unfamiliarExercisePhrase
+jumping lunge,0,unfamiliarExercisePhrase
+jump lunge,0,unfamiliarExercisePhrase
+skater,0,unfamiliarExercisePhrase
+mountain climbing,0,unfamiliarExercisePhrase
+plyometric move,0,unfamiliarExercisePhrase
+plyo,0,unfamiliarExercisePhrase
+march,0,unfamiliarExercisePhrase
+modified version push up,0,unfamiliarExercisePhrase
+modified version pushup,0,unfamiliarExercisePhrase
+front lunge,0,unfamiliarExercisePhrase
+glute stretch,0,unfamiliarExercisePhrase
+next round,0,quantityOfAnExercise
+second one,0,quantityOfAnExercise
+don't have much left,1,quantityOfAnExercise
+few more,0,quantityOfAnExercise
+few times,0,quantityOfAnExercise
+few left,0,quantityOfAnExercise
+last time on,0,quantityOfAnExercise
+not many left,1,quantityOfAnExercise
+one more,3,quantityOfAnExercise
+one on each side,0,quantityOfAnExercise
+one right and one left,0,quantityOfAnExercise
+this is one of two,0,quantityOfAnExercise
+different moves,0,quantityOfAnExercise
+try that again,0,quantityOfAnExercise
+those few,0,quantityOfAnExercise
+total rep,0,quantityOfAnExercise
+total round,0,quantityOfAnExercise
+number one,0,quantityOfAnExercise
+block number,0,quantityOfAnExercise
+exercise number,0,quantityOfAnExercise
+ten stretches,0,quantityOfAnExercise
+second set,0,quantityOfAnExercise
+third set,0,quantityOfAnExercise
+fourth set,0,quantityOfAnExercise
+fifth set,0,quantityOfAnExercise
+second exercise,0,quantityOfAnExercise
+third exercise,0,quantityOfAnExercise
+fourth exercise,0,quantityOfAnExercise
+fifth exercise,0,quantityOfAnExercise
+second rep,0,quantityOfAnExercise
+third rep,0,quantityOfAnExercise
+fourth rep,0,quantityOfAnExercise
+fifth rep,0,quantityOfAnExercise
+second stretch,0,quantityOfAnExercise
+third stretch,0,quantityOfAnExercise
+fourth stretch,0,quantityOfAnExercise
+fifth stretch,0,quantityOfAnExercise
+second round,1,quantityOfAnExercise
+third round,0,quantityOfAnExercise
+fourth round,0,quantityOfAnExercise
+fifth round,0,quantityOfAnExercise
+last one,1,quantityOfAnExercise
+full round,0,quantityOfAnExercise
+circuit number,0,quantityOfAnExercise
+one ab crunch,0,quantityOfAnExercise
+one crunch,0,quantityOfAnExercise
+one curl up,0,quantityOfAnExercise
+one curl-up,0,quantityOfAnExercise
+one high knees,0,quantityOfAnExercise
+one high knee,0,quantityOfAnExercise
+one jumping jacks,0,quantityOfAnExercise
+one jumping jack,0,quantityOfAnExercise
+one jacks,0,quantityOfAnExercise
+one jack,0,quantityOfAnExercise
+one lunge,0,quantityOfAnExercise
+1 mile run,0,quantityOfAnExercise
+1-mile run,0,quantityOfAnExercise
+one mile run,0,quantityOfAnExercise
+one-mile run,0,quantityOfAnExercise
+one plank,0,quantityOfAnExercise
+one push up and rotation,0,quantityOfAnExercise
+one push up,0,quantityOfAnExercise
+one push-up and rotation,0,quantityOfAnExercise
+one push-up,0,quantityOfAnExercise
+one pushup and rotation,0,quantityOfAnExercise
+one pushup,0,quantityOfAnExercise
+one shuttle run,0,quantityOfAnExercise
+one side plank,0,quantityOfAnExercise
+one sit & reach,0,quantityOfAnExercise
+one sit and reach,0,quantityOfAnExercise
+one squat,0,quantityOfAnExercise
+one step-up,0,quantityOfAnExercise
+one triceps dip on chair,0,quantityOfAnExercise
+one tricep dip on chair,0,quantityOfAnExercise
+one v sit reach,0,quantityOfAnExercise
+one v-sit reach,0,quantityOfAnExercise
+one wall sit,0,quantityOfAnExercise
+one wall-sit,0,quantityOfAnExercise
+two ab crunch,0,quantityOfAnExercise
+two crunch,0,quantityOfAnExercise
+two curl up,0,quantityOfAnExercise
+two curl-up,0,quantityOfAnExercise
+two high knees,0,quantityOfAnExercise
+two high knee,0,quantityOfAnExercise
+two jumping jacks,0,quantityOfAnExercise
+two jumping jack,0,quantityOfAnExercise
+two jacks,0,quantityOfAnExercise
+two jack,0,quantityOfAnExercise
+two lunge,0,quantityOfAnExercise
+two 1 mile run,0,quantityOfAnExercise
+two 1-mile run,0,quantityOfAnExercise
+two one mile run,0,quantityOfAnExercise
+two one-mile run,0,quantityOfAnExercise
+two plank,0,quantityOfAnExercise
+two push up and rotation,0,quantityOfAnExercise
+two push up,0,quantityOfAnExercise
+two push-up and rotation,0,quantityOfAnExercise
+two push-up,0,quantityOfAnExercise
+two pushup and rotation,0,quantityOfAnExercise
+two pushup,0,quantityOfAnExercise
+two shuttle run,0,quantityOfAnExercise
+two side plank,0,quantityOfAnExercise
+two sit & reach,0,quantityOfAnExercise
+two sit and reach,0,quantityOfAnExercise
+two squat,0,quantityOfAnExercise
+two step-up,0,quantityOfAnExercise
+two triceps dip on chair,0,quantityOfAnExercise
+two tricep dip on chair,0,quantityOfAnExercise
+two v sit reach,0,quantityOfAnExercise
+two v-sit reach,0,quantityOfAnExercise
+two wall sit,0,quantityOfAnExercise
+two wall-sit,0,quantityOfAnExercise
+three ab crunch,0,quantityOfAnExercise
+three crunch,0,quantityOfAnExercise
+three curl up,0,quantityOfAnExercise
+three curl-up,0,quantityOfAnExercise
+three high knees,0,quantityOfAnExercise
+three high knee,0,quantityOfAnExercise
+three jumping jacks,0,quantityOfAnExercise
+three jumping jack,0,quantityOfAnExercise
+three jacks,0,quantityOfAnExercise
+three jack,0,quantityOfAnExercise
+three lunge,0,quantityOfAnExercise
+three 1 mile run,0,quantityOfAnExercise
+three 1-mile run,0,quantityOfAnExercise
+three one mile run,0,quantityOfAnExercise
+three one-mile run,0,quantityOfAnExercise
+three plank,0,quantityOfAnExercise
+three push up and rotation,0,quantityOfAnExercise
+three push up,0,quantityOfAnExercise
+three push-up and rotation,0,quantityOfAnExercise
+three push-up,0,quantityOfAnExercise
+three pushup and rotation,0,quantityOfAnExercise
+three pushup,0,quantityOfAnExercise
+three shuttle run,0,quantityOfAnExercise
+three side plank,0,quantityOfAnExercise
+three sit & reach,0,quantityOfAnExercise
+three sit and reach,0,quantityOfAnExercise
+three squat,0,quantityOfAnExercise
+three step-up,0,quantityOfAnExercise
+three triceps dip on chair,0,quantityOfAnExercise
+three tricep dip on chair,0,quantityOfAnExercise
+three v sit reach,0,quantityOfAnExercise
+three v-sit reach,0,quantityOfAnExercise
+three wall sit,0,quantityOfAnExercise
+three wall-sit,0,quantityOfAnExercise
+four ab crunch,0,quantityOfAnExercise
+four crunch,0,quantityOfAnExercise
+four curl up,0,quantityOfAnExercise
+four curl-up,0,quantityOfAnExercise
+four high knees,0,quantityOfAnExercise
+four high knee,0,quantityOfAnExercise
+four jumping jacks,0,quantityOfAnExercise
+four jumping jack,0,quantityOfAnExercise
+four jacks,0,quantityOfAnExercise
+four jack,0,quantityOfAnExercise
+four lunge,0,quantityOfAnExercise
+four 1 mile run,0,quantityOfAnExercise
+four 1-mile run,0,quantityOfAnExercise
+four one mile run,0,quantityOfAnExercise
+four one-mile run,0,quantityOfAnExercise
+four plank,0,quantityOfAnExercise
+four push up and rotation,0,quantityOfAnExercise
+four push up,0,quantityOfAnExercise
+four push-up and rotation,0,quantityOfAnExercise
+four push-up,0,quantityOfAnExercise
+four pushup and rotation,0,quantityOfAnExercise
+four pushup,0,quantityOfAnExercise
+four shuttle run,0,quantityOfAnExercise
+four side plank,0,quantityOfAnExercise
+four sit & reach,0,quantityOfAnExercise
+four sit and reach,0,quantityOfAnExercise
+four squat,0,quantityOfAnExercise
+four step-up,0,quantityOfAnExercise
+four triceps dip on chair,0,quantityOfAnExercise
+four tricep dip on chair,0,quantityOfAnExercise
+four v sit reach,0,quantityOfAnExercise
+four v-sit reach,0,quantityOfAnExercise
+four wall sit,0,quantityOfAnExercise
+four wall-sit,0,quantityOfAnExercise
+five ab crunch,0,quantityOfAnExercise
+five crunch,0,quantityOfAnExercise
+five curl up,0,quantityOfAnExercise
+five curl-up,0,quantityOfAnExercise
+five high knees,0,quantityOfAnExercise
+five high knee,0,quantityOfAnExercise
+five jumping jacks,0,quantityOfAnExercise
+five jumping jack,0,quantityOfAnExercise
+five jacks,0,quantityOfAnExercise
+five jack,0,quantityOfAnExercise
+five lunge,0,quantityOfAnExercise
+five 1 mile run,0,quantityOfAnExercise
+five 1-mile run,0,quantityOfAnExercise
+five one mile run,0,quantityOfAnExercise
+five one-mile run,0,quantityOfAnExercise
+five plank,0,quantityOfAnExercise
+five push up and rotation,0,quantityOfAnExercise
+five push up,0,quantityOfAnExercise
+five push-up and rotation,0,quantityOfAnExercise
+five push-up,0,quantityOfAnExercise
+five pushup and rotation,0,quantityOfAnExercise
+five pushup,0,quantityOfAnExercise
+five shuttle run,0,quantityOfAnExercise
+five side plank,0,quantityOfAnExercise
+five sit & reach,0,quantityOfAnExercise
+five sit and reach,0,quantityOfAnExercise
+five squat,0,quantityOfAnExercise
+five step-up,0,quantityOfAnExercise
+five triceps dip on chair,0,quantityOfAnExercise
+five tricep dip on chair,0,quantityOfAnExercise
+five v sit reach,0,quantityOfAnExercise
+five v-sit reach,0,quantityOfAnExercise
+five wall sit,0,quantityOfAnExercise
+five wall-sit,0,quantityOfAnExercise
+1 ab crunch,0,quantityOfAnExercise
+1 crunch,0,quantityOfAnExercise
+1 curl up,0,quantityOfAnExercise
+1 curl-up,0,quantityOfAnExercise
+1 high knees,0,quantityOfAnExercise
+1 high knee,0,quantityOfAnExercise
+1 jumping jacks,0,quantityOfAnExercise
+1 jumping jack,0,quantityOfAnExercise
+1 jacks,0,quantityOfAnExercise
+1 jack,0,quantityOfAnExercise
+1 lunge,0,quantityOfAnExercise
+1 1 mile run,0,quantityOfAnExercise
+1 1-mile run,0,quantityOfAnExercise
+1 one mile run,0,quantityOfAnExercise
+1 one-mile run,0,quantityOfAnExercise
+1 plank,0,quantityOfAnExercise
+1 push up and rotation,0,quantityOfAnExercise
+1 push up,0,quantityOfAnExercise
+1 push-up and rotation,0,quantityOfAnExercise
+1 push-up,0,quantityOfAnExercise
+1 pushup and rotation,0,quantityOfAnExercise
+1 pushup,0,quantityOfAnExercise
+1 shuttle run,0,quantityOfAnExercise
+1 side plank,0,quantityOfAnExercise
+1 sit & reach,0,quantityOfAnExercise
+1 sit and reach,0,quantityOfAnExercise
+1 squat,0,quantityOfAnExercise
+1 step-up,0,quantityOfAnExercise
+1 triceps dip on chair,0,quantityOfAnExercise
+1 tricep dip on chair,0,quantityOfAnExercise
+1 v sit reach,0,quantityOfAnExercise
+1 v-sit reach,0,quantityOfAnExercise
+1 wall sit,0,quantityOfAnExercise
+1 wall-sit,0,quantityOfAnExercise
+2 ab crunch,0,quantityOfAnExercise
+2 crunch,0,quantityOfAnExercise
+2 curl up,0,quantityOfAnExercise
+2 curl-up,0,quantityOfAnExercise
+2 high knees,0,quantityOfAnExercise
+2 high knee,0,quantityOfAnExercise
+2 jumping jacks,0,quantityOfAnExercise
+2 jumping jack,0,quantityOfAnExercise
+2 jacks,0,quantityOfAnExercise
+2 jack,0,quantityOfAnExercise
+2 lunge,0,quantityOfAnExercise
+2 1 mile run,0,quantityOfAnExercise
+2 1-mile run,0,quantityOfAnExercise
+2 one mile run,0,quantityOfAnExercise
+2 one-mile run,0,quantityOfAnExercise
+2 plank,0,quantityOfAnExercise
+2 push up and rotation,0,quantityOfAnExercise
+2 push up,0,quantityOfAnExercise
+2 push-up and rotation,0,quantityOfAnExercise
+2 push-up,0,quantityOfAnExercise
+2 pushup and rotation,0,quantityOfAnExercise
+2 pushup,0,quantityOfAnExercise
+2 shuttle run,0,quantityOfAnExercise
+2 side plank,0,quantityOfAnExercise
+2 sit & reach,0,quantityOfAnExercise
+2 sit and reach,0,quantityOfAnExercise
+2 squat,0,quantityOfAnExercise
+2 step-up,0,quantityOfAnExercise
+2 triceps dip on chair,0,quantityOfAnExercise
+2 tricep dip on chair,0,quantityOfAnExercise
+2 v sit reach,0,quantityOfAnExercise
+2 v-sit reach,0,quantityOfAnExercise
+2 wall sit,0,quantityOfAnExercise
+2 wall-sit,0,quantityOfAnExercise
+3 ab crunch,0,quantityOfAnExercise
+3 crunch,0,quantityOfAnExercise
+3 curl up,0,quantityOfAnExercise
+3 curl-up,0,quantityOfAnExercise
+3 high knees,0,quantityOfAnExercise
+3 high knee,0,quantityOfAnExercise
+3 jumping jacks,0,quantityOfAnExercise
+3 jumping jack,0,quantityOfAnExercise
+3 jacks,0,quantityOfAnExercise
+3 jack,0,quantityOfAnExercise
+3 lunge,0,quantityOfAnExercise
+3 1 mile run,0,quantityOfAnExercise
+3 1-mile run,0,quantityOfAnExercise
+3 one mile run,0,quantityOfAnExercise
+3 one-mile run,0,quantityOfAnExercise
+3 plank,0,quantityOfAnExercise
+3 push up and rotation,0,quantityOfAnExercise
+3 push up,0,quantityOfAnExercise
+3 push-up and rotation,0,quantityOfAnExercise
+3 push-up,0,quantityOfAnExercise
+3 pushup and rotation,0,quantityOfAnExercise
+3 pushup,0,quantityOfAnExercise
+3 shuttle run,0,quantityOfAnExercise
+3 side plank,0,quantityOfAnExercise
+3 sit & reach,0,quantityOfAnExercise
+3 sit and reach,0,quantityOfAnExercise
+3 squat,0,quantityOfAnExercise
+3 step-up,0,quantityOfAnExercise
+3 triceps dip on chair,0,quantityOfAnExercise
+3 tricep dip on chair,0,quantityOfAnExercise
+3 v sit reach,0,quantityOfAnExercise
+3 v-sit reach,0,quantityOfAnExercise
+3 wall sit,0,quantityOfAnExercise
+3 wall-sit,0,quantityOfAnExercise
+4 ab crunch,0,quantityOfAnExercise
+4 crunch,0,quantityOfAnExercise
+4 curl up,0,quantityOfAnExercise
+4 curl-up,0,quantityOfAnExercise
+4 high knees,0,quantityOfAnExercise
+4 high knee,0,quantityOfAnExercise
+4 jumping jacks,0,quantityOfAnExercise
+4 jumping jack,0,quantityOfAnExercise
+4 jacks,0,quantityOfAnExercise
+4 jack,0,quantityOfAnExercise
+4 lunge,0,quantityOfAnExercise
+4 1 mile run,0,quantityOfAnExercise
+4 1-mile run,0,quantityOfAnExercise
+4 one mile run,0,quantityOfAnExercise
+4 one-mile run,0,quantityOfAnExercise
+4 plank,0,quantityOfAnExercise
+4 push up and rotation,0,quantityOfAnExercise
+4 push up,0,quantityOfAnExercise
+4 push-up and rotation,0,quantityOfAnExercise
+4 push-up,0,quantityOfAnExercise
+4 pushup and rotation,0,quantityOfAnExercise
+4 pushup,0,quantityOfAnExercise
+4 shuttle run,0,quantityOfAnExercise
+4 side plank,0,quantityOfAnExercise
+4 sit & reach,0,quantityOfAnExercise
+4 sit and reach,0,quantityOfAnExercise
+4 squat,0,quantityOfAnExercise
+4 step-up,0,quantityOfAnExercise
+4 triceps dip on chair,0,quantityOfAnExercise
+4 tricep dip on chair,0,quantityOfAnExercise
+4 v sit reach,0,quantityOfAnExercise
+4 v-sit reach,0,quantityOfAnExercise
+4 wall sit,0,quantityOfAnExercise
+4 wall-sit,0,quantityOfAnExercise
+5 ab crunch,0,quantityOfAnExercise
+5 crunch,0,quantityOfAnExercise
+5 curl up,0,quantityOfAnExercise
+5 curl-up,0,quantityOfAnExercise
+5 high knees,0,quantityOfAnExercise
+5 high knee,0,quantityOfAnExercise
+5 jumping jacks,0,quantityOfAnExercise
+5 jumping jack,0,quantityOfAnExercise
+5 jacks,0,quantityOfAnExercise
+5 jack,0,quantityOfAnExercise
+5 lunge,0,quantityOfAnExercise
+5 1 mile run,0,quantityOfAnExercise
+5 1-mile run,0,quantityOfAnExercise
+5 one mile run,0,quantityOfAnExercise
+5 one-mile run,0,quantityOfAnExercise
+5 plank,0,quantityOfAnExercise
+5 push up and rotation,0,quantityOfAnExercise
+5 push up,0,quantityOfAnExercise
+5 push-up and rotation,0,quantityOfAnExercise
+5 push-up,0,quantityOfAnExercise
+5 pushup and rotation,0,quantityOfAnExercise
+5 pushup,0,quantityOfAnExercise
+5 shuttle run,0,quantityOfAnExercise
+5 side plank,0,quantityOfAnExercise
+5 sit & reach,0,quantityOfAnExercise
+5 sit and reach,0,quantityOfAnExercise
+5 squat,0,quantityOfAnExercise
+5 step-up,0,quantityOfAnExercise
+5 triceps dip on chair,0,quantityOfAnExercise
+5 tricep dip on chair,0,quantityOfAnExercise
+5 v sit reach,0,quantityOfAnExercise
+5 v-sit reach,0,quantityOfAnExercise
+5 wall sit,0,quantityOfAnExercise
+5 wall-sit,0,quantityOfAnExercise
+one exercise,0,quantityOfAnExercise
+two exercise,0,quantityOfAnExercise
+three exercise,0,quantityOfAnExercise
+four exercise,0,quantityOfAnExercise
+five exercise,0,quantityOfAnExercise
+six exercise,0,quantityOfAnExercise
+seven exercise,0,quantityOfAnExercise
+eight exercise,0,quantityOfAnExercise
+nine exercise,0,quantityOfAnExercise
+ten exercise,0,quantityOfAnExercise
+eleven exercise,0,quantityOfAnExercise
+twelve exercise,0,quantityOfAnExercise
+thirteen exercise,0,quantityOfAnExercise
+fourteen exercise,0,quantityOfAnExercise
+fifteen exercise,0,quantityOfAnExercise
+1 exercise,0,quantityOfAnExercise
+2 exercise,0,quantityOfAnExercise
+3 exercise,0,quantityOfAnExercise
+4 exercise,0,quantityOfAnExercise
+5 exercise,0,quantityOfAnExercise
+6 exercise,0,quantityOfAnExercise
+7 exercise,0,quantityOfAnExercise
+8 exercise,0,quantityOfAnExercise
+9 exercise,0,quantityOfAnExercise
+10 exercise,0,quantityOfAnExercise
+11 exercise,0,quantityOfAnExercise
+12 exercise,0,quantityOfAnExercise
+13 exercise,0,quantityOfAnExercise
+14 exercise,0,quantityOfAnExercise
+15 exercise,0,quantityOfAnExercise
+one rep,0,quantityOfAnExercise
+two rep,0,quantityOfAnExercise
+three rep,0,quantityOfAnExercise
+four rep,0,quantityOfAnExercise
+five rep,0,quantityOfAnExercise
+six rep,0,quantityOfAnExercise
+seven rep,0,quantityOfAnExercise
+eight rep,0,quantityOfAnExercise
+nine rep,0,quantityOfAnExercise
+ten rep,0,quantityOfAnExercise
+eleven rep,0,quantityOfAnExercise
+twelve rep,0,quantityOfAnExercise
+thirteen rep,0,quantityOfAnExercise
+fourteen rep,0,quantityOfAnExercise
+fifteen rep,0,quantityOfAnExercise
+1 rep,0,quantityOfAnExercise
+2 rep,0,quantityOfAnExercise
+3 rep,0,quantityOfAnExercise
+4 rep,0,quantityOfAnExercise
+5 rep,0,quantityOfAnExercise
+6 rep,0,quantityOfAnExercise
+7 rep,0,quantityOfAnExercise
+8 rep,0,quantityOfAnExercise
+9 rep,0,quantityOfAnExercise
+10 rep,0,quantityOfAnExercise
+11 rep,0,quantityOfAnExercise
+12 rep,0,quantityOfAnExercise
+13 rep,0,quantityOfAnExercise
+14 rep,0,quantityOfAnExercise
+15 rep,0,quantityOfAnExercise
+one set,0,quantityOfAnExercise
+two set,0,quantityOfAnExercise
+three set,0,quantityOfAnExercise
+four set,0,quantityOfAnExercise
+five set,0,quantityOfAnExercise
+six set,0,quantityOfAnExercise
+seven set,0,quantityOfAnExercise
+eight set,0,quantityOfAnExercise
+nine set,0,quantityOfAnExercise
+ten set,0,quantityOfAnExercise
+eleven set,0,quantityOfAnExercise
+twelve set,0,quantityOfAnExercise
+thirteen set,0,quantityOfAnExercise
+fourteen set,0,quantityOfAnExercise
+fifteen set,0,quantityOfAnExercise
+1 set,0,quantityOfAnExercise
+2 set,0,quantityOfAnExercise
+3 set,0,quantityOfAnExercise
+4 set,0,quantityOfAnExercise
+5 set,0,quantityOfAnExercise
+6 set,0,quantityOfAnExercise
+7 set,0,quantityOfAnExercise
+8 set,0,quantityOfAnExercise
+9 set,0,quantityOfAnExercise
+10 set,0,quantityOfAnExercise
+11 set,0,quantityOfAnExercise
+12 set,0,quantityOfAnExercise
+13 set,0,quantityOfAnExercise
+14 set,0,quantityOfAnExercise
+15 set,0,quantityOfAnExercise
+two more,0,quantityOfAnExercise
+three more,0,quantityOfAnExercise
+four more,0,quantityOfAnExercise
+five more,3,quantityOfAnExercise
+six more,0,quantityOfAnExercise
+seven more,0,quantityOfAnExercise
+eight more,0,quantityOfAnExercise
+nine more,0,quantityOfAnExercise
+ten more,1,quantityOfAnExercise
+eleven more,0,quantityOfAnExercise
+twelve more,0,quantityOfAnExercise
+thirteen more,0,quantityOfAnExercise
+fourteen more,0,quantityOfAnExercise
+fifteen more,0,quantityOfAnExercise
+1 more,0,quantityOfAnExercise
+2 more,0,quantityOfAnExercise
+3 more,0,quantityOfAnExercise
+4 more,0,quantityOfAnExercise
+5 more,0,quantityOfAnExercise
+6 more,0,quantityOfAnExercise
+7 more,0,quantityOfAnExercise
+8 more,0,quantityOfAnExercise
+9 more,0,quantityOfAnExercise
+10 more,2,quantityOfAnExercise
+11 more,0,quantityOfAnExercise
+12 more,0,quantityOfAnExercise
+13 more,0,quantityOfAnExercise
+14 more,0,quantityOfAnExercise
+15 more,0,quantityOfAnExercise
+one time,0,quantityOfAnExercise
+two times,0,quantityOfAnExercise
+three times,0,quantityOfAnExercise
+four times,0,quantityOfAnExercise
+five times,0,quantityOfAnExercise
+six times,0,quantityOfAnExercise
+seven times,0,quantityOfAnExercise
+eight times,0,quantityOfAnExercise
+nine times,0,quantityOfAnExercise
+ten times,0,quantityOfAnExercise
+eleven times,0,quantityOfAnExercise
+twelve times,0,quantityOfAnExercise
+thirteen times,0,quantityOfAnExercise
+fourteen times,0,quantityOfAnExercise
+fifteen times,0,quantityOfAnExercise
+1 times,0,quantityOfAnExercise
+2 times,0,quantityOfAnExercise
+3 times,0,quantityOfAnExercise
+4 times,0,quantityOfAnExercise
+5 times,0,quantityOfAnExercise
+6 times,0,quantityOfAnExercise
+7 times,0,quantityOfAnExercise
+8 times,0,quantityOfAnExercise
+9 times,0,quantityOfAnExercise
+10 times,0,quantityOfAnExercise
+11 times,0,quantityOfAnExercise
+12 times,0,quantityOfAnExercise
+13 times,0,quantityOfAnExercise
+14 times,0,quantityOfAnExercise
+15 times,0,quantityOfAnExercise
+one movement,0,quantityOfAnExercise
+two movement,0,quantityOfAnExercise
+three movement,0,quantityOfAnExercise
+four movement,0,quantityOfAnExercise
+five movement,0,quantityOfAnExercise
+six movement,0,quantityOfAnExercise
+seven movement,0,quantityOfAnExercise
+eight movement,0,quantityOfAnExercise
+nine movement,0,quantityOfAnExercise
+ten movement,0,quantityOfAnExercise
+eleven movement,0,quantityOfAnExercise
+twelve movement,0,quantityOfAnExercise
+thirteen movement,0,quantityOfAnExercise
+fourteen movement,0,quantityOfAnExercise
+fifteen movement,0,quantityOfAnExercise
+1 movement,0,quantityOfAnExercise
+2 movement,0,quantityOfAnExercise
+3 movement,0,quantityOfAnExercise
+4 movement,0,quantityOfAnExercise
+5 movement,0,quantityOfAnExercise
+6 movement,0,quantityOfAnExercise
+7 movement,0,quantityOfAnExercise
+8 movement,0,quantityOfAnExercise
+9 movement,0,quantityOfAnExercise
+10 movement,0,quantityOfAnExercise
+11 movement,0,quantityOfAnExercise
+12 movement,0,quantityOfAnExercise
+13 movement,0,quantityOfAnExercise
+14 movement,0,quantityOfAnExercise
+15 movement,0,quantityOfAnExercise
+last two,0,quantityOfAnExercise
+last three,0,quantityOfAnExercise
+last four,0,quantityOfAnExercise
+last five,0,quantityOfAnExercise
+last six,0,quantityOfAnExercise
+last seven,0,quantityOfAnExercise
+last eight,0,quantityOfAnExercise
+last nine,0,quantityOfAnExercise
+last ten,0,quantityOfAnExercise
+last eleven,0,quantityOfAnExercise
+last twelve,0,quantityOfAnExercise
+last thirteen,0,quantityOfAnExercise
+last fourteen,0,quantityOfAnExercise
+last fifteen,0,quantityOfAnExercise
+last 1,0,quantityOfAnExercise
+last 2,0,quantityOfAnExercise
+last 3,0,quantityOfAnExercise
+last 4,0,quantityOfAnExercise
+last 5,0,quantityOfAnExercise
+last 6,0,quantityOfAnExercise
+last 7,0,quantityOfAnExercise
+last 8,0,quantityOfAnExercise
+last 9,0,quantityOfAnExercise
+last 10,0,quantityOfAnExercise
+last 11,0,quantityOfAnExercise
+last 12,0,quantityOfAnExercise
+last 13,0,quantityOfAnExercise
+last 14,0,quantityOfAnExercise
+last 15,0,quantityOfAnExercise
+one left,0,quantityOfAnExercise
+two left,0,quantityOfAnExercise
+three left,0,quantityOfAnExercise
+four left,0,quantityOfAnExercise
+five left,0,quantityOfAnExercise
+six left,0,quantityOfAnExercise
+seven left,0,quantityOfAnExercise
+eight left,0,quantityOfAnExercise
+nine left,0,quantityOfAnExercise
+ten left,0,quantityOfAnExercise
+eleven left,0,quantityOfAnExercise
+twelve left,0,quantityOfAnExercise
+thirteen left,0,quantityOfAnExercise
+fourteen left,0,quantityOfAnExercise
+fifteen left,0,quantityOfAnExercise
+1 left,0,quantityOfAnExercise
+2 left,0,quantityOfAnExercise
+3 left,0,quantityOfAnExercise
+4 left,0,quantityOfAnExercise
+5 left,0,quantityOfAnExercise
+6 left,0,quantityOfAnExercise
+7 left,0,quantityOfAnExercise
+8 left,0,quantityOfAnExercise
+9 left,0,quantityOfAnExercise
+10 left,0,quantityOfAnExercise
+11 left,0,quantityOfAnExercise
+12 left,0,quantityOfAnExercise
+13 left,0,quantityOfAnExercise
+14 left,0,quantityOfAnExercise
+15 left,0,quantityOfAnExercise
+round one,0,quantityOfAnExercise
+round two,0,quantityOfAnExercise
+round three,0,quantityOfAnExercise
+round four,0,quantityOfAnExercise
+round five,0,quantityOfAnExercise
+round six,0,quantityOfAnExercise
+round seven,0,quantityOfAnExercise
+round eight,0,quantityOfAnExercise
+round nine,0,quantityOfAnExercise
+round ten,0,quantityOfAnExercise
+round eleven,0,quantityOfAnExercise
+round twelve,0,quantityOfAnExercise
+round thirteen,0,quantityOfAnExercise
+round fourteen,0,quantityOfAnExercise
+round fifteen,0,quantityOfAnExercise
+round 1,0,quantityOfAnExercise
+round 2,0,quantityOfAnExercise
+round 3,0,quantityOfAnExercise
+round 4,0,quantityOfAnExercise
+round 5,0,quantityOfAnExercise
+round 6,0,quantityOfAnExercise
+round 7,0,quantityOfAnExercise
+round 8,0,quantityOfAnExercise
+round 9,0,quantityOfAnExercise
+round 10,0,quantityOfAnExercise
+round 11,0,quantityOfAnExercise
+round 12,0,quantityOfAnExercise
+round 13,0,quantityOfAnExercise
+round 14,0,quantityOfAnExercise
+round 15,0,quantityOfAnExercise
+one round,0,quantityOfAnExercise
+two round,0,quantityOfAnExercise
+three round,0,quantityOfAnExercise
+four round,0,quantityOfAnExercise
+five round,0,quantityOfAnExercise
+six round,0,quantityOfAnExercise
+seven round,0,quantityOfAnExercise
+eight round,0,quantityOfAnExercise
+nine round,0,quantityOfAnExercise
+ten round,0,quantityOfAnExercise
+eleven round,0,quantityOfAnExercise
+twelve round,0,quantityOfAnExercise
+thirteen round,0,quantityOfAnExercise
+fourteen round,0,quantityOfAnExercise
+fifteen round,0,quantityOfAnExercise
+1 round,0,quantityOfAnExercise
+2 round,0,quantityOfAnExercise
+3 round,0,quantityOfAnExercise
+4 round,0,quantityOfAnExercise
+5 round,0,quantityOfAnExercise
+6 round,0,quantityOfAnExercise
+7 round,0,quantityOfAnExercise
+8 round,0,quantityOfAnExercise
+9 round,0,quantityOfAnExercise
+10 round,0,quantityOfAnExercise
+11 round,0,quantityOfAnExercise
+12 round,0,quantityOfAnExercise
+13 round,0,quantityOfAnExercise
+14 round,0,quantityOfAnExercise
+15 round,0,quantityOfAnExercise
+those one,0,quantityOfAnExercise
+those two,0,quantityOfAnExercise
+those three,0,quantityOfAnExercise
+those four,0,quantityOfAnExercise
+those five,0,quantityOfAnExercise
+those six,0,quantityOfAnExercise
+those seven,0,quantityOfAnExercise
+those eight,0,quantityOfAnExercise
+those nine,0,quantityOfAnExercise
+those ten,0,quantityOfAnExercise
+those eleven,0,quantityOfAnExercise
+those twelve,0,quantityOfAnExercise
+those thirteen,0,quantityOfAnExercise
+those fourteen,0,quantityOfAnExercise
+those fifteen,0,quantityOfAnExercise
+those 1,0,quantityOfAnExercise
+those 2,0,quantityOfAnExercise
+those 3,0,quantityOfAnExercise
+those 4,0,quantityOfAnExercise
+those 5,0,quantityOfAnExercise
+those 6,0,quantityOfAnExercise
+those 7,0,quantityOfAnExercise
+those 8,0,quantityOfAnExercise
+those 9,0,quantityOfAnExercise
+those 10,0,quantityOfAnExercise
+those 11,0,quantityOfAnExercise
+those 12,0,quantityOfAnExercise
+those 13,0,quantityOfAnExercise
+those 14,0,quantityOfAnExercise
+those 15,0,quantityOfAnExercise
+do one,0,quantityOfAnExercise
+do two,0,quantityOfAnExercise
+do three,0,quantityOfAnExercise
+do four,0,quantityOfAnExercise
+do five,0,quantityOfAnExercise
+do six,0,quantityOfAnExercise
+do seven,0,quantityOfAnExercise
+do eight,0,quantityOfAnExercise
+do nine,0,quantityOfAnExercise
+do ten,0,quantityOfAnExercise
+do eleven,0,quantityOfAnExercise
+do twelve,0,quantityOfAnExercise
+do thirteen,0,quantityOfAnExercise
+do fourteen,0,quantityOfAnExercise
+do fifteen,0,quantityOfAnExercise
+do 1,1,quantityOfAnExercise
+do 2,0,quantityOfAnExercise
+do 3,0,quantityOfAnExercise
+do 4,0,quantityOfAnExercise
+do 5,0,quantityOfAnExercise
+do 6,0,quantityOfAnExercise
+do 7,0,quantityOfAnExercise
+do 8,0,quantityOfAnExercise
+do 9,0,quantityOfAnExercise
+do 10,1,quantityOfAnExercise
+do 11,0,quantityOfAnExercise
+do 12,0,quantityOfAnExercise
+do 13,0,quantityOfAnExercise
+do 14,0,quantityOfAnExercise
+do 15,0,quantityOfAnExercise
+one stretch,0,quantityOfAnExercise
+two stretches,0,quantityOfAnExercise
+three stretches,0,quantityOfAnExercise
+four stretches,0,quantityOfAnExercise
+five stretches,0,quantityOfAnExercise
+six stretches,0,quantityOfAnExercise
+seven stretches,0,quantityOfAnExercise
+eight stretches,0,quantityOfAnExercise
+nine stretches,0,quantityOfAnExercise
+eleven stretches,0,quantityOfAnExercise
+twelve stretches,0,quantityOfAnExercise
+thirteen stretches,0,quantityOfAnExercise
+fourteen stretches,0,quantityOfAnExercise
+fifteen stretches,0,quantityOfAnExercise
+1 stretch,0,quantityOfAnExercise
+2 stretches,0,quantityOfAnExercise
+3 stretches,0,quantityOfAnExercise
+4 stretches,0,quantityOfAnExercise
+5 stretches,0,quantityOfAnExercise
+6 stretches,0,quantityOfAnExercise
+7 stretches,0,quantityOfAnExercise
+8 stretches,0,quantityOfAnExercise
+9 stretches,0,quantityOfAnExercise
+10 stretches,0,quantityOfAnExercise
+11 stretches,0,quantityOfAnExercise
+12 stretches,0,quantityOfAnExercise
+13 stretches,0,quantityOfAnExercise
+14 stretches,0,quantityOfAnExercise
+15 stretches,0,quantityOfAnExercise
+two on each side,0,quantityOfAnExercise
+three on each side,0,quantityOfAnExercise
+four on each side,0,quantityOfAnExercise
+five on each side,0,quantityOfAnExercise
+six on each side,0,quantityOfAnExercise
+seven on each side,0,quantityOfAnExercise
+eight on each side,0,quantityOfAnExercise
+nine on each side,0,quantityOfAnExercise
+ten on each side,0,quantityOfAnExercise
+eleven on each side,0,quantityOfAnExercise
+twelve on each side,0,quantityOfAnExercise
+thirteen on each side,0,quantityOfAnExercise
+fourteen on each side,0,quantityOfAnExercise
+fifteen on each side,0,quantityOfAnExercise
+1 on each side,0,quantityOfAnExercise
+2 on each side,0,quantityOfAnExercise
+3 on each side,0,quantityOfAnExercise
+4 on each side,0,quantityOfAnExercise
+5 on each side,0,quantityOfAnExercise
+6 on each side,0,quantityOfAnExercise
+7 on each side,0,quantityOfAnExercise
+8 on each side,0,quantityOfAnExercise
+9 on each side,0,quantityOfAnExercise
+10 on each side,0,quantityOfAnExercise
+11 on each side,0,quantityOfAnExercise
+12 on each side,0,quantityOfAnExercise
+13 on each side,0,quantityOfAnExercise
+14 on each side,0,quantityOfAnExercise
+15 on each side,0,quantityOfAnExercise
+doing one,0,quantityOfAnExercise
+doing two,0,quantityOfAnExercise
+doing three,0,quantityOfAnExercise
+doing four,0,quantityOfAnExercise
+doing five,0,quantityOfAnExercise
+doing six,0,quantityOfAnExercise
+doing seven,0,quantityOfAnExercise
+doing eight,0,quantityOfAnExercise
+doing nine,0,quantityOfAnExercise
+doing ten,0,quantityOfAnExercise
+doing eleven,0,quantityOfAnExercise
+doing twelve,0,quantityOfAnExercise
+doing thirteen,0,quantityOfAnExercise
+doing fourteen,0,quantityOfAnExercise
+doing fifteen,0,quantityOfAnExercise
+doing 1,0,quantityOfAnExercise
+doing 2,0,quantityOfAnExercise
+doing 3,0,quantityOfAnExercise
+doing 4,0,quantityOfAnExercise
+doing 5,0,quantityOfAnExercise
+doing 6,0,quantityOfAnExercise
+doing 7,0,quantityOfAnExercise
+doing 8,0,quantityOfAnExercise
+doing 9,0,quantityOfAnExercise
+doing 10,0,quantityOfAnExercise
+doing 11,0,quantityOfAnExercise
+doing 12,0,quantityOfAnExercise
+doing 13,0,quantityOfAnExercise
+doing 14,0,quantityOfAnExercise
+doing 15,0,quantityOfAnExercise
+one circuit,0,quantityOfAnExercise
+two circuit,0,quantityOfAnExercise
+three circuit,0,quantityOfAnExercise
+four circuit,0,quantityOfAnExercise
+five circuit,0,quantityOfAnExercise
+six circuit,0,quantityOfAnExercise
+seven circuit,0,quantityOfAnExercise
+eight circuit,0,quantityOfAnExercise
+nine circuit,0,quantityOfAnExercise
+ten circuit,0,quantityOfAnExercise
+eleven circuit,0,quantityOfAnExercise
+twelve circuit,0,quantityOfAnExercise
+thirteen circuit,0,quantityOfAnExercise
+fourteen circuit,0,quantityOfAnExercise
+fifteen circuit,0,quantityOfAnExercise
+1 circuit,0,quantityOfAnExercise
+2 circuit,0,quantityOfAnExercise
+3 circuit,0,quantityOfAnExercise
+4 circuit,0,quantityOfAnExercise
+5 circuit,0,quantityOfAnExercise
+6 circuit,0,quantityOfAnExercise
+7 circuit,0,quantityOfAnExercise
+8 circuit,0,quantityOfAnExercise
+9 circuit,0,quantityOfAnExercise
+10 circuit,0,quantityOfAnExercise
+11 circuit,0,quantityOfAnExercise
+12 circuit,0,quantityOfAnExercise
+13 circuit,0,quantityOfAnExercise
+14 circuit,0,quantityOfAnExercise
+15 circuit,0,quantityOfAnExercise
+first circuit,0,quantityOfAnExercise
+second circuit,0,quantityOfAnExercise
+third circuit,0,quantityOfAnExercise
+fourth circuit,0,quantityOfAnExercise
+fifth circuit,0,quantityOfAnExercise
+sixth circuit,0,quantityOfAnExercise
+seventh circuit,0,quantityOfAnExercise
+eighth circuit,0,quantityOfAnExercise
+ninth circuit,0,quantityOfAnExercise
+tenth circuit,0,quantityOfAnExercise
+eleventh circuit,0,quantityOfAnExercise
+twelfth circuit,0,quantityOfAnExercise
+thirteenth circuit,0,quantityOfAnExercise
+fourteenth circuit,0,quantityOfAnExercise
+fifteenth circuit,0,quantityOfAnExercise
+circuit one,0,quantityOfAnExercise
+circuit two,0,quantityOfAnExercise
+circuit three,0,quantityOfAnExercise
+circuit four,0,quantityOfAnExercise
+circuit five,0,quantityOfAnExercise
+circuit six,0,quantityOfAnExercise
+circuit seven,0,quantityOfAnExercise
+circuit eight,0,quantityOfAnExercise
+circuit nine,0,quantityOfAnExercise
+circuit ten,0,quantityOfAnExercise
+circuit eleven,0,quantityOfAnExercise
+circuit twelve,0,quantityOfAnExercise
+circuit thirteen,0,quantityOfAnExercise
+circuit fourteen,0,quantityOfAnExercise
+circuit fifteen,0,quantityOfAnExercise
+circuit 1,0,quantityOfAnExercise
+circuit 2,0,quantityOfAnExercise
+circuit 3,0,quantityOfAnExercise
+circuit 4,0,quantityOfAnExercise
+circuit 5,0,quantityOfAnExercise
+circuit 6,0,quantityOfAnExercise
+circuit 7,0,quantityOfAnExercise
+circuit 8,0,quantityOfAnExercise
+circuit 9,0,quantityOfAnExercise
+circuit 10,0,quantityOfAnExercise
+circuit 11,0,quantityOfAnExercise
+circuit 12,0,quantityOfAnExercise
+circuit 13,0,quantityOfAnExercise
+circuit 14,0,quantityOfAnExercise
+circuit 15,0,quantityOfAnExercise
+one move,0,quantityOfAnExercise
+two moves,0,quantityOfAnExercise
+three moves,0,quantityOfAnExercise
+four moves,0,quantityOfAnExercise
+five moves,0,quantityOfAnExercise
+six moves,0,quantityOfAnExercise
+seven moves,0,quantityOfAnExercise
+eight moves,0,quantityOfAnExercise
+nine moves,0,quantityOfAnExercise
+ten moves,0,quantityOfAnExercise
+eleven moves,0,quantityOfAnExercise
+twelve moves,0,quantityOfAnExercise
+thirteen moves,0,quantityOfAnExercise
+fourteen moves,0,quantityOfAnExercise
+fifteen moves,0,quantityOfAnExercise
+1 moves,0,quantityOfAnExercise
+2 moves,0,quantityOfAnExercise
+3 moves,0,quantityOfAnExercise
+4 moves,0,quantityOfAnExercise
+5 moves,0,quantityOfAnExercise
+6 moves,0,quantityOfAnExercise
+7 moves,0,quantityOfAnExercise
+8 moves,0,quantityOfAnExercise
+9 moves,0,quantityOfAnExercise
+10 moves,0,quantityOfAnExercise
+11 moves,0,quantityOfAnExercise
+12 moves,0,quantityOfAnExercise
+13 moves,0,quantityOfAnExercise
+14 moves,0,quantityOfAnExercise
+15 moves,0,quantityOfAnExercise
+first move,0,quantityOfAnExercise
+second moves,0,quantityOfAnExercise
+third moves,0,quantityOfAnExercise
+fourth moves,0,quantityOfAnExercise
+fifth moves,0,quantityOfAnExercise
+sixth moves,0,quantityOfAnExercise
+seventh moves,0,quantityOfAnExercise
+eighth moves,0,quantityOfAnExercise
+ninth moves,0,quantityOfAnExercise
+tenth moves,0,quantityOfAnExercise
+eleventh moves,0,quantityOfAnExercise
+twelfth moves,0,quantityOfAnExercise
+thirteenth moves,0,quantityOfAnExercise
+fourteenth moves,0,quantityOfAnExercise
+fifteenth moves,0,quantityOfAnExercise
+first movement,0,quantityOfAnExercise
+second movement,0,quantityOfAnExercise
+third movement,0,quantityOfAnExercise
+fourth movement,0,quantityOfAnExercise
+fifth movement,0,quantityOfAnExercise
+sixth movement,0,quantityOfAnExercise
+seventh movement,0,quantityOfAnExercise
+eighth movement,0,quantityOfAnExercise
+ninth movement,0,quantityOfAnExercise
+tenth movement,0,quantityOfAnExercise
+eleventh movement,0,quantityOfAnExercise
+twelfth movement,0,quantityOfAnExercise
+thirteenth movement,0,quantityOfAnExercise
+fourteenth movement,0,quantityOfAnExercise
+fifteenth movement,0,quantityOfAnExercise
+final exercise,0,quantityOfAnExercise
+final round,0,quantityOfAnExercise
+final rep,0,quantityOfAnExercise
+final set,0,quantityOfAnExercise
+final time,0,quantityOfAnExercise
+final movement,0,quantityOfAnExercise
+final move,0,quantityOfAnExercise
+final circuit,0,quantityOfAnExercise
+final workout,0,quantityOfAnExercise
+final stretch,0,quantityOfAnExercise
+last exercise,0,quantityOfAnExercise
+last round,0,quantityOfAnExercise
+last rep,0,quantityOfAnExercise
+last set,0,quantityOfAnExercise
+last time,0,quantityOfAnExercise
+last movement,0,quantityOfAnExercise
+last move,0,quantityOfAnExercise
+last circuit,0,quantityOfAnExercise
+last workout,0,quantityOfAnExercise
+last stretch,0,quantityOfAnExercise
+last and final exercise,0,quantityOfAnExercise
+last and final round,0,quantityOfAnExercise
+last and final rep,0,quantityOfAnExercise
+last and final set,0,quantityOfAnExercise
+last and final time,0,quantityOfAnExercise
+last and final movement,0,quantityOfAnExercise
+last and final move,0,quantityOfAnExercise
+last and final circuit,0,quantityOfAnExercise
+last and final workout,0,quantityOfAnExercise
+last and final stretch,0,quantityOfAnExercise
+last big exercise,0,quantityOfAnExercise
+last big round,0,quantityOfAnExercise
+last big rep,0,quantityOfAnExercise
+last big set,0,quantityOfAnExercise
+last big time,0,quantityOfAnExercise
+last big movement,0,quantityOfAnExercise
+last big move,0,quantityOfAnExercise
+last big circuit,0,quantityOfAnExercise
+last big workout,0,quantityOfAnExercise
+last big stretch,0,quantityOfAnExercise
+more exercise,1,quantityOfAnExercise
+more round,0,quantityOfAnExercise
+more rep,0,quantityOfAnExercise
+more set,0,quantityOfAnExercise
+more time,0,quantityOfAnExercise
+more movement,0,quantityOfAnExercise
+more move,0,quantityOfAnExercise
+more circuit,0,quantityOfAnExercise
+more workout,0,quantityOfAnExercise
+more stretch,0,quantityOfAnExercise
+first exercise,0,quantityOfAnExercise
+first round,1,quantityOfAnExercise
+first rep,0,quantityOfAnExercise
+first set,0,quantityOfAnExercise
+first time,0,quantityOfAnExercise
+first workout,0,quantityOfAnExercise
+first stretch,0,quantityOfAnExercise
+next exercise,0,quantityOfAnExercise
+next rep,0,quantityOfAnExercise
+next set,0,quantityOfAnExercise
+next time,0,quantityOfAnExercise
+next movement,0,quantityOfAnExercise
+next move,0,quantityOfAnExercise
+next circuit,0,quantityOfAnExercise
+next workout,0,quantityOfAnExercise
+next stretch,0,quantityOfAnExercise
+exercise,1,quantityOfAnExercise
+round,21,quantityOfAnExercise
+rep,9,quantityOfAnExercise
+set,0,quantityOfAnExercise
+time,16,quantityOfAnExercise
+movement,7,quantityOfAnExercise
+move,12,quantityOfAnExercise
+circuit,0,quantityOfAnExercise
+workout,4,quantityOfAnExercise
+stretch,3,quantityOfAnExercise
+let's do it again,0,startingAnExercise
+do it again,0,startingAnExercise
+repeat opposite side,0,startingAnExercise
+repeat opposite,0,startingAnExercise
+first start with,0,startingAnExercise
+first start,0,startingAnExercise
+first we,0,startingAnExercise
+first you,0,startingAnExercise
+first i,0,startingAnExercise
+move right in through,0,startingAnExercise
+we're moving to,0,startingAnExercise
+you're moving to,0,startingAnExercise
 get right into it,0,startingAnExercise
+we're ready,0,startingAnExercise
+i'm getting ready,0,startingAnExercise
+you're getting ready,0,startingAnExercise
 we're getting ready,1,startingAnExercise
 getting ready,1,startingAnExercise
 getting right into it,1,startingAnExercise
 here we go,3,startingAnExercise
 join me now,0,startingAnExercise
-we're gonna start off,0,startingAnExercise
-start off,0,startingAnExercise
+i'm gonna start,0,startingAnExercise
+gonna move right into,0,startingAnExercise
+move right into,0,startingAnExercise
+you're going to start,0,startingAnExercise
+you're gonna start,0,startingAnExercise
+we're gonna first start,0,startingAnExercise
+gonna first start,0,startingAnExercise
+we're gonna go right into,0,startingAnExercise
+gonna go right into,0,startingAnExercise
 we're gonna start our,0,startingAnExercise
-start our,0,startingAnExercise
 we're gonna start with,0,startingAnExercise
 we're going to start with,1,startingAnExercise
+we're gonna start,0,startingAnExercise
+start off,0,startingAnExercise
+i'm going to start,0,startingAnExercise
+start our,0,startingAnExercise
+starting with,1,startingAnExercise
 start with,2,startingAnExercise
+started up,0,startingAnExercise
 starting off,0,startingAnExercise
-the first exercise,0,startingAnExercise
-we're going to start,1,startingAnExercise
 we're starting,1,startingAnExercise
 you ready,1,startingAnExercise
+we ready,0,startingAnExercise
+start doing,0,startingAnExercise
+starting first,0,startingAnExercise
+get started,0,startingAnExercise
+first and foremost,0,startingAnExercise
+first,3,startingAnExercise
+starting,3,startingAnExercise
+starts now,0,startingAnExercise
+start it over,0,startingAnExercise
+start out,0,startingAnExercise
+start,11,startingAnExercise
+ready to do,0,startingAnExercise
+ready,3,startingAnExercise
+squeeze these,1,inaccessibleLocations
+show you,1,inaccessibleLocations
+notice how,2,inaccessibleLocations
+see how,0,inaccessibleLocations
+observe how,0,inaccessibleLocations
+look how,0,inaccessibleLocations
+view how,0,inaccessibleLocations
+move this,1,inaccessibleLocations
+move here,0,inaccessibleLocations
+move there,0,inaccessibleLocations
+side view,2,inaccessibleLocations
+going here,1,inaccessibleLocations
+going there,0,inaccessibleLocations
+end up here,1,inaccessibleLocations
+end up there,0,inaccessibleLocations
+out there,1,inaccessibleLocations
+out here,0,inaccessibleLocations
+over here,1,inaccessibleLocations
+over there,0,inaccessibleLocations
+go here,0,inaccessibleLocations
+go there,0,inaccessibleLocations
+stay there,0,inaccessibleLocations
+stays here,0,inaccessibleLocations
+this way,0,inaccessibleLocations
+that way,0,inaccessibleLocations
+this plank,0,inaccessibleLocations
+like this,0,inaccessibleLocations
+like that,0,inaccessibleLocations
+stay here,0,inaccessibleLocations
+their way,0,inaccessibleLocations
+be here,0,inaccessibleLocations
+here we are,0,inaccessibleLocations
+here we,4,inaccessibleLocations
+all the way out,0,inaccessibleLocations
+look there,0,inaccessibleLocations
+look here,0,inaccessibleLocations
+look at,1,inaccessibleLocations
+up there,0,inaccessibleLocations
+up here,1,inaccessibleLocations
+down there,0,inaccessibleLocations
+down here,0,inaccessibleLocations
+right here,4,inaccessibleLocations
+right there,1,inaccessibleLocations
+all out there,1,inaccessibleLocations
+see your,0,inaccessibleLocations
+i'm here,0,inaccessibleLocations
+you're here,0,inaccessibleLocations
+we're here,0,inaccessibleLocations
+you'll notice,0,inaccessibleLocations
+you'll see,0,inaccessibleLocations
+you notice,1,inaccessibleLocations
+you see,1,inaccessibleLocations
+i notice,0,inaccessibleLocations
+i see,0,inaccessibleLocations
+you can see,0,inaccessibleLocations
+rest here,0,inaccessibleLocations
+turn that,0,inaccessibleLocations
+this slide,0,inaccessibleLocations
+this side,0,inaccessibleLocations
+hovering here,0,inaccessibleLocations
+throwing it up there,0,inaccessibleLocations
+through here,0,inaccessibleLocations
+that stretch,2,inaccessibleLocations
+notice this,0,inaccessibleLocations
+see this,0,inaccessibleLocations
+observe this,0,inaccessibleLocations
+look this,0,inaccessibleLocations
+view this,0,inaccessibleLocations
+notice that,0,inaccessibleLocations
+see that,0,inaccessibleLocations
+observe that,0,inaccessibleLocations
+look that,0,inaccessibleLocations
+view that,0,inaccessibleLocations
+notice there,0,inaccessibleLocations
+see there,0,inaccessibleLocations
+observe there,0,inaccessibleLocations
+view there,0,inaccessibleLocations
+notice here,0,inaccessibleLocations
+notice,3,inaccessibleLocations
+see here,0,inaccessibleLocations
+observe here,0,inaccessibleLocations
+view here,1,inaccessibleLocations
+see,2,inaccessibleLocations
+observe,0,inaccessibleLocations
+view,2,inaccessibleLocations
+show me,0,inaccessibleLocations
+show us,0,inaccessibleLocations
+body parts worked,1,expectedBodySensation
+deep burn,0,expectedBodySensation
+feel a little bit,0,expectedBodySensation
+feel a,0,expectedBodySensation
+feel every,0,expectedBodySensation
+feel in the,0,expectedBodySensation
+feel it,2,expectedBodySensation
+feel like,1,expectedBodySensation
+feel that stretch,1,expectedBodySensation
+feel that,2,expectedBodySensation
+feel this,0,expectedBodySensation
+feel the,0,expectedBodySensation
+feel those,1,expectedBodySensation
+feeling a,1,expectedBodySensation
+feeling it,0,expectedBodySensation
+feeling this,0,expectedBodySensation
+feeling that,1,expectedBodySensation
+feeling those,1,expectedBodySensation
+get that heart rate up,0,expectedBodySensation
+get the heart rate up,0,expectedBodySensation
+getting that heart rate up,0,expectedBodySensation
+heart rates probably up,0,expectedBodySensation
+heart rate up,0,expectedBodySensation
+heart rate down,0,expectedBodySensation
+heart rates up,0,expectedBodySensation
+heart rate,0,expectedBodySensation
+is engaged,0,expectedBodySensation
+pretend like you're,0,expectedBodySensation
+struggling,0,expectedBodySensation
+this one really hits,1,expectedBodySensation
+this works your,0,expectedBodySensation
+working those,0,expectedBodySensation
+work those,0,expectedBodySensation
+you might notice your,0,expectedBodySensation
+you find that,0,expectedBodySensation
+find that,0,expectedBodySensation
+you're gonna feel those,0,expectedBodySensation
+you're gonna find that,0,expectedBodySensation
+you’re gonna notice that,0,expectedBodySensation
+burning through,0,expectedBodySensation
+burning,0,expectedBodySensation
+tight,9,expectedBodySensation
+warming up,0,expectedBodySensation
+warmed up,0,expectedBodySensation
+sweating,0,expectedBodySensation
+sweat,0,expectedBodySensation
+good stretch,0,expectedBodySensation
+low impact,0,expectedBodySensation
+start burning,0,expectedBodySensation
+to burn,0,expectedBodySensation
+burn,0,expectedBodySensation
+hurts,0,expectedBodySensation
+hurt,1,expectedBodySensation
+hyperextend,1,expectedBodySensation
+painful,0,expectedBodySensation
+pain,1,expectedBodySensation
+get a stretch,0,expectedBodySensation
+feeling,5,expectedBodySensation
+feel,18,expectedBodySensation
+ache,1,expectedBodySensation
+discomfort,0,expectedBodySensation
+comfort,3,expectedBodySensation
+aching,3,expectedBodySensation
+strain,0,expectedBodySensation
+we're going to move right into,0,transitioning
+we are going to move right into,0,transitioning
+we're gonna move right into,0,transitioning
 we are headed to,0,transitioning
+are headed to,0,transitioning
 we'll take it to,0,transitioning
+ll take it to,0,transitioning
+you take it to,0,transitioning
 we're back to,0,transitioning
+i'm back to,0,transitioning
 we're changing,0,transitioning
+i'm changing,0,transitioning
 we're doing,1,transitioning
+i'm doing,0,transitioning
 we're going back to,1,transitioning
+i'm going back to,0,transitioning
 we're going back,1,transitioning
+i'm going back,0,transitioning
 we're going into,1,transitioning
+i'm going into,0,transitioning
 we're going to go back,0,transitioning
 we're going to go,2,transitioning
 we're going to,25,transitioning
+i'm going to,0,transitioning
 we're gonna go to,0,transitioning
 we're gonna go,0,transitioning
+i'm gonna go,0,transitioning
 we're gonna do,0,transitioning
+i'm gonna do,0,transitioning
 we're gonna move,0,transitioning
 we're gonna,3,transitioning
+i'm gonna,0,transitioning
 we're moving into,0,transitioning
+i'm moving into,0,transitioning
 we've got another,0,transitioning
 we've got some,0,transitioning
+i've got another,0,transitioning
+i've got some,0,transitioning
+i got another,0,transitioning
+i got some,0,transitioning
 we're on to,1,transitioning
-and we're straight in,0,transitioning
+i'm on to,0,transitioning
+we're straight in,0,transitioning
 another combo,1,transitioning
 do another,0,transitioning
 going back to,1,transitioning
@@ -2884,49 +4259,54 @@ head to,0,transitioning
 into the next,3,transitioning
 it's coming next,0,transitioning
 it's time for,0,transitioning
-let's do,0,transitioning
 march now,0,transitioning
 now we're going up,0,transitioning
 now we're going,1,transitioning
-now I want you to,0,transitioning
-now we're going,1,transitioning
+now i want you to,0,transitioning
 right into the,2,transitioning
 right into,4,transitioning
 switch sides,0,transitioning
 switch side,0,transitioning
 then get up,0,transitioning
-then I,1,transitioning
+then i,0,transitioning
 then we go to,0,transitioning
 then we'll go,0,transitioning
 then we'll,0,transitioning
 then you're,1,transitioning
-we are done,0,stoppingAnExercise
-we're done,0,stoppingAnExercise
-it's over,0,stoppingAnExercise
-done okay,5,stoppingAnExercise
-it is done,0,stoppingAnExercise
-that's the end,1,stoppingAnExercise
-are done,0,stoppingAnExercise
-re done,0,stoppingAnExercise
+let's get that going,0,transitioning
+let's get that,0,transitioning
+let's get,1,transitioning
+we got our,0,transitioning
+let's go ahead,0,transitioning
+get those going,0,transitioning
+and then,5,transitioning
+you're going to,1,transitioning
+after that,0,transitioning
+afterwards,0,transitioning
+you're gonna,0,transitioning
+in addition to,0,transitioning
+in addition,0,transitioning
+furthermore,0,transitioning
+further,0,transitioning
+moreover,0,transitioning
+right next up,0,transitioning
+next up,0,transitioning
+next,10,transitioning
+now we,2,transitioning
+now you,2,transitioning
+now i,1,transitioning
+alright now,0,transitioning
+all right now,0,transitioning
+and now,0,transitioning
+almost finished,0,duration
+nearly over,0,duration
+few minute,0,duration
+few second,0,duration
 we have five seconds,0,duration
 we've got 40 seconds,0,duration
 work for 20 seconds,0,duration
 got 10 more seconds,1,duration
-10 more seconds,2,duration
-20 seconds of each,0,duration
-20 seconds of,0,duration
-20 seconds,0,duration
-20 second,1,duration
-30 seconds,0,duration
-30 second,1,duration
-40 seconds of work,0,duration
-40 seconds,0,duration
-40 second,0,duration
-50 seconds,0,duration
-50 second,0,duration
 last 60 seconds,0,duration
-60 seconds,0,duration
-60 second,0,duration
 almost done,1,duration
 almost there,5,duration
 can see the finish line,0,duration
@@ -2936,6 +4316,8 @@ forty second,0,duration
 getting close to the end,0,duration
 halfway done,1,duration
 more seconds left,1,duration
+seconds left,1,duration
+second left,0,duration
 more seconds,6,duration
 not done yet,0,duration
 not much left,2,duration
@@ -2943,22 +4325,164 @@ not much time left,1,duration
 second break,1,duration
 seconds here,0,duration
 got ten seconds,1,duration
-ten seconds,1,duration
-ten second,1,duration
-twenty seconds,0,duration
-twenty second,0,duration
 we are almost there,0,duration
-seconds,7,duration
+we're halfway,0,duration
+halfway already,0,duration
 halfway there,0,duration
-fifty seconds,0,duration
-fifty second,0,duration
+halfway over,0,duration
+halfway,1,duration
+1 second of,0,duration
+2 seconds of,0,duration
+3 seconds of,0,duration
+4 seconds of,0,duration
+5 seconds of,0,duration
+6 seconds of,0,duration
+7 seconds of,0,duration
+8 seconds of,0,duration
+9 seconds of,0,duration
+10 seconds of,0,duration
+15 seconds of,0,duration
+20 seconds of,0,duration
+25 seconds of,0,duration
+30 seconds of,0,duration
+35 seconds of,0,duration
+40 seconds of,0,duration
+45 seconds of,0,duration
+50 seconds of,0,duration
+55 seconds of,0,duration
+60 seconds of,0,duration
+one seconds of,0,duration
+two seconds of,0,duration
+three seconds of,0,duration
+four seconds of,0,duration
+five seconds of,0,duration
+six seconds of,0,duration
+seven seconds of,0,duration
+eight seconds of,0,duration
+nine seconds of,0,duration
+ten seconds of,0,duration
+fifteen seconds of,0,duration
+twenty seconds of,0,duration
+twenty five seconds of,0,duration
+thirty seconds of,0,duration
+thirty five seconds of,0,duration
+forty seconds of,0,duration
+forty five seconds of,0,duration
+fifty seconds of,0,duration
+fifty five seconds of,0,duration
+sixty seconds of,0,duration
+1 second,0,duration
+2 seconds,0,duration
+3 seconds,0,duration
+4 seconds,0,duration
+5 seconds,0,duration
+6 seconds,0,duration
+7 seconds,0,duration
+8 seconds,0,duration
+9 seconds,0,duration
+10 seconds,0,duration
+15 seconds,0,duration
+20 seconds,0,duration
+25 seconds,0,duration
+30 seconds,0,duration
+35 seconds,0,duration
+40 seconds,0,duration
+45 seconds,0,duration
+50 seconds,0,duration
+55 seconds,0,duration
+60 seconds,0,duration
+one seconds,0,duration
+two seconds,0,duration
+three seconds,0,duration
+four seconds,0,duration
+five seconds,0,duration
+six seconds,0,duration
+seven seconds,0,duration
+eight seconds,0,duration
+nine seconds,0,duration
+ten seconds,1,duration
+fifteen seconds,0,duration
+twenty seconds,0,duration
+twenty five seconds,0,duration
 thirty seconds,0,duration
+thirty five seconds,0,duration
+forty seconds,0,duration
+forty five seconds,0,duration
+fifty seconds,0,duration
+fifty five seconds,0,duration
+sixty seconds,0,duration
+1 second left,0,duration
+2 seconds left,0,duration
+3 seconds left,0,duration
+4 seconds left,0,duration
+5 seconds left,0,duration
+6 seconds left,0,duration
+7 seconds left,0,duration
+8 seconds left,0,duration
+9 seconds left,0,duration
+10 seconds left,0,duration
+15 seconds left,0,duration
+20 seconds left,0,duration
+25 seconds left,0,duration
+30 seconds left,0,duration
+35 seconds left,0,duration
+40 seconds left,0,duration
+45 seconds left,0,duration
+50 seconds left,0,duration
+55 seconds left,0,duration
+60 seconds left,0,duration
+one seconds left,0,duration
+two seconds left,0,duration
+three seconds left,0,duration
+four seconds left,0,duration
+five seconds left,0,duration
+six seconds left,0,duration
+seven seconds left,0,duration
+eight seconds left,0,duration
+nine seconds left,0,duration
+ten seconds left,0,duration
+fifteen seconds left,0,duration
+twenty seconds left,0,duration
+twenty five seconds left,0,duration
+thirty seconds left,0,duration
+thirty five seconds left,0,duration
+forty seconds left,0,duration
+forty five seconds left,0,duration
+fifty seconds left,0,duration
+fifty five seconds left,0,duration
+sixty seconds left,0,duration
+one second,0,duration
+two second,0,duration
+three second,0,duration
+four second,0,duration
+five second,0,duration
+six second,0,duration
+seven second,0,duration
+eight second,0,duration
+nine second,0,duration
+ten second,1,duration
+fifteen second,0,duration
+twenty second,0,duration
+twenty five second,0,duration
 thirty second,0,duration
+thirty five second,0,duration
+forty five second,0,duration
+fifty second,0,duration
+fifty five second,0,duration
+sixty second,0,duration
+couple more minute,0,duration
+few more minute,0,duration
+more minute,0,duration
+extra minute,0,duration
 1 minute,0,duration
 2 minute,0,duration
 3 minute,0,duration
 4 minute,0,duration
 5 minute,0,duration
+6 minute,0,duration
+7 minute,0,duration
+8 minute,0,duration
+9 minute,0,duration
 10 minute,0,duration
 15 minute,0,duration
 20 minute,0,duration
@@ -2975,6 +4499,10 @@ two minute,0,duration
 three minute,0,duration
 four minute,0,duration
 five minute,0,duration
+six minute,0,duration
+seven minute,0,duration
+eight minute,0,duration
+nine minute,0,duration
 ten minute,0,duration
 fifteen minute,0,duration
 twenty minute,0,duration
@@ -2986,20 +4514,158 @@ forty five minute,0,duration
 fifty minute,0,duration
 fifty five minute,0,duration
 sixty minute,0,duration
+1 hour,0,duration
+2 hour,0,duration
+3 hour,0,duration
+4 hour,0,duration
+5 hour,0,duration
+6 hour,0,duration
+7 hour,0,duration
+8 hour,0,duration
+9 hour,0,duration
+10 hour,0,duration
+15 hour,0,duration
+20 hour,0,duration
+25 hour,0,duration
+30 hour,0,duration
+35 hour,0,duration
+40 hour,0,duration
+45 hour,0,duration
+50 hour,0,duration
+55 hour,0,duration
+60 hour,0,duration
+one hour,0,duration
+two hour,0,duration
+three hour,0,duration
+four hour,0,duration
+five hour,0,duration
+six hour,0,duration
+seven hour,0,duration
+eight hour,0,duration
+nine hour,0,duration
+ten hour,0,duration
+fifteen hour,0,duration
+twenty hour,0,duration
+twenty five hour,0,duration
+thirty hour,0,duration
+thirty five hour,0,duration
+forty hour,0,duration
+forty five hour,0,duration
+fifty hour,0,duration
+fifty five hour,0,duration
+sixty hour,0,duration
+1 more second,0,duration
+2 more second,0,duration
+3 more second,0,duration
+4 more second,0,duration
+5 more second,0,duration
+6 more second,0,duration
+7 more second,0,duration
+8 more second,0,duration
+9 more second,0,duration
+10 more second,2,duration
+15 more second,0,duration
+20 more second,0,duration
+25 more second,0,duration
+30 more second,0,duration
+35 more second,0,duration
+40 more second,0,duration
+45 more second,0,duration
+50 more second,0,duration
+55 more second,0,duration
+60 more second,0,duration
+one more second,0,duration
+two more second,0,duration
+three more second,0,duration
+four more second,0,duration
+five more second,3,duration
+six more second,0,duration
+seven more second,0,duration
+eight more second,0,duration
+nine more second,0,duration
+ten more second,1,duration
+fifteen more second,0,duration
+twenty more second,0,duration
+twenty five more second,0,duration
+thirty more second,0,duration
+thirty five more second,0,duration
+forty more second,0,duration
+forty five more second,0,duration
+fifty more second,0,duration
+fifty five more second,0,duration
+sixty more second,0,duration
+minute,0,duration
 hour,0,duration
-3 2 & 1,0,pacing
-3 2 1,0,pacing
+more second,6,duration
+second of,0,duration
+seconds of,0,duration
+seconds,7,duration
+second rest,0,duration
+workout done,0,stoppingAnExercise
+workout complete,0,stoppingAnExercise
+workout finished,0,stoppingAnExercise
+workout ended,0,stoppingAnExercise
+workout concluded,0,stoppingAnExercise
+exercise done,0,stoppingAnExercise
+exercise complete,0,stoppingAnExercise
+exercise finished,0,stoppingAnExercise
+exercise ended,0,stoppingAnExercise
+exercise concluded,0,stoppingAnExercise
+we are done,1,stoppingAnExercise
+we're done,0,stoppingAnExercise
+you are done,0,stoppingAnExercise
+you're done,0,stoppingAnExercise
+i am done,0,stoppingAnExercise
+i'm done,0,stoppingAnExercise
+it's over,0,stoppingAnExercise
+done okay,4,stoppingAnExercise
+it is done,0,stoppingAnExercise
+is done,0,stoppingAnExercise
+that's the end,1,stoppingAnExercise
+it's the end,0,stoppingAnExercise
+reached the end,0,stoppingAnExercise
+made it to the end,0,stoppingAnExercise
+at the end,0,stoppingAnExercise
+are done,1,stoppingAnExercise
+re done,1,stoppingAnExercise
+that's it,4,stoppingAnExercise
+completed,0,stoppingAnExercise
+done,8,stoppingAnExercise
+finished,0,stoppingAnExercise
+ended,0,stoppingAnExercise
+concluded,0,stoppingAnExercise
+conclusion,0,stoppingAnExercise
+hasten,0,pacing
+hurry,0,pacing
+sprint,0,pacing
 allotted time period,1,pacing
 as quick as we can,0,pacing
 at my counts,0,pacing
+at my count,0,pacing
+on my counts,0,pacing
+on my count,0,pacing
 at your own pace,2,pacing
+your own pace,2,pacing
 break whenever,0,pacing
 cue you down,0,pacing
+cue you,0,pacing
 do it slow,0,pacing
 don't rush,0,pacing
+rush,2,pacing
 fast as you can,0,pacing
 fast pace,0,pacing
-fast,1,pacing
+1 2 3 4 5 6 7 8 9 10,0,pacing
+1 2 3 4 5 6 7 8 9,0,pacing
+1 2 3 4 5 6 7 8,0,pacing
+1 2 3 4 5 6 7,0,pacing
+1 2 3 4 5 6,0,pacing
+1 2 3 4 5,0,pacing
+1 2 3 4,0,pacing
+7 8 9 10,0,pacing
+6 7 8 9,0,pacing
+six seven eight nine,0,pacing
+six seven,0,pacing
+eight nine,0,pacing
 5 come on 4 3 2 1,0,pacing
 5 4 3 2 and last 1 0,0,pacing
 5 4 3 2 and 1,0,pacing
@@ -3019,7 +4685,6 @@ in 3 2 1,0,pacing
 3 in 2 and in 1,0,pacing
 3 2 and 1,0,pacing
 3 2 1 and 0,0,pacing
-3 2 1,0,pacing
 3 2,0,pacing
 2 and again 1,0,pacing
 2 and 1,0,pacing
@@ -3034,77 +4699,166 @@ four three two one zero,4,pacing
 last four three two one,0,pacing
 four three two one,8,pacing
 four three,13,pacing
+2 3 4,0,pacing
+2 3,0,pacing
+3 4,0,pacing
+one two three four five,0,pacing
+one two three four,0,pacing
+two three four,0,pacing
 one two,0,pacing
+two three,0,pacing
+three four,0,pacing
 in three come on in two and one,0,pacing
 in three two and one,0,pacing
-in three two one ,0,pacing
+in three two one,0,pacing
 three come on two and one,0,pacing
 three come on two one,0,pacing
 three in two and in one,0,pacing
 three two and one,4,pacing
 three two one and zero,3,pacing
-three two one,11,pacing
-three two,16,pacing
+three two one,10,pacing
+three two,15,pacing
 two and again one,0,pacing
 two and one,4,pacing
-two one,11,pacing
+two one,10,pacing
 go fast,0,pacing
 go in a tempo,0,pacing
 go slow,0,pacing
 good tempo,0,pacing
+tempo,0,pacing
 moving at a pace,1,pacing
+pace,4,pacing
 pause whenever,0,pacing
+pause,0,pacing
 side side ,0,pacing
 slow right down,0,pacing
+slow down,0,pacing
 slow slow slow,0,pacing
 speed it up,0,pacing
 speed this up,0,pacing
+speed up,0,pacing
 switch switch switch,0,pacing
 take a break whenever,0,pacing
+take a break,0,pacing
 the pace is high,0,pacing
 your pace,0,pacing
-circuit number,0,quantityOfAnExercise
-don't have much left,0,quantityOfAnExercise
-few more,0,quantityOfAnExercise
-few times,0,quantityOfAnExercise
-four high knee,0,quantityOfAnExercise
-last five,0,quantityOfAnExercise
-last one,1,quantityOfAnExercise
-last round,0,quantityOfAnExercise
-last time on,0,quantityOfAnExercise
-last time,0,quantityOfAnExercise
-not many left,1,quantityOfAnExercise
-one more exercise,1,quantityOfAnExercise
-one more round,0,quantityOfAnExercise
-one more set,0,quantityOfAnExercise
-one more time,0,quantityOfAnExercise
-one more,3,quantityOfAnExercise
-one on each side,0,quantityOfAnExercise
-one right and one left,0,quantityOfAnExercise
-round one,0,quantityOfAnExercise
-this is one of two,0,quantityOfAnExercise
-three different moves,0,quantityOfAnExercise
-three more,0,quantityOfAnExercise
-three rounds,0,quantityOfAnExercise
-three times,0,quantityOfAnExercise
-try that again,0,quantityOfAnExercise
-two different movement,0,quantityOfAnExercise
-two jumping jack,0,quantityOfAnExercise
-two more,0,quantityOfAnExercise
-two times,0,quantityOfAnExercise
-four more,0,quantityOfAnExercise
-five more,3,quantityOfAnExercise
-six more,0,quantityOfAnExercise
-seven more,0,quantityOfAnExercise
-eight more,0,quantityOfAnExercise
-nine more,0,quantityOfAnExercise
-ten more,1,quantityOfAnExercise
+pause button,0,pacing
+go ahead pause,0,pacing
+pause the video,0,pacing
+now's the time to pause,0,pacing
+a break,0,pacing
+rest now,0,pacing
+rest,5,pacing
+pause now,0,pacing
+slowly,0,pacing
+slower,0,pacing
+slow,0,pacing
+quickly,0,pacing
+quick,1,pacing
+faster,1,pacing
+fast,1,pacing
+speed,0,pacing
+three two & one,0,pacing
+nine and eight,0,pacing
+nine & eight,0,pacing
+nine eight,0,pacing
+eight and seven,0,pacing
+eight & seven,0,pacing
+eight seven,0,pacing
+seven and six,0,pacing
+seven & six,0,pacing
+seven six,0,pacing
+six and five,0,pacing
+six & five,0,pacing
+six five,0,pacing
+five and four,0,pacing
+five & four,0,pacing
+five four,10,pacing
+four and three,0,pacing
+four & three,0,pacing
+three and two,0,pacing
+three & two,0,pacing
+two & one,0,pacing
+9 and 8,0,pacing
+9 & 8,0,pacing
+9 8,0,pacing
+8 and 7,0,pacing
+8 & 7,0,pacing
+8 7,0,pacing
+7 and 6,0,pacing
+7 & 6,0,pacing
+7 6,0,pacing
+6 and 5,0,pacing
+6 & 5,0,pacing
+6 5,0,pacing
+5 and 4,0,pacing
+5 & 4,0,pacing
+5 4,0,pacing
+4 and 3,0,pacing
+4 & 3,0,pacing
+3 and 2,0,pacing
+3 & 2,0,pacing
+2 & 1,0,pacing
+one and two,0,pacing
+one & two,0,pacing
+one two & three,0,pacing
+one two three,0,pacing
+eight and nine,0,pacing
+eight & nine,0,pacing
+seven and eight,0,pacing
+seven & eight,0,pacing
+seven eight,0,pacing
+six and seven,0,pacing
+six & seven,0,pacing
+five and six,0,pacing
+five & six,0,pacing
+five six,0,pacing
+four and five,0,pacing
+four & five,0,pacing
+four five,0,pacing
+three and four,0,pacing
+three & four,0,pacing
+two and three,0,pacing
+two & three,0,pacing
+8 and 9,0,pacing
+8 & 9,0,pacing
+8 9,0,pacing
+7 and 8,0,pacing
+7 & 8,0,pacing
+7 8,0,pacing
+6 and 7,0,pacing
+6 & 7,0,pacing
+6 7,0,pacing
+5 and 6,0,pacing
+5 6,0,pacing
+4 and 5,0,pacing
+4 & 5,0,pacing
+4 5,0,pacing
+3 and 4,0,pacing
+3 & 4,0,pacing
+2 and 3,0,pacing
+2 & 3,0,pacing
+1 and 2,0,pacing
+1 & 2,0,pacing
+agile,0,pacing
+brisk,0,pacing
+nimble,0,pacing
+rapid,0,pacing
+accelerat,0,pacing
 ab crunch,0,familiarExercisePhrases
+crunch,3,familiarExercisePhrases
 curl up,0,familiarExercisePhrases
 curl-up,0,familiarExercisePhrases
+high knees,0,familiarExercisePhrases
 high knee,0,familiarExercisePhrases
+jumping jacks,0,familiarExercisePhrases
 jumping jack,0,familiarExercisePhrases
+jacks,0,familiarExercisePhrases
+jack,0,familiarExercisePhrases
 lunge,0,familiarExercisePhrases
+1 mile run,0,familiarExercisePhrases
+1-mile run,0,familiarExercisePhrases
+one mile run,0,familiarExercisePhrases
 one-mile run,0,familiarExercisePhrases
 plank,0,familiarExercisePhrases
 push up and rotation,0,familiarExercisePhrases
@@ -3128,10 +4882,17 @@ wall-sit,0,familiarExercisePhrases
 abdominals,0,bodyParts
 abdominal,0,bodyParts
 abs,2,bodyParts
+ankles,0,bodyParts
+ankle,0,bodyParts
 upper arms,0,bodyParts
 arms,3,bodyParts
 upper arm,1,bodyParts
 arm,7,bodyParts
+core muscle,0,bodyParts
+the back,2,bodyParts
+that back,2,bodyParts
+lower back,2,bodyParts
+low back,0,bodyParts
 back chest,0,bodyParts
 back heel,0,bodyParts
 back muscles,0,bodyParts
@@ -3143,14 +4904,19 @@ back toe,0,bodyParts
 backside,1,bodyParts
 biceps,2,bodyParts
 bicep,2,bodyParts
+body parts,2,bodyParts
+body part,2,bodyParts
 bones,0,bodyParts
 bone,0,bodyParts
+butt,0,bodyParts
 calf,0,bodyParts
 calves,0,bodyParts
+chest,4,bodyParts
 chin,5,bodyParts
 core,7,bodyParts
 ears,2,bodyParts
 ear,2,bodyParts
+elbow joint,0,bodyParts
 elbows,10,bodyParts
 elbow,12,bodyParts
 eyes,0,bodyParts
@@ -3166,8 +4932,10 @@ glutes,3,bodyParts
 glute,3,bodyParts
 gluts,1,bodyParts
 glut,4,bodyParts
-hands,2,bodyParts
-hand,2,bodyParts
+hamstring,3,bodyParts
+hands,3,bodyParts
+hand,3,bodyParts
+head,2,bodyParts
 heels,5,bodyParts
 heel,5,bodyParts
 hips,14,bodyParts
@@ -3178,7 +4946,8 @@ knees,6,bodyParts
 knee,7,bodyParts
 knucles,0,bodyParts
 knuckle,0,bodyParts
-lower back,2,bodyParts
+legs,1,bodyParts
+leg,4,bodyParts
 lower body,1,bodyParts
 muscles,6,bodyParts
 muscle,6,bodyParts
@@ -3204,29 +4973,64 @@ sole,0,bodyParts
 spine,0,bodyParts
 straight back,0,bodyParts
 tail,0,bodyParts
+thigh,0,bodyParts
 toes,0,bodyParts
-toes,0,bodyParts
+toe,0,bodyParts
 triceps,5,bodyParts
 tricep,7,bodyParts
 upper body,4,bodyParts
 your back,3,bodyParts
+wrists,0,bodyParts
+wrist,0,bodyParts
+tummy,0,bodyParts
+limb,0,bodyParts
+torso,0,bodyParts
+skin,0,bodyParts
+nose,0,bodyParts
+face,0,bodyParts
+hair,5,bodyParts
+eyebrow,0,bodyParts
+mouth,0,bodyParts
+lip,0,bodyParts
+fingernail,0,bodyParts
+toenail,0,bodyParts
+finger nail,0,bodyParts
+toe nail,0,bodyParts
+thumb,1,bodyParts
+abdomen,0,bodyParts
+skeleton,0,bodyParts
+skull,0,bodyParts
+brain,0,bodyParts
+knee cap,0,bodyParts
+kneecap,0,bodyParts
+right up,0,directionToMove
+right above,0,directionToMove
 above,0,directionToMove
 all the way up,4,directionToMove
 angle,1,directionToMove
 are back,1,directionToMove
 around,2,directionToMove
 at the top,5,directionToMove
+steps back,0,directionToMove
+step back,0,directionToMove
+down into,0,directionToMove
 back down,4,directionToMove
 back flat,0,directionToMove
+right toward,0,directionToMove
+right back into,1,directionToMove
+right back in,1,directionToMove
 back in the center,0,directionToMove
 back in,2,directionToMove
 back neutral,0,directionToMove
 back to center,0,directionToMove
 back to the center,0,directionToMove
 back to the middle,0,directionToMove
+back to,2,directionToMove
 back together,0,directionToMove
 back up,1,directionToMove
 backwards,1,directionToMove
+behind the,0,directionToMove
+behind,0,directionToMove
 below,2,directionToMove
 bring it back,0,directionToMove
 bring them back,0,directionToMove
@@ -3236,6 +5040,7 @@ come up,2,directionToMove
 degrees,0,directionToMove
 down your back,0,directionToMove
 take it down,0,directionToMove
+right over,0,directionToMove
 right down,0,directionToMove
 straight down,0,directionToMove
 down,10,directionToMove
@@ -3249,8 +5054,8 @@ in line,1,directionToMove
 in the ground,0,directionToMove
 into,8,directionToMove
 jump them back,0,directionToMove
-left,6,directionToMove
-level,0,directionToMove
+left,7,directionToMove
+level,2,directionToMove
 low,11,directionToMove
 lower,4,directionToMove
 move back,0,directionToMove
@@ -3258,21 +5063,23 @@ off the ground,3,directionToMove
 on the ground,1,directionToMove
 open,0,directionToMove
 other side,0,directionToMove
-out,17,directionToMove
+out,18,directionToMove
 over,6,directionToMove
 parallel,1,directionToMove
 pull back,2,directionToMove
 pulling back,6,directionToMove
 push yourself back,0,directionToMove
 right into,4,directionToMove
-right,29,directionToMove
+right underneath,0,directionToMove
+underneath,0,directionToMove
+right back up,1,directionToMove
+right,30,directionToMove
 each side,0,directionToMove
-side,3,directionToMove
+side,4,directionToMove
 side to side,0,directionToMove
 sit back,0,directionToMove
 sit it back,0,directionToMove
 sitting back,0,directionToMove
-step back,0,directionToMove
 stepping back,0,directionToMove
 stepping it back,0,directionToMove
 straight line,2,directionToMove
@@ -3281,44 +5088,49 @@ straight,7,directionToMove
 to the ground,5,directionToMove
 towards the back,0,directionToMove
 toward,0,directionToMove
-up,46,directionToMove
+up,48,directionToMove
 the ground,9,directionToMove
-body parts worked,1,expectedBodySensation
-deep burn,0,expectedBodySensation
-feel a,0,expectedBodySensation
-feel every,0,expectedBodySensation
-feel in the,0,expectedBodySensation
-feel it,2,expectedBodySensation
-feel like,1,expectedBodySensation
-feel that stretch,1,expectedBodySensation
-feel that,2,expectedBodySensation
-feel the,0,expectedBodySensation
-feel those,1,expectedBodySensation
-feeling a,1,expectedBodySensation
-feeling it,0,expectedBodySensation
-feeling that,1,expectedBodySensation
-feeling those,1,expectedBodySensation
-get that heart rate up,0,expectedBodySensation
-get the heart rate up,0,expectedBodySensation
-getting that heart rate up,0,expectedBodySensation
-heart rates probably up,0,expectedBodySensation
-heart rates up,0,expectedBodySensation
-heart rate,0,expectedBodySensation
-is engaged,0,expectedBodySensation
-pretend like you're,0,expectedBodySensation
-struggling,0,expectedBodySensation
-this one really hits,1,expectedBodySensation
-this works your,0,expectedBodySensation
-work those,0,expectedBodySensation
-you might notice your,0,expectedBodySensation
-you're gonna feel those,0,expectedBodySensation
-you're gonna find that,0,expectedBodySensation
-weight,21,equipment
-dumbbell,16,equipment
-box,5,equipment
+weight,24,equipment
+dumbbell,18,equipment
+box,6,equipment
 chair,5,equipment
 seat,3,equipment
+a drink,0,equipment
+water bottle,0,equipment
 water,1,equipment
+table,3,equipment
 mat,1,equipment
 towel,0,equipment
 jump rope,0,equipment
+items,0,equipment
+item,0,equipment
+objects,0,equipment
+object,0,equipment
+potted plant,0,equipment
+the plant,0,equipment
+treadmill,0,equipment
+coffee jugs,0,equipment
+coffee jug,0,equipment
+rolling pin,0,equipment
+bands,0,equipment
+band,0,equipment
+barbell,0,equipment
+bench,0,equipment
+exercise ball,0,equipment
+ez bar,0,equipment
+ez - bar,0,equipment
+foam roll,0,equipment
+kettlebell,0,equipment
+machine,0,equipment
+pull bar,0,equipment
+weight plate,0,equipment
+plate,0,equipment
+walls,0,equipment
+wall,0,equipment
+rehydrate,0,equipment
+hydrate,0,equipment
+bike,0,equipment
+rope,0,equipment
+equipment,2,equipment
+bicycle,0,equipment
+ball,0,equipment

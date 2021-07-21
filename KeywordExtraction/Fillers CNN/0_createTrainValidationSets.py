@@ -10,12 +10,11 @@ import random
 dictionary={}
 
 # Encoding utf-8-sig makes sure that non-alphabetical characters don't get appended to the first entry
-csvfile=open(os.getcwd()+"/Sentences_Vids12356_filled.csv", encoding="utf-8-sig",mode="r")
+csvfile=open(os.getcwd()+"/Sentences_Vids12345678_longerFillerDataset.csv", encoding="utf-8-sig",mode="r")
 reader = csv.reader(csvfile)
 
 highestWordCount=0
 
-# Make a dictionary where the keys are the category numbers (1-16) and the values are an array of all the sentences/phrases falling into each category
 for row in reader:
     # print(row[0])
 
@@ -30,7 +29,7 @@ for row in reader:
 print(dictionary)
 # print(highestWordCount)
 
-# Make train (80%), validation (20%)
+# Make train (90%), validation (10%)
 fullTrainList=[]
 fullValidationList=[]
 
@@ -40,10 +39,10 @@ for key, value in dictionary.items():
 
     if key=="2":
         print("Hello")
-        shuffledList=shuffledList[:int(math.floor(float(len(shuffledList))*0.30))]
+        shuffledList=shuffledList[:int(math.floor(float(len(shuffledList))))]
         print(len(shuffledList))
 
-    trainSetNumber=int(math.floor(float(len(shuffledList))*0.8))
+    trainSetNumber=int(math.floor(float(len(shuffledList))*0.9))
 
     trainSet=shuffledList[:trainSetNumber]
     validationSet=shuffledList[trainSetNumber:]

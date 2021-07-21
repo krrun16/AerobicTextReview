@@ -31,8 +31,8 @@ def getKeywordsArray(filename):
 def getColoredHTMLText(fullText,transcriptFilename):
     familiarExercisePhrases = getKeywordsArray("familiarExercisePhrases")
     bodyParts = getKeywordsArray("bodyParts")
-    directionToMove = getKeywordsArray("directionToMove")
     expectedBodySensation = getKeywordsArray("expectedBodySensation")
+    directionToMove = getKeywordsArray("directionToMove")
     equipment = getKeywordsArray("equipment")
 
     startingAnExercise = getKeywordsArray("startingAnExercise")
@@ -54,27 +54,27 @@ def getColoredHTMLText(fullText,transcriptFilename):
 
     allKeywords = [[brPhrase, lightRed, "brPhrase", "none"],
                    [encouragingPhrases, lightRed, "encouragingPhrases", "none"],
-                   [inaccessibleLocations, lightRed, "inaccessibleLocations", "none"],
                    [subjectivePhrases, lightRed, "subjectivePhrases", "none"],
                    [unfamiliarExercisePhrase,lightRed,"unfamiliarExercisePhrase","none"],
 
-                   [startingAnExercise, lightGreen, "startingAnExercise", "before"],
-                   [transitioning, lightGreen, "transitioning", "before"],
-                   [stoppingAnExercise, lightGreen, "stoppingAnExercise", "after"],
-                   [duration, lightGreen, "duration", "none"],
-                   [pacing, lightGreen, "pacing", "none"],
                    [quantityOfAnExercise, lightGreen, "quantityOfAnExercise", "none"],
+                   [startingAnExercise, lightGreen, "startingAnExercise", "before"],
+                   [inaccessibleLocations, lightRed, "inaccessibleLocations", "none"],
+                   [expectedBodySensation, lightYellow, "expectedBodySensation", "none"],
+                   [transitioning, lightGreen, "transitioning", "before"],
+                   [duration, lightGreen, "duration", "none"],
+                   [stoppingAnExercise, lightGreen, "stoppingAnExercise", "after"],
+                   [pacing, lightGreen, "pacing", "none"],
+
 
                    [familiarExercisePhrases, lightYellow, "familiarExercisePhrases", "none"],
                    [bodyParts, lightYellow, "bodyParts", "none"],
                    [directionToMove, lightYellow, "directionToMove", "none"],
-                   [expectedBodySensation, lightYellow, "expectedBodySensation", "none"],
                    [equipment, lightYellow, "equipment", "none"]]
 
     colorTextHTML=fullText
 
-    keywordsToIgnore = ["all right", "alright", "right now", "get right into it", "getting right into it",
-                        "which one is right for you", "doing it right","matter"]
+    keywordsToIgnore = getKeywordsArray("wordsToIgnore")
 
     for keyword in keywordsToIgnore:
         colorTextHTML = colorTextHTML.replace(" " + keyword,

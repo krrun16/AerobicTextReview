@@ -5,8 +5,7 @@
 import keras
 from keras.preprocessing import sequence
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation
-from keras.layers import Embedding, Conv1D, GlobalMaxPooling1D
+from keras.layers import Dense, Dropout, Activation, Embedding, Conv1D, GlobalMaxPooling1D, MaxPooling1D
 import nltk
 import os
 import random
@@ -92,7 +91,7 @@ print(max_words)
 
 # Same values as this tutorial, except using 200 epochs for more training: https://austingwalters.com/convolutional-neural-networks-cnn-to-classify-sentences/
 # If you're gonna change batch_size or maxlen, need to update it in 2_cnnSentenceClassifier_test.py as well!!!!!!!
-batch_size, maxlen, epochs = 64, 500, 200
+batch_size, maxlen, epochs = 64, 500, 100
 # embedding_dims, filters, kernel_size, hidden_dims = 50, 512, 5, 150
 embedding_dims, filters, kernel_size, hidden_dims = 50, 250, 5, 150
 
@@ -108,7 +107,7 @@ results = [["x","y"]]
 
 # Code our validation set into numbers (the same numbers used to code the train set)
 def codeValidationSet(add_pos_tags=False):
-    csvfile = open(os.getcwd() + "/Sentences_Vids4.csv")
+    csvfile = open(os.getcwd() + "/0_validationSet.csv")
     reader = csv.reader(csvfile)
     for row in reader:  # each row is a list
         results.append(row)
@@ -167,14 +166,15 @@ model.add(Dropout(0.2))  # masks various input values
 model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
 
 # Create the pooling layer
+model.add(MaxPooling1D(pool_size=2, strides=1))
+
+# Create the convolutional layer
+model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
+
+# Create the pooling layer
 model.add(GlobalMaxPooling1D())
 
 # Create the 1st fully connected layer
-model.add(Dense(hidden_dims))
-model.add(Dropout(0.2))
-model.add(Activation('relu'))
-
-# Create the 2nd fully connected layer (improves accuracy as opposed to only 1 fully connected layer)
 model.add(Dense(hidden_dims))
 model.add(Dropout(0.2))
 model.add(Activation('relu'))
@@ -204,8 +204,14 @@ import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 
 def plot_history(history):
-    acc = history.history['accuracy']
-    val_acc = history.history['val_accuracy']
+    for key in history.history:
+        print (key)
+
+    # In later versions of keras, they use "accuracy" and "val_accuracy" instead of "acc" and "val_acc"
+    # May want to check the keys printed in the print statement above when you run
+
+    acc = history.history['acc']
+    val_acc = history.history['val_acc']
     loss = history.history['loss']
     val_loss = history.history['val_loss']
     x = range(1, len(acc) + 1)
