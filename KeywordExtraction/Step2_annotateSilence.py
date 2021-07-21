@@ -12,7 +12,7 @@ def getPercentageSilence(cleanTimestampsFilename):
         if row[2] != "" and row[3] != "":
             allRows.append([row[0], row[2], row[3]])
 
-    totalTime = allRows[len(allRows) - 1][2]
+    totalTime = float(allRows[len(allRows) - 1][2]) - float(allRows[1][1])
 
     totalSilence = 0
     for i in range(len(allRows) - 1):
