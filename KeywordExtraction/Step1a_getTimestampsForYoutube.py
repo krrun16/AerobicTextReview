@@ -1,6 +1,6 @@
 # Python 3.7 (There could be bugs with other versions like 3.8)
 # pip install streamlit
-# pip install pytube==10.8.5
+# pip install youtube-transcript-api
 # pip install youtube_dl
 # pip install deepsegment
 # pip install tensorflow==1.14
@@ -14,15 +14,14 @@ import subprocess
 fullTexts=[]
 audioFiles=[]
 
-def getTimestampsJsonFromYoutubeLink(youtubeLink):
-    myFilename=os.getcwd()+"/gentle/YoutubeOutput.mp3"
+def downloadAudioFromYoutubeLink(youtubeLink):
+    myFilename = os.getcwd() + "/gentle/YoutubeOutput.mp3"
 
     if os.path.isfile(myFilename):
         os.remove(myFilename)
 
     ydl_opts = {
-        'outtmpl': myFilename,
-        'format': 'bestaudio/best',
+        'outtmpl': myFilename, 'format': 'bestaudio/best',
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
@@ -33,15 +32,21 @@ def getTimestampsJsonFromYoutubeLink(youtubeLink):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([youtubeLink])
 
+def runGentleForcedAligner():
     os.chdir('gentle')
 
-    query = subprocess.Popen("python3 align.py YoutubeOutput.mp3 YoutubeOutput.txt", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    query = subprocess.Popen("python3 align.py YoutubeOutput.mp3 YoutubeOutput.txt",
+                             shell=True,
+                             stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE)
+
     output, error = query.communicate()
 
     print("Yay output!")
     print(output)
 
     return output
+
     # timestampsJson=run(["python3", "align.py","YoutubeOutput.mp3","YoutubeOutput.txt"]).stdout
     # return timestampsJson
 
@@ -52,14 +57,12 @@ def turnTimestampsJsonFileIntoCSV(jsonFilename):
     with open(jsonFilename, "r") as myfile:
         stringData = json.load(myfile)
 
-    print("More string data yay")
     print(stringData)
 
     workbook = xlsxwriter.Workbook("YoutubeOutput_timestamps_fromFile.xlsx")
     worksheet = workbook.add_worksheet()
 
     words=stringData["words"][0]
-    print("More words yay")
     print(words)
 
     i=0
@@ -78,7 +81,6 @@ def turnTimestampsJsonIntoCSV(jsonText):
         jsonData=json.loads(jsonText)
 
         words=jsonData["words"]
-        print("Yay words")
         print(words)
 
         for word in words:

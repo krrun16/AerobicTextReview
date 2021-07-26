@@ -1,7 +1,7 @@
 # STUFF TO INSTALL:
 # Python 3.7 (There could be bugs with other versions like 3.8)
 # pip install streamlit
-# pip install pytube==10.8.5
+# pip install youtube-transcript-api
 # pip install youtube_dl
 # pip install deepsegment
 # pip install tensorflow==1.14
@@ -34,7 +34,8 @@ from Step1a_getTimestampsForYoutube import *
 from Step2_annotateSilence import *
 from Step3_highlightSearchableKeywords import *
 
-from pytube import YouTube
+from youtube_transcript_api import YouTubeTranscriptApi
+import urllib.parse
 from os.path import dirname as up
 import streamlit as st
 import re
@@ -90,45 +91,58 @@ def countNumberOfKeywordsPerClass(colorTextHTML):
 
 if page=="Enter a Youtube Link":
     youtubeLink = st.text_input('Enter an exercise video Youtube link:')
+
     youtubeLink = youtubeLink.strip()
     print(youtubeLink)
 
     colorTextHTML = ""
     transcriptText = st.empty()
 
+    def extract_video_id(url):
+        # Examples:
+        # - http://youtu.be/numbersandletters
+        # - http://www.youtube.com/watch?v=numbersandletters&feature=feedu
+        # - http://www.youtube.com/embed/numbersandletters
+        # - http://www.youtube.com/v/numbersandletters?version=3&amp;hl=en_US
+        query = urllib.parse.urlparse(url)
+        if query.hostname == 'youtu.be': return query.path[1:]
+        if query.hostname in {'www.youtube.com', 'youtube.com'}:
+            if query.path == '/watch': return urllib.parse.parse_qs(query.query)['v'][0]
+            if query.path[:7] == '/watch/': return query.path.split('/')[1]
+            if query.path[:7] == '/embed/': return query.path.split('/')[2]
+            if query.path[:3] == '/v/': return query.path.split('/')[2]
+            # below is optional for playlists
+            if query.path[:9] == '/playlist': return urllib.parse.parse_qs(query.query)['list'][0]
+
+
+    # returns None for invalid YouTube url
+
     @st.cache
     def getColorTextHTML(youtubeLink):
-        source = YouTube(youtubeLink)
+        videoID = extract_video_id(youtubeLink)
 
-        try:
-            en_caption = source.captions['en']
-        except:
-            try:
-                en_caption = source.captions['a.en']
-            except:
-                return "<p>The YouTube channel disabled subtitles for this video.</p>", False
+        # using the srt variable with the list of dictionaries
+        # obtained by the the .get_transcript() function
+        srt = YouTubeTranscriptApi.get_transcript(videoID)
 
-        en_caption_convert_to_srt = (en_caption.generate_srt_captions())
-        lineTextArray = en_caption_convert_to_srt.splitlines()
-        lineTextArray = lineTextArray[2:]
+        fullText=""
 
-        desired_lines = lineTextArray[::4]
+        with open("YoutubeOutput.txt", "w") as f:
+            # iterating through each element of list srt
+            for i in srt:
+                # writing each element of srt on a new line
+                f.write(i["text"]+" ")
+                fullText += i["text"]+" "
 
-        # save the caption to a file named Output.txt
-        text_file = open("YoutubeOutput.txt", "w")
-        text_file_gentle = open("gentle/YoutubeOutput.txt", "w")
-        fullText = ""
-        for lineText in desired_lines:
-            fullText += lineText.rstrip('\n') + " "
+        with open("gentle/YoutubeOutput.txt", "w") as f:
+            # iterating through each element of list srt
+            for i in srt:
+                # writing each element of srt on a new line
+                f.write(i["text"]+" ")
 
-        fullText = fullText.lower()
+        downloadAudioFromYoutubeLink(youtubeLink)
 
-        text_file.write(fullText)
-        text_file.close()
-        text_file_gentle.write(fullText)
-        text_file_gentle.close()
-
-        timestampsJson=getTimestampsJsonFromYoutubeLink(youtubeLink)
+        timestampsJson=runGentleForcedAligner()
         os.chdir('..')
         turnTimestampsJsonIntoCSV(timestampsJson)
 
@@ -136,11 +150,10 @@ if page=="Enter a Youtube Link":
         fullText = addSilencePlaceholdersForYoutubeVideo(fullText)  # replaces silences with (X second silence) to not disrupt other code
 
         # Detect fillers, get HTML red highlight
-        # highlightedFillers, numberOfFillers = highlightFillersOnText(fullText)
+        highlightedFillers, numberOfFillers = highlightFillersOnText(fullText)
 
         # Get HTML highlights of the other non-filler keywords
-        colorTextHTML, numberOfKeywordsPerClassDictionary = getColoredHTMLText(fullText,
-                                                                                "YoutubeOutput.txt")
+        colorTextHTML, numberOfKeywordsPerClassDictionary = getColoredHTMLText(highlightedFillers,"YoutubeOutput.txt")
 
         colorTextHTML = "<p>" + colorTextHTML + "</p>"
         colorTextHTML = colorTextHTML.replace("XYZThisMakesSureHighlightingIsDoneCorrectlyXYZ", "")
@@ -163,6 +176,9 @@ if page=="Enter a Youtube Link":
     # Different checkbox options
 
     st.sidebar.write("Select Categories:")
+    placeholderAllCheck = st.sidebar.empty()
+    st.sidebar.markdown("____")
+
     st.sidebar.markdown("<b style='background-color:#ffeb91'>Table 1 (specify body movements):</b>",
                         unsafe_allow_html=True)
 
@@ -172,6 +188,7 @@ if page=="Enter a Youtube Link":
     placeholder4 = st.sidebar.empty()
     placeholder5 = st.sidebar.empty()
 
+    allCheck = placeholderAllCheck.checkbox("Check All", key="a0")
     familiarExercisePhrases = placeholder1.checkbox("Familiar Exercise Phrases", key="a1")
     bodyParts = placeholder2.checkbox("Body Parts", key="a2")
     directionToMove = placeholder3.checkbox("Direction to Move", key="a3")
@@ -264,6 +281,62 @@ if page=="Enter a Youtube Link":
     lightRed = "#f0986c"
 
     # Table 1
+    if allCheck:
+        colorTextHTML = colorTextHTML.replace(
+            '<span style="background-color:#ffffff" class="silences">',
+            '<span style="background-color:' + str(lightGrey) + '" class="silences">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="familiarExercisePhrases">',
+                                              '<span style="background-color:' + str(
+                                                  lightYellow) + '" class="familiarExercisePhrases">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="bodyParts">',
+                                              '<span style="background-color:' + str(
+                                                  lightYellow) + '" class="bodyParts">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="directionToMove">',
+                                              '<span style="background-color:' + str(
+                                                  lightYellow) + '" class="directionToMove">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="expectedBodySensation">',
+                                              '<span style="background-color:' + str(
+                                                  lightYellow) + '" class="expectedBodySensation">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="equipment">',
+                                              '<span style="background-color:' + str(
+                                                  lightYellow) + '" class="equipment">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="startingAnExercise">',
+                                              '<span style="background-color:' + str(
+                                                  lightGreen) + '" class="startingAnExercise">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="stoppingAnExercise">',
+                                              '<span style="background-color:' + str(
+                                                  lightGreen) + '" class="stoppingAnExercise">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="duration">',
+                                              '<span style="background-color:' + str(
+                                                  lightGreen) + '" class="duration">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="pacing">',
+                                              '<span style="background-color:' + str(lightGreen) + '" class="pacing">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="quantityOfAnExercise">',
+                                              '<span style="background-color:' + str(
+                                                  lightGreen) + '" class="quantityOfAnExercise">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="transitioning">',
+                                              '<span style="background-color:' + str(
+                                                  lightGreen) + '" class="transitioning">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="brPhrase">',
+                                              '<span style="background-color:' + str(lightRed) + '" class="brPhrase">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="encouragingPhrases">',
+                                              '<span style="background-color:' + str(
+                                                  lightRed) + '" class="encouragingPhrases">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="inaccessibleLocations">',
+                                              '<span style="background-color:' + str(
+                                                  lightRed) + '" class="inaccessibleLocations">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="filler">',
+                                              '<span style="background-color:' + str(lightRed) + '" class="filler">')
+        colorTextHTML = colorTextHTML.replace('<span style="background-color:#ffffff" class="subjectivePhrases">',
+                                              '<span style="background-color:' + str(
+                                                  lightRed) + '" class="subjectivePhrases">')
+        colorTextHTML = colorTextHTML.replace(
+            '<span style="background-color:#ffffff" class="unfamiliarExercisePhrase">',
+            '<span style="background-color:' + str(lightRed) + '" class="unfamiliarExercisePhrase">')
+
+        transcriptText.empty()
+        transcriptText.markdown(colorTextHTML, unsafe_allow_html=True)
+
     if twoSecondSilence:
         colorTextHTML = colorTextHTML.replace(
             '<span style="background-color:#ffffff" class="silences">',
@@ -454,6 +527,9 @@ else:
     # Different checkbox options
 
     st.sidebar.write("Select Categories:")
+    placeholderAllCheck = st.sidebar.empty()
+    st.sidebar.markdown("____")
+
     st.sidebar.markdown("<b style='background-color:#ffeb91'>Table 1 (specify body movements):</b>",
                         unsafe_allow_html=True)
 
@@ -463,6 +539,7 @@ else:
     placeholder4a = st.sidebar.empty()
     placeholder5a = st.sidebar.empty()
 
+    allCheck = placeholderAllCheck.checkbox("Check All",key="b0")
     familiarExercisePhrasesa = placeholder1a.checkbox("Familiar Exercise Phrases", key="b1")
     bodyPartsa = placeholder2a.checkbox("Body Parts", key="b2")
     directionToMovea = placeholder3a.checkbox("Direction to Move", key="b3")
@@ -698,6 +775,69 @@ else:
         lightYellow = "#ffeb91"
         lightGreen = "#a1e3aa"
         lightRed = "#f0986c"
+
+        if allCheck:
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="silences">',
+                '<span style="background-color:' + str(lightGrey) + '" class="silences">')
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="familiarExercisePhrases">',
+                '<span style="background-color:' + str(
+                    lightYellow) + '" class="familiarExercisePhrases">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="bodyParts">',
+                                                  '<span style="background-color:' + str(
+                                                      lightYellow) + '" class="bodyParts">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="directionToMove">',
+                                                  '<span style="background-color:' + str(
+                                                      lightYellow) + '" class="directionToMove">')
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="expectedBodySensation">',
+                '<span style="background-color:' + str(
+                    lightYellow) + '" class="expectedBodySensation">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="equipment">',
+                                                  '<span style="background-color:' + str(
+                                                      lightYellow) + '" class="equipment">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="startingAnExercise">',
+                                                  '<span style="background-color:' + str(
+                                                      lightGreen) + '" class="startingAnExercise">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="stoppingAnExercise">',
+                                                  '<span style="background-color:' + str(
+                                                      lightGreen) + '" class="stoppingAnExercise">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="duration">',
+                                                  '<span style="background-color:' + str(
+                                                      lightGreen) + '" class="duration">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="pacing">',
+                                                  '<span style="background-color:' + str(
+                                                      lightGreen) + '" class="pacing">')
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="quantityOfAnExercise">',
+                '<span style="background-color:' + str(
+                    lightGreen) + '" class="quantityOfAnExercise">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="transitioning">',
+                                                  '<span style="background-color:' + str(
+                                                      lightGreen) + '" class="transitioning">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="brPhrase">',
+                                                  '<span style="background-color:' + str(
+                                                      lightRed) + '" class="brPhrase">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="encouragingPhrases">',
+                                                  '<span style="background-color:' + str(
+                                                      lightRed) + '" class="encouragingPhrases">')
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="inaccessibleLocations">',
+                '<span style="background-color:' + str(
+                    lightRed) + '" class="inaccessibleLocations">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="filler">',
+                                                  '<span style="background-color:' + str(
+                                                      lightRed) + '" class="filler">')
+            colorTextHTMLa = colorTextHTMLa.replace('<span style="background-color:#ffffff" class="subjectivePhrases">',
+                                                  '<span style="background-color:' + str(
+                                                      lightRed) + '" class="subjectivePhrases">')
+            colorTextHTMLa = colorTextHTMLa.replace(
+                '<span style="background-color:#ffffff" class="unfamiliarExercisePhrase">',
+                '<span style="background-color:' + str(lightRed) + '" class="unfamiliarExercisePhrase">')
+
+            transcriptTexta.empty()
+            transcriptTexta.markdown(colorTextHTMLa, unsafe_allow_html=True)
 
         if twoSecondSilence:
             colorTextHTMLa = colorTextHTMLa.replace(

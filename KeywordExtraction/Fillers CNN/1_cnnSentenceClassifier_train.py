@@ -12,6 +12,7 @@ import random
 import csv
 import numpy as np
 
+
 # Turns a sentence like "We are going to do another jumping jack" into an array of numbers, like [1, 3, 6, 14, 17, 21, 25, 31]
 # each word in the training dataset corresponds to a number. Then this function will "code" every sentence in the training dataset into an array of numbers
 # The CNN will recognize patterns in the numbers
@@ -44,6 +45,7 @@ def create_word_embedding(comments, add_pos_tags=False):
 
     return encoded_comments, commentAndEncodedComment, word_embedding
 
+
 # /////////////////////////////////////////////////////////////////////////////////
 # Get train sets for x (sentence or phrase) and y (category)
 results = [["x", "y"]]
@@ -73,7 +75,7 @@ for list in y_train:
     for subitem in list:
         y_train_new.append([int(subitem)])
 
-max_words=0
+max_words = 0
 
 # /////////////////////////////////////////////////////////////////////////////////
 # Save the word embedding codes for future use to test the same model on a different dataset
@@ -81,7 +83,7 @@ with open('1_wordEmbedding.csv', 'w') as csv_file:
     writer = csv.writer(csv_file)
     for key, value in word_embedding.items():
         writer.writerow([key, value])
-        max_words+=1
+        max_words += 1
 
 # /////////////////////////////////////////////////////////////////////////////////
 # Determine the number of categories + default (i.e. sentence types)
@@ -103,7 +105,8 @@ y_train = keras.utils.to_categorical(y_train_new, num_classes)
 
 # /////////////////////////////////////////////////////////////////////////////////
 # Get x and y validation sets
-results = [["x","y"]]
+results = [["x", "y"]]
+
 
 # Code our validation set into numbers (the same numbers used to code the train set)
 def codeValidationSet(add_pos_tags=False):
@@ -151,30 +154,25 @@ def codeValidationSet(add_pos_tags=False):
 
     return x_validation, y_validation
 
+
 # The x and y validation sets we will use
 x_validation, y_validation = codeValidationSet()
 
 # ///////////////////////////////////////////////////
-# Training the Actual Model
+# Training the Model
+
 model = Sequential()
 
-# Created Embedding (Input) Layer (max_words) --> Convolutional Layer
+# Created Embedding (Input) Layer (max_words) --> Convolution Layer
 model.add(Embedding(max_words, embedding_dims, input_length=maxlen))
 model.add(Dropout(0.2))  # masks various input values
 
-# Create the convolutional layer
 model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
-
-# Create the pooling layer
 model.add(MaxPooling1D(pool_size=2, strides=1))
 
-# Create the convolutional layer
 model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
-
-# Create the pooling layer
 model.add(GlobalMaxPooling1D())
 
-# Create the 1st fully connected layer
 model.add(Dense(hidden_dims))
 model.add(Dropout(0.2))
 model.add(Activation('relu'))
@@ -189,6 +187,7 @@ model.compile(loss='categorical_crossentropy',
 
 # This allows us to plot training and validation set accuracy later on
 from keras.callbacks import History
+
 history = History()
 
 # "Fit the model" (train model) using training data (70% of dataset)
@@ -201,11 +200,13 @@ model.save('1_myModel.h5')
 # ///////////////////////////////////////////////////
 # Make a plot of accuracy
 import matplotlib.pyplot as plt
+
 plt.style.use('ggplot')
+
 
 def plot_history(history):
     for key in history.history:
-        print (key)
+        print(key)
 
     # In later versions of keras, they use "accuracy" and "val_accuracy" instead of "acc" and "val_acc"
     # May want to check the keys printed in the print statement above when you run
@@ -228,5 +229,6 @@ def plot_history(history):
     plt.title('Training and validation loss')
     plt.legend()
     plt.savefig('1_trainingValidationAccuracy.png')
+
 
 plot_history(history)

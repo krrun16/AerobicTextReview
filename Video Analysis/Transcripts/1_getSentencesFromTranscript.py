@@ -4,7 +4,7 @@ import os
 segmenter = DeepSegment('en')
 mySentences=[]
 
-transcriptFiles=["Video_WalkAtHome.txt"]
+transcriptFiles=["Video_9_HIIT.txt"]
 
 from os.path import dirname as up
 
@@ -35,7 +35,7 @@ for transcriptFilename in transcriptFiles:
 import csv
 import os
 
-with open(os.getcwd()+"/Fillers_VidsWalkAtHome.csv", 'w') as csv_file:
+with open(os.getcwd()+"/Fillers_Video_9_HIIT.csv", 'w') as csv_file:
     writer = csv.writer(csv_file)
     for mySentence in mySentences:
         writer.writerow([mySentence[0], mySentence[1]])
